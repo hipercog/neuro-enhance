@@ -29,29 +29,29 @@
 %% Setup MAIN parameters
 % set the input directory where your data is stored
 proj_root = '~/Benslab/PROJECT_NEUROENHANCE/China';
-group_dir = {'music' 'english' 'control'};%order from Chinese bkgrd data labels
+group_dir = {'control' 'english' 'music'};%order from Chinese bkgrd data labels
 para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = 'neuroenhance_branch_test';
 
 % use sbj_filt to select all (or a subset) of available recordings
-sbj_filt = []; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[] [] []}; %setdiff(1:12, [3 7]);
 
 % set the electrode for which to calculate and plot ERPs after preprocessing
 erploc = {'A31'};
 
 % Runtime options for CTAP:
 PREPRO = true;
-STOP_ON_ERROR = true;
-OVERWRITE_OLD_RESULTS = true;
+STOP_ON_ERROR = false;
+OVERWRITE_OLD_RESULTS = false;
 
 
 %% Loop the available data sources
-% for gix = 1:numel(group_dir)
-%     for pix = 1:numel(para_dir)
-%DEBUG:
-gix = 3; pix = 3;
+for gix = 1:numel(group_dir)
+    sbj_filt = grpXsbj_filt{gix};
+    for pix = 1:numel(para_dir)
+%DEBUG:gix = 3; pix = 3;
 
         %Create the CONFIGURATION struct
         %First, define important paths; plus step sets and their parameters
@@ -68,8 +68,10 @@ gix = 3; pix = 3;
         pipeArr = {@nebr_pipe1,...
                    @nebr_pipe2A,...
                    @nebr_pipe2B,...
+                   @nebr_pipe3A,...
+                   @nebr_pipe3B,...
                    @nebr_peekpipe};
-        runps = [1 4];
+        runps = 2:6;
         %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
 
@@ -89,8 +91,8 @@ gix = 3; pix = 3;
         %                 , pipeArr, 'first', first, 'last', last...
         %                 , 'dbg', STOP_ON_ERROR)
 
-%     end
-% end
+    end
+end
 
 %cleanup the global workspace
 clear PREPRO STOP_ON_ERROR OVERWRITE_OLD_RESULTS sbj_filt pipeArr first last
