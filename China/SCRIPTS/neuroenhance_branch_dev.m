@@ -44,11 +44,11 @@ erploc = {'A31'};
 % Runtime options for CTAP:
 PREPRO = true;
 STOP_ON_ERROR = false;
-OVERWRITE_OLD_RESULTS = false;
+OVERWRITE_OLD_RESULTS = true;
 
 
 %% Loop the available data sources
-parfor gix = 1:numel(group_dir)
+for gix = 1:numel(group_dir)
     sbj_filt = grpXsbj_filt{gix};
     for pix = 3:numel(para_dir)
 %DEBUG:gix = 3; pix = 3;
@@ -71,7 +71,7 @@ parfor gix = 1:numel(group_dir)
                    @nebr_pipe3A,...
                    @nebr_pipe3B,...
                    @nebr_peekpipe};
-        runps = 6;
+        runps = 1:6;
         %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
 
