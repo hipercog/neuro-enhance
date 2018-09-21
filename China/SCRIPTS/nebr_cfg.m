@@ -23,7 +23,7 @@ function [Cfg, out] = nebr_cfg(project_root_folder, group_dir, para_dir, ID)
         fullfile('SCRIPTS', 'musmelo_trial_indices');
 
     % Channel location file
-    Cfg.eeg.chanlocs = fullfile(Cfg.env.paths.projectRoot...
+    Cfg.eeg.chanlocs = fullfile(mfilename('fullpath'), '..'...
                         , 'EGI_chanlocs', '2_9AverageNet128_v1.sfp');
 
     % specify the file type of your data
