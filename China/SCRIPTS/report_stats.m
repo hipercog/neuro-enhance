@@ -11,9 +11,10 @@ T = cell(1, numel(peek_stats));
 for pidx = 1:numel(peek_stats)
     [isxl, xlsheets] = xlsfinfo(peek_stats(pidx).name);
     xlsheets = xlsheets(~startsWith(xlsheets, 'Sheet'));
+    T{pidx} = cell(1, numel(xlsheets));
     for sidx = 1:numel(xlsheets)
-        T{end + 1} = readtable(peek_stats(pidx).name...
+        T{pidx}{sidx} = readtable(peek_stats(pidx).name...
             , 'ReadRowNames', true...
-            , 'Sheet', xlsheets(sidx));
+            , 'Sheet', xlsheets{sidx});
     end
 end
