@@ -1,6 +1,6 @@
 function neuroenhance_branch_dev()
 %% Branching CTAP script to clean NEURO-ENHANCE Chinese PRE-test data
-% 
+%
 % OPERATION STEPS
 % # 1
 % Download + Install:
@@ -14,7 +14,7 @@ function neuroenhance_branch_dev()
 % Set your working directory to CTAP root (wherever you cloned CTAP)
 
 % # 3
-% Add EEGLAB and CTAP to your Matlab path. For a script to do this see 
+% Add EEGLAB and CTAP to your Matlab path. For a script to do this see
 % update_matlab_path_ctap.m at CTAP repository root: the directory containing
 % 'ctap' and 'dependencies' folders.
 
@@ -29,7 +29,17 @@ function neuroenhance_branch_dev()
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored
-proj_root = '~/Benslab/PROJECT_NEUROENHANCE/China';
+linux = '~/Benslab';
+pc3 = 'D:\LocalData\bcowley';
+if isunix
+    % Code to run on Linux platform
+    proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'China', 'CHINA_POSTTESTS');
+elseif ispc
+    % Code to run on Windows platform
+    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'China', 'CHINA_POSTTESTS');
+else
+    disp('Platform not supported')
+end
 group_dir = {'control' 'english' 'music'};%order from Chinese bkgrd data labels
 para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'};
 
