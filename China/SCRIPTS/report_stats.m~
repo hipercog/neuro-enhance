@@ -109,12 +109,7 @@ end
 
 %% SCRATCH
 for g = grps
-    ix = ismember({treeStats(10).pipe.group}, g);
-    dat = [treeStats(10).pipe(ix).bestn];
-    figure('Name', g{:}); hist(dat, numel(unique(dat)));
-end
-for c = cnds
-    ix = ismember({treeStats(10).pipe.proto}, c);
-    dat = [treeStats(10).pipe(ix).bestn];
-    figure('Name', c{:}); hist(dat, numel(unique(dat)));
+    gix = ismember({treeStats(10).pipe.group}, g);
+    dat = [treeStats(10).pipe(gix).bestn];
+    figure('Name', g); hist(dat, numel(unique(dat)));
 end

@@ -2,11 +2,12 @@ function [Cfg, out] = nebr_cfg(project_root_folder, group_dir, para_dir, ID)
 %NEBR_CFG Return configuration structure
 
     %% Fixed path options
-    data_dir = 'CHINA_PRETESTS';
+    data_dir = {'CHINA_PRETEST' 'CHINA_POSTEST'};
+    data_dir = data_dir{contains(data_dir, ID, 'IgnoreCase', true)};
     anal_dir = 'ANALYSIS';
     
     % Analysis branch ID
-    Cfg.id = ID;
+    Cfg.id = ['neuroenhance_bei_' ID];
     Cfg.srcid = {''};
     Cfg.env.paths.projectRoot = project_root_folder;
 
@@ -23,8 +24,8 @@ function [Cfg, out] = nebr_cfg(project_root_folder, group_dir, para_dir, ID)
         fullfile('SCRIPTS', 'musmelo_trial_indices');
 
     % Channel location file
-    Cfg.eeg.chanlocs = fullfile(mfilename('fullpath'), '..'...
-                        , 'EGI_chanlocs', '2_9AverageNet128_v1.sfp');
+    [p, ~, ~] = fileparts(mfilename('fullpath'));
+    Cfg.eeg.chanlocs = fullfile(p, '..', 'EGI_chanlocs', '2_9AverageNet128_v1.sfp');
 
     % specify the file type of your data
     Cfg.eeg.data_type = '*.raw';

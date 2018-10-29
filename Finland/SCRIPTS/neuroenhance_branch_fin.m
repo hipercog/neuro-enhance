@@ -1,5 +1,5 @@
-function neuroenhance_branch_dev()
-%% Branching CTAP script to clean NEURO-ENHANCE Chinese PRE-test data
+function neuroenhance_branch_fin()
+%% Branching CTAP script to clean NEURO-ENHANCE Finnish PRE- POST-test data
 %
 % OPERATION STEPS
 % # 1
@@ -20,7 +20,7 @@ function neuroenhance_branch_dev()
 
 % # 4
 % Set up a directory to contain the data files:
-%   * 483 EEG datasets (EGI .raw format) from NeuroEnhance Beijing pre-test
+%   * EEG datasets (BrainAmp .eeg format) from NeuroEnhance Beijing pre-test
 % Pass the complete path to this directory into the variable 'proj_root', below
 
 % # 5
@@ -31,20 +31,22 @@ function neuroenhance_branch_dev()
 % set the input directory where your data is stored
 linux = '~/Benslab';
 pc3 = 'D:\LocalData\bcowley';
+proj_data = fullfile('PROJECT_NEUROENHANCE', 'Finland', '');
 if isunix
     % Code to run on Linux platform
-    proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'China', 'CHINA_POSTTESTS');
+    proj_root = fullfile(linux, proj_data);
 elseif ispc
     % Code to run on Windows platform
-    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'China', 'CHINA_POSTTESTS');
+    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
 else
     disp('Platform not supported')
 end
-group_dir = {'control' 'english' 'music'};%order from Chinese bkgrd data labels
-para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'};
+group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
+para_dir = {'AV' 'multiMMN' 'switching'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
-ctapID = 'neuroenhance_branch_test';
+ctapID = {'pre' 'post'};
+ctapID = ctapID{2};
 
 % use sbj_filt to select all (or a subset) of available recordings
 grpXsbj_filt = {[] [] []}; %setdiff(1:12, [3 7]);
@@ -80,7 +82,7 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
     grp = group_dir(gix);
-    [Cfg, ~] = nebr_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
+    [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
 
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
@@ -90,12 +92,12 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
 
     %Select pipe array and first and last pipe to run
-    pipeArr = {@nebr_pipe1,...
-               @nebr_pipe2A,...
-               @nebr_pipe2B,...
-               @nebr_pipe3A,...
-               @nebr_pipe3B,...
-               @nebr_peekpipe};
+    pipeArr = {@nefi_pipe1,...
+               @nefi_pipe2A,...
+               @nefi_pipe2B,...
+               @nefi_pipe3A,...
+               @nefi_pipe3B,...
+               @nefi_peekpipe};
     runps = 1:6;
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
