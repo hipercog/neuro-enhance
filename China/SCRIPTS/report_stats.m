@@ -190,7 +190,7 @@ else
                     contains({treeStats(1).pipe.sbjXpro}, cnds{c}, 'Ig', true);
                 if ~any(sid1), continue; end
                 for ldx = 1:numel(lvl)
-                    sbjXpro = {treeStats(lvl(ldx)).pipe.sbjXpro};%basis measurement subj
+                    sbjXpro = {treeStats(lvl(ldx)).pipe.sbjXpro};%base subj
                     sidx = startsWith(sbjXpro, num2str(tmp(s))) &...
                             contains(sbjXpro, cnds{c}, 'IgnoreCase', true);
                     if ~any(sidx), continue; end
@@ -209,7 +209,8 @@ else
                     treeStats(nups(ldx)).pipe(sidx).group = grps{g};
                     treeStats(nups(ldx)).pipe(sidx).proto = cnds{c};
                     treeStats(nups(ldx)).pipe(sidx).stat = MATS{ldx};
-                    statmn(ldx) = mean(MATS{ldx}{:,:}, 'all', 'omitnan');
+                    statmn(ldx) = mean(...
+                        (MATS{ldx}{:,:} + 1) * 50, 'all', 'omitnan') - 50;
                     treeStats(nups(ldx)).pipe(sidx).mean_stat = statmn(ldx);
                 end
                 % make entry holding best pipe info
@@ -250,27 +251,38 @@ else
     for idx = 1:numel(treeRej(end).pipe)
         if treeRej(end).pipe(idx).subj ~= treeStats(end).pipe(idx).subj
             error('something has gone terribly wrong')
+        else
+            bestpipe(idx).subj = treeStats(end).pipe(idx).subj;
+            bestpipe(idx).group = treeStats(end).pipe(idx).group;
+            bestpipe(idx).proto = treeStats(end).pipe(idx).proto;
         end
         rejn = treeRej(end).pipe(idx).bestn;
-%         rejrank = find(treeRej(end).pipe(idx).badness < thr);
-        [rejrank, rej_sort_ix] = sort(treeRej(end).pipe(idx).badness);
-        rej_blw_thr = rej_sort_ix(rejrank < thr);
         stan = treeStats(end).pipe(idx).bestn;
         bestpipe(idx).rejbest = rejn;
-        bestpipe(idx).rejrank = rej_sort_ix;
-        bestpipe(idx).rej_under_thr = rej_blw_thr;
         bestpipe(idx).statbst = stan;
+        
+        [rejrank, rjix] = sort(treeRej(end).pipe(idx).badness);
+        [srank, stix] = sort(treeStats(end).pipe(idx).mean_stats, 'descend');
+        for p = 1:numel(plvls)
+            piperank(p) = find(rjix == p) + find(stix == p);
+        end
+        bestix = find(piperank == min(piperank));
+        if numel(bestix) > 1
+            [~, bestix] = min(rejrank(bestix));
+        end
+        bestpipe(idx).bestpipe = bestix;
+
         if any(ismember(rejn, stan))
             bestpipe(idx).bestn = rejn(ismember(rejn, stan));
-        elseif any(ismember(rej_blw_thr, stan))
-            bestpipe(idx).bestn = rej_blw_thr(ismember(rej_blw_thr, stan));
         else
-            %TODO: HOW TO RESOLVE TIES??
             bestpipe(idx).bestn = stan;
         end
-        bestpipe(idx).badness =...
+
+        bestpipe(idx).badness1 = treeRej(end).pipe(idx).badness(bestix);
+        bestpipe(idx).badness2 =...
                        treeRej(end).pipe(idx).badness(bestpipe(idx).bestn);
-        bestpipe(idx).stat =...
+        bestpipe(idx).stat1 = treeStats(end).pipe(idx).mean_stats(bestix);
+        bestpipe(idx).stat2 =...
                   treeStats(end).pipe(idx).mean_stats(bestpipe(idx).bestn);
     end
     save(fullfile(oud, 'best_pipe.mat'), 'bestpipe')
