@@ -31,10 +31,9 @@ function neuroenhance_branch_fin()
 % set the input directory where your data is stored
 linux = '~/Benslab';
 pc3 = 'D:\LocalData\bcowley';
-proj_data = fullfile('PROJECT_NEUROENHANCE', 'Finland', '');
 if isunix
     % Code to run on Linux platform
-    proj_root = fullfile(linux, proj_data);
+    proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'Finland', '');
 elseif ispc
     % Code to run on Windows platform
     proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
@@ -46,18 +45,15 @@ para_dir = {'AV' 'multiMMN' 'switching'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
-ctapID = ctapID{2};
+ctapID = ctapID{1};
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[] [] []}; %setdiff(1:12, [3 7]);
-
-% set the electrode for which to calculate and plot ERPs after preprocessing
-% erploc = {'A31'};
+grpXsbj_filt = {[] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
-DEBUG = false;
+DEBUG = true;
 PREPRO = true;
-STOP_ON_ERROR = false;
+STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 
@@ -67,12 +63,13 @@ if DEBUG
 else
   parforArg = Inf;
 end
-parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
+% parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
+for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-indices from global index by modulo
     %Loop order is not as for nested loops, but parfor mixes order anyway
     gix = mod(ix - 1, numel(group_dir)) + 1;
     if parforArg == 0
-        sbj_filt = grpXsbj_filt{gix}; %#ok<PFBNS>
+        sbj_filt = grpXsbj_filt{gix}; %%#ok<PFBNS>
     else
         sbj_filt = [];
     end
