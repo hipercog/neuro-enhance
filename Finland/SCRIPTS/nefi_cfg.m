@@ -25,7 +25,7 @@ function [Cfg, out] = nefi_cfg(project_root_folder, group_dir, para_dir, ID)
 
     % Channel location file
     [p, ~, ~] = fileparts(mfilename('fullpath'));
-    Cfg.eeg.chanlocs = fullfile(p, '..', 'acticap_chanlocs', 'myacticap32.sph');
+    Cfg.eeg.chanlocs = fullfile(p, '..', 'acticap_chanlocs', 'myacticap32.ced');
 
     % specify the file type of your data
     Cfg.eeg.data_type = '*.vhdr';

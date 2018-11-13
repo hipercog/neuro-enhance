@@ -45,35 +45,36 @@ para_dir = {'AV' 'multiMMN' 'switching'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
-ctapID = ctapID{1};
+ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[] [] [] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[130 132] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
 DEBUG = true;
 PREPRO = true;
 STOP_ON_ERROR = true;
-OVERWRITE_OLD_RESULTS = true;
+OVERWRITE_OLD_RESULTS = false;
 
 
 %% Loop the available data sources
+% Use non-nested loop for groups X protocols; allows parfor parallel processing
 if DEBUG
   parforArg = 0;
 else
   parforArg = Inf;
 end
 % parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
-for ix = 1:numel(group_dir) * numel(para_dir)
-    %get sub-indices from global index by modulo
-    %Loop order is not as for nested loops, but parfor mixes order anyway
+for ix = 1%:numel(group_dir) * numel(para_dir)
+    %get sub-index S from global index G by modulo. Loop order is not as for 
+    %nested loops, but parfor mixes order anyway. First is group index:
     gix = mod(ix - 1, numel(group_dir)) + 1;
     if parforArg == 0
         sbj_filt = grpXsbj_filt{gix}; %%#ok<PFBNS>
     else
         sbj_filt = [];
     end
-
+    %Second is protocol index
     pix = mod(ix - 1, numel(para_dir)) + 1;
 
     %Create the CONFIGURATION struct
@@ -95,7 +96,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
                @nefi_pipe3A,...
                @nefi_pipe3B,...
                @nefi_peekpipe};
-    runps = 1:6;
+    runps = 2:6;
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
 

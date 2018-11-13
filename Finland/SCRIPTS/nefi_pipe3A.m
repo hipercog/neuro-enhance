@@ -3,8 +3,8 @@ function [Cfg, out] = nefi_pipe3A(Cfg)
 
     %%%%%%%% Define hierarchy %%%%%%%%
     Cfg.id = 'pipe3A';
-    Cfg.srcid = {'pipe1#pipe2A#1_IC_correction'... 
-                 'pipe1#pipe2B#1_IC_correction'};
+    Cfg.srcid = {'pipe1#pipe2A#1_ICcor_ADJblk'... 
+                 'pipe1#pipe2B#1_IC_corr_FSTR'};
 
     %%%%%%%% Define pipeline %%%%%%%%
     % IC correction
@@ -12,7 +12,7 @@ function [Cfg, out] = nefi_pipe3A(Cfg)
     stepSet(i).funH = { @CTAP_detect_bad_channels,...%bad channels by variance
                         @CTAP_reject_data,...
                         @CTAP_interp_chan };
-    stepSet(i).id = [num2str(i) '_chan_correction'];
+    stepSet(i).id = [num2str(i) '_chan_corr_vari'];
 
     out.detect_bad_channels = struct(...
         'method', 'variance',...
