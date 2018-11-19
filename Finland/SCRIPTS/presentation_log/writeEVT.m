@@ -8,7 +8,7 @@ for e=1:size(events,2)
     tmu = (events(1,e).latency-1) / srate * 1e6;
     code = 1;
     
-    if strcmp(paradigm,'multi')
+    if contains(paradigm, 'multi', 'IgnoreCase', true)
         
         if strcmp(events(1,e).type,'boundary')
             code = 41;
@@ -35,7 +35,7 @@ for e=1:size(events,2)
         end
         comnt = events(1,e).type;
         
-    elseif strcmp(paradigm,'av')
+    elseif contains(paradigm, 'av', 'IgnoreCase', true)
         % Responses 1 and 3
         trino = '99';
         type = events(1,e).type;
@@ -72,7 +72,7 @@ for e=1:size(events,2)
             comnt = events(1,e).type;
         end
         
-    elseif strcmp(paradigm,'swi')
+    elseif contains(paradigm, 'swi', 'IgnoreCase', true)
         trino = '99';
         type = events(1,e).type;
         

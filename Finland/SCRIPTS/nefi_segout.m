@@ -2,7 +2,7 @@
 function [Cfg, out] = nefi_segout(Cfg)
 
     %%%%%%%% Define hierarchy %%%%%%%%
-    Cfg.id = 'badsegNexport';
+    Cfg.id = 'segout';
     Cfg.srcid = {'pipe1#pipe2A#pipe3A#1_chan_corr_vari'};
 
     %%%%%%%% Define pipeline %%%%%%%%
@@ -33,7 +33,7 @@ function [Cfg, out] = nefi_segout(Cfg)
 
     out.export_data = struct(...
         'type', 'mul',...
-        'outdir', fullfile(Cfg.env.paths.exportRoot, 'BESAmul'));
+        'outdir', fullfile(Cfg.env.paths.ctapRoot, 'MUL_EXPORT'));
 
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.stepSets = stepSet;

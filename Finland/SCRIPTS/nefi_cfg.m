@@ -14,13 +14,10 @@ function [Cfg, out] = nefi_cfg(project_root_folder, group_dir, para_dir, ID)
 
     % Define important directories and files
     Cfg.env.paths.branchSource = fullfile(Cfg.env.paths.projectRoot...
-        , data_dir, sprintf('Data_%d', idx), group_dir, para_dir);
-    
+                , data_dir, sprintf('Data_%d', idx), group_dir, para_dir);
     Cfg.env.paths.logFiles = fullfile(Cfg.env.paths.projectRoot...
-        , data_dir, sprintf('Logfiles_%d', idx), group_dir, para_dir); 
-
+                , data_dir, sprintf('Logfiles_%d', idx), group_dir, para_dir);
     Cfg.env.paths.analysisRoot = fullfile(Cfg.env.paths.projectRoot, anal_dir);
-
     Cfg.env.paths.ctapRoot = fullfile(Cfg.env.paths.analysisRoot, Cfg.id);
 
     % Channel location file
@@ -36,8 +33,6 @@ function [Cfg, out] = nefi_cfg(project_root_folder, group_dir, para_dir, ID)
     % NOTE! EOG channel specification for artifact detection purposes
     Cfg.eeg.veogChannelNames = {'VEOG'};
     Cfg.eeg.heogChannelNames = {'Fp1' 'Fp2'};
-    
-    Cfg.grfx.on = false;
 
     % dummy var
     out = struct([]);

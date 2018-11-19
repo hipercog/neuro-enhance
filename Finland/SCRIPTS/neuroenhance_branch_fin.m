@@ -29,11 +29,11 @@ function neuroenhance_branch_fin()
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored
-linux = '~/Benslab';
+linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
 pc3 = 'D:\LocalData\bcowley';
 if isunix
     % Code to run on Linux platform
-    proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'Finland', '');
+    proj_root = fullfile(linux{2}, 'PROJECT_NEUROENHANCE', 'Finland', '');
 elseif ispc
     % Code to run on Windows platform
     proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
@@ -42,6 +42,7 @@ else
 end
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
+group_dir = group_dir(1);
 para_dir = para_dir(2);
 
 % use ctapID to uniquely name the base folder of the output directory tree
@@ -49,7 +50,7 @@ ctapID = {'pre' 'post'};
 ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[130 132] [] [] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[130] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
 DEBUG = true;
@@ -97,7 +98,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
                @nefi_pipe3A,...
                @nefi_pipe3B,...
                @nefi_peekpipe,...
-               @nefi_segout};
+               @nefi_epout};
     runps = 7;
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
