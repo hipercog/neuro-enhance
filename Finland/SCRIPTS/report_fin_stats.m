@@ -1,10 +1,11 @@
 %% INIT
 %make paths
-proj = fullfile('PROJECT_NEUROENHANCE', 'Finland', 'ANALYSIS'...
-                , 'neuroenhance_fin_pre'); %PICK PRE-POST STAGE!!
-% ind = fullfile(filesep, 'media', 'ben', 'Maxtor', proj);
-oud = fullfile(filesep, 'home', 'ben', 'Benslab', proj);
-ind = oud;
+proj = {'neuroenhance_fin_pre', 'neuroenhance_fin_post'};%PICK PRE-POST STAGE!!
+% 'PROJECT_NEUROENHANCE', 'Finland', 'ANALYSIS'...
+ind = fullfile(filesep, 'media', 'ben', 'USB1', proj{1});
+% /media/ben/USB1/neuroenhance_fin_pre
+oud = fullfile(filesep, 'home', 'ben', 'Benslab', 'PROJECT_NEUROENHANCE'...
+                                     , 'Finland', 'ANALYSIS', proj{1});
 if ~isfolder(fullfile(oud, 'STAT_HISTS'))
     mkdir(fullfile(oud, 'STAT_HISTS'))
 end
@@ -16,20 +17,21 @@ plvls = {'2A' '2B' '3A' '3B'};
 plotnsave = false;
 
 
-%% READ SUBJxGROUP INFO
-if exist(fullfile(oud, 'subjectXgroup.mat'), 'file') == 2
-    load(fullfile(oud, 'subjectXgroup.mat'))
-else
-    %read list of subjects per group
-    sbjXgrp = readtable(fullfile(ind, 'subjectXgroup.csv'));
-    save(fullfile(oud, 'subjectXgroup.mat'), 'sbjXgrp')
-end
+% %% READ SUBJxGROUP INFO
+% if exist(fullfile(oud, 'subjectXgroup.mat'), 'file') == 2
+%     load(fullfile(oud, 'subjectXgroup.mat'))
+% else
+%     %read list of subjects per group
+%     sbjXgrp = readtable(fullfile(ind, 'subjectXgroup.csv'));
+%     save(fullfile(oud, 'subjectXgroup.mat'), 'sbjXgrp')
+% end
 
 
 %% FIND PEEK STAT FILES 
 if exist(fullfile(oud, 'peek_stat_files.mat'), 'file') == 2
     load(fullfile(oud, 'peek_stat_files.mat'))
 else
+    %% READ CODE
     % WARNING: This can take a long time!!!
     peek_stat_files = subdir(fullfile(ind, '*_stats.dat'));
 %     peek_stat_dirs = subdir(fullfile(ind, '*', 'log_stats', filesep));
@@ -37,42 +39,109 @@ else
 end
 
 
+%% READ IN PEEK STAT FILES 
+if exist(fullfile(oud, 'peek_stats.mat'), 'file') == 2
+    load(fullfile(oud, 'peek_stats.mat'))
+else
+    %% READ CODE
+    % This can take a long time! because 'readtable()' takes a LONG time.
+    %create & fill structure of peek stat tables per participant/recording
+    [treeStats, sort_ix] = subdir_parse(peek_stat_files...
+        , ind, 'peekpipe/this/', 'pipename');
+    for tidx = 1:numel(treeStats)
+        for stix = 1:numel(treeStats(tidx).file)
+            treeStats(tidx).pipe(stix).stat = readtable(...
+                fullfile(treeStats(tidx).path, treeStats(tidx).file{stix})...
+                , 'ReadRowNames', true);
+        end
+    end
+    save(fullfile(oud, 'peek_stats.mat'), 'treeStats')
+end
+
+
+%% GET PEEK STAT COMPARISON DATA
+if exist(fullfile(oud, 'peek_stats.mat'), 'file') == 2
+    load(fullfile(oud, 'peek_stats.mat'))
+else
+    %% COMPARING PEEK STATS
+    lvl = [];
+    lvl_nms = {};
+    for l2 = plvls(1:2)
+        for l3 = plvls(3:4)
+            lvl(end + 1) = find(contains({treeStats.pipename}, l2) &...
+                                contains({treeStats.pipename}, l3));
+            lvl_nms{end + 1} = ['p1_p' l2{:} l3{:}];  %#ok<*SAGROW>
+        end
+    end
+    MATS = cell(1, numel(lvl));
+    vnmi = treeStats(1).pipe(1).stat.Properties.VariableNames;
+    stmn = zeros(1, numel(lvl));
+    nups = numel(treeStats) + 1:numel(treeStats) + numel(lvl) + 1;
+    treeStats(nups(end)).pipename = 'best_pipes';
+    for ldx = 1:numel(lvl)
+        treeStats(nups(ldx)).pipename = lvl_nms{ldx};
+    end
+    
+    for s = 1:numel(treeStats(1).pipe)
+        rowname = treeStats(1).file{s};
+        grpname = grps{cellfun(@(x) contains(rowname, x, 'Ig', 0), grps)};
+        cndname = cnds{cellfun(@(x) contains(rowname, x, 'Ig', 0), cnds)};
+        
+        for ldx = 1:numel(lvl)
+            rni = ismember(treeStats(lvl(ldx)).file, rowname);
+            if ~any(rni), continue; end            
+            treeStats(lvl(ldx)).pipe(rni).subj = rowname(1:5);
+            treeStats(lvl(ldx)).pipe(rni).subj_num = str2double(rowname(3:5));
+            treeStats(lvl(ldx)).pipe(rni).group = grpname;
+            treeStats(lvl(ldx)).pipe(rni).proto = cndname;
+
+            treeStats(nups(ldx)).pipe(rni).subj = rowname(1:5);
+            treeStats(nups(ldx)).pipe(rni).subj_num = str2double(rowname(3:5));
+            treeStats(nups(ldx)).pipe(rni).group = grpname;
+            treeStats(nups(ldx)).pipe(rni).proto = cndname;
+            
+            [MATS{ldx}, nrow, nvar] = ctap_compare_stat(...
+                                        treeStats(1).pipe(s).stat...
+                                        , treeStats(lvl(ldx)).pipe(rni).stat);
+            treeStats(nups(ldx)).pipe(rni).stat = MATS{ldx};
+            stmn(ldx) = mean((MATS{ldx}{:,:} + 1) * 50, 'all', 'omitnan') - 50;
+            treeStats(nups(ldx)).pipe(rni).mean_stat = stmn(ldx);
+
+            if plotnsave
+                fh = ctap_stat_hists(MATS{ldx}, 'xlim', [-1 1]); %#ok<*UNRCH>
+                print(fh, '-dpng', fullfile(oud, 'STAT_HISTS'...
+                    , sprintf('%s_%s_%s_%s_stats.png', grpname...
+                    , cndname, rowname(1:5), lvl_nms{ldx})))
+            end
+        end
+        % make entry holding best pipe info
+        treeStats(nups(end)).file{rni} = rowname;
+        treeStats(nups(end)).pipe(rni).subj = rowname(1:5);
+        treeStats(nups(end)).pipe(rni).group = grpname;
+        treeStats(nups(end)).pipe(rni).proto = cndname;
+        MATS = cellfun(@(x) x{:,:}, MATS, 'Un', 0);
+        MAT = reshape(cell2mat(MATS), nrow, nvar, numel(MATS));
+        [treeStats(nups(end)).pipe(rni).stat, I] = max(MAT, [], 3);
+        [~, sortn] = sort(hist(I(:), numel(unique(I))), 'descend');
+        bestn = mode(I, [1 2]);
+        treeStats(nups(end)).pipe(rni).best = lvl_nms{bestn};
+        treeStats(nups(end)).pipe(rni).bestn = bestn;
+        treeStats(nups(end)).pipe(rni).best2wrst = sortn;
+        treeStats(nups(end)).pipe(rni).mean_stats = stmn;
+
+    end
+    save(fullfile(oud, 'peek_stats.mat'), 'treeStats')
+end
+
+
 %% FIND REJECTION TEXT FILES
 if exist(fullfile(oud, 'rej_files.mat'), 'file') == 2
     load(fullfile(oud, 'rej_files.mat'))
 else
+    %% FIND CODE
     % WARNING: This can take a long time!!!
     rej_txts = subdir(fullfile(ind, 'all_rejections.txt'));
     save(fullfile(oud, 'rej_files.mat'), 'rej_txts')
-end
-
-
-%% READ PEEK STAT FILES 
-if exist(fullfile(oud, 'peek_stats.mat'), 'file') == 2
-    load(fullfile(oud, 'peek_stats.mat'))
-else
-    % This can take a long time! because 'readtable()' takes a LONG time.
-    %create & fill structure of peek stat tables per participant/recording
-    treeStats =...
-        subdir_parse(peek_stat_files, ind, 'peekpipe/this/', 'pipename');
-    for pidx = 1:numel(peek_stat_files)
-        %TODO : read individual text files, not dirty EXCEL!
-%         [isxl, xlsheets] = xlsfinfo(peek_stat_files(pidx).name);
-%         if isempty(isxl)
-%             warning('xlsfinfo:bad_input', 'Bad xlsx: %s\n%s'...
-%                 , peek_stat_files(pidx).name, xlsheets)
-%             continue
-%         end
-%         xlsheets = xlsheets(~startsWith(xlsheets, 'Sheet'));
-%         for sid1 = 1:numel(xlsheets)
-%             treeStats(pidx).pipe(sid1).sbjXpro = xlsheets{sid1};
-%             treeStats(pidx).pipe(sid1).stat =...
-%                 readtable(peek_stat_files(pidx).name...
-%                 , 'ReadRowNames', true...
-%                 , 'Sheet', xlsheets{sid1});
-%         end
-    end
-    save(fullfile(oud, 'peek_stats.mat'), 'treeStats')
 end
 
 
@@ -80,13 +149,17 @@ end
 if exist(fullfile(oud, 'rej_stats.mat'), 'file') == 2
     load(fullfile(oud, 'rej_stats.mat'))
 else
+    %% READ CODE
     %get pipenames from sbudir structure
     [treeRej, sort_rejtxt] = subdir_parse(rej_txts, ind...
         , 'this/logs/all_rejections.txt', 'pipename');
     %load rejection data text files to structure
-    for r = 1:numel(sort_rejtxt)
-        treeRej(r).pipe =...
-            table2struct(readtable(sort_rejtxt(r).name, 'Delimiter', ','));
+    for tidx = 1:numel(treeRej)
+        for stix = 1:numel(treeRej(tidx).file)
+            treeRej(tidx).pipe = table2struct(readtable(...
+                fullfile(treeRej(tidx).path, treeRej(tidx).file{stix})...
+                , 'Delimiter', ',', 'Format', '%s%s%s'));
+        end
     end
     lvl = [];
     lvl_nms = {};
@@ -107,46 +180,44 @@ if exist(fullfile(oud, 'rej_stats.mat'), 'file') == 2
 else
     %% PARSE REJECTION TABLE DATA
     %go through each pipe, group, protocol and subject to parse the data
-    for r = 1:numel(sort_rejtxt)
-        vars = fieldnames(treeRej(r).pipe);
+    for p = 1:size(treeRej)
+        vars = fieldnames(treeRej(p).pipe);
         bad = vars{contains(vars, 'bad')};
-        for g = 1:numel(grps)
-            tmp = table2array(sbjXgrp(:, grps{g}));
-            tmp(isnan(tmp)) = [];
-            for c = 1:numel(cnds)
-                for s = 1:numel(tmp)
-                    sid = startsWith({treeRej(r).pipe.Row}, num2str(tmp(s))) &...
-                        contains({treeRej(r).pipe.Row}, cnds{c}, 'Ig', true);
-                    if ~any(sid), continue; end
-                    treeRej(r).pipe(sid).subj = tmp(s);
-                    treeRej(r).pipe(sid).group = grps{g};
-                    treeRej(r).pipe(sid).proto = cnds{c};
-                    treeRej(r).pipe(sid).badness =...
-                        str2double(strsplit(strrep(strrep(...
-                        treeRej(r).pipe(sid).(bad), 'E', ''), 'none', '0')));
-                    treeRej(r).pipe(sid).badcount =...
-                        numel(treeRej(r).pipe(sid).([bad '_nums']));
-                end
+        pc = vars{contains(vars, 'pc')};
+        % massage the rows to clean and prep the data
+        for r = 1:size(treeRej(p).pipe)
+            rowname = treeRej(p).pipe(r).Row;
+            treeRej(p).pipe(r).subj = rowname(1:5);
+            treeRej(p).pipe(r).group =...
+                grps{cellfun(@(x) contains(rowname, x, 'Ig', 0), grps)};
+            treeRej(p).pipe(r).proto =...
+                cnds{cellfun(@(x) contains(rowname, x, 'Ig', 0), cnds)};
+            treeRej(p).pipe(r).(pc) = str2double(treeRej(p).pipe(r).(pc));
+            bdnss = strsplit(treeRej(p).pipe(r).(bad));
+            if any(isnan(cellfun(@str2double, bdnss)))
+                treeRej(p).pipe(r).(bad) = bdnss;
+            else
+                treeRej(p).pipe(r).(bad) = cellfun(@str2double, bdnss);
             end
+            treeRej(p).pipe(r).badcount = numel(treeRej(p).pipe(r).(bad));
         end
     end
     save(fullfile(oud, 'rej_stats.mat'), 'treeRej')
     %% COMPARING
     bases = setdiff(1:6, lvl);
     for lix = lvl
-%         all([treeRej(1).pipe.subj] == [treeRej(lix).pipe.subj])    end
         vars = fieldnames(treeRej(lix).pipe);
         badpc = vars{contains(vars, '_pc')};
         root = bases(round(lix ./ 3));
         vars = fieldnames(treeRej(root).pipe);
         rootpc = vars{contains(vars, '_pc')};
-        for s = [treeRej(lix).pipe.subj]
+        for s = {treeRej(lix).pipe.subj}
             for p = cnds
-                sidx = find(s == [treeRej(lix).pipe.subj] &...
-                    ismember({treeRej(lix).pipe.proto}, p));
-                rsdx = find(s == [treeRej(root).pipe.subj] &...
-                     ismember({treeRej(root).pipe.proto}, p));
-                if isempty(sidx) || isempty(rsdx), continue; end
+                sidx = ismember({treeRej(lix).pipe.subj}, s) &...
+                       ismember({treeRej(lix).pipe.proto}, p);
+                rsdx = ismember({treeRej(root).pipe.subj}, s) &...
+                       ismember({treeRej(root).pipe.proto}, p);
+                if sum(sidx) ~= 1 || sum(rsdx) ~= 1, continue; end
                 root_badpc = treeRej(root).pipe(rsdx).(rootpc);
                 treeRej(lix).pipe(sidx).root_badpc = root_badpc;
                 treeRej(lix).pipe(sidx).total_badpc = root_badpc +...
@@ -159,89 +230,21 @@ else
     treeRej(end +1).pipename = 'rank_pipes';
     %for each row, find lowest-scoring of four node pipes and copy
     for idx = 1:numel(treeRej(lvl(1)).pipe)
+        clear testvec
         for lix = lvl
-            testvec(lvl == lix) = [treeRej(lix).pipe(idx).total_badpc];
-        end
-        low_lvl = lvl(testvec ==  min(testvec));
-        treeRej(end).pipe(idx).subj = treeRej(lvl(1)).pipe(idx).subj;
-        treeRej(end).pipe(idx).badness = testvec;
-        treeRej(end).pipe(idx).bestn = find(ismember(lvl, low_lvl));
-
-    end
-    save(fullfile(oud, 'rej_stats.mat'), 'treeRej')
-end
-
-
-%% GET PEEK STAT COMPARISON DATA
-if exist(fullfile(oud, 'peek_stats.mat'), 'file') == 2
-    load(fullfile(oud, 'peek_stats.mat'))
-else
-    %% COMPARING PEEK STATS
-    lvl = [];
-    lvl_nms = {};
-    for l2 = plvls(1:2)
-        for l3 = plvls(3:4)
-            lvl(end + 1) = find(contains({treeStats.pipename}, l2) &...
-                                contains({treeStats.pipename}, l3));
-            lvl_nms{end + 1} = ['p1_p' l2{:} l3{:}];  %#ok<*SAGROW>
-        end
-    end
-    MATS = cell(1, 4);
-    vnmi = treeStats(1).pipe(1).stat.Properties.VariableNames;
-    nups = 1 + numel(treeStats):numel(treeStats) + numel(lvl) + 1;
-    statmn = zeros(1, 4);
-    
-    for g = 1:numel(grps)
-        tmp = table2array(sbjXgrp(:, grps{g}));
-        tmp(isnan(tmp)) = [];
-        for c = 1:numel(cnds)
-            for s = 1:numel(tmp)
-                sid1 = startsWith({treeStats(1).pipe.sbjXpro}, num2str(tmp(s))) &...
-                    contains({treeStats(1).pipe.sbjXpro}, cnds{c}, 'Ig', true);
-                if ~any(sid1), continue; end
-                for ldx = 1:numel(lvl)
-                    sbjXpro = {treeStats(lvl(ldx)).pipe.sbjXpro};%base subj
-                    sidx = startsWith(sbjXpro, num2str(tmp(s))) &...
-                            contains(sbjXpro, cnds{c}, 'IgnoreCase', true);
-                    if ~any(sidx), continue; end
-                    [MATS{ldx}, nrow, nvar] = ctap_compare_stat(...
-                        treeStats(1).pipe(sid1).stat...
-                        , treeStats(lvl(ldx)).pipe(sidx).stat);
-                    if plotnsave
-                        fh = ctap_stat_hists(MATS{ldx}, 'xlim', [-1 1]); %#ok<*UNRCH>
-                        print(fh, '-dpng', fullfile(oud, 'STAT_HISTS'...
-                            , sprintf('%s_%s_%s_%s_stats.png', grps{g}...
-                            , cnds{c}, num2str(tmp(s)), lvl_nms{ldx})))
-                    end
-                    treeStats(nups(ldx)).pipename = lvl_nms{ldx};
-                    treeStats(nups(ldx)).pipe(sidx).sbjXpro = sbjXpro{sidx};
-                    treeStats(nups(ldx)).pipe(sidx).subj = tmp(s);
-                    treeStats(nups(ldx)).pipe(sidx).group = grps{g};
-                    treeStats(nups(ldx)).pipe(sidx).proto = cnds{c};
-                    treeStats(nups(ldx)).pipe(sidx).stat = MATS{ldx};
-                    statmn(ldx) = mean(...
-                        (MATS{ldx}{:,:} + 1) * 50, 'all', 'omitnan') - 50;
-                    treeStats(nups(ldx)).pipe(sidx).mean_stat = statmn(ldx);
-                end
-                % make entry holding best pipe info
-                treeStats(nups(end)).pipename = 'best_pipes';
-                treeStats(nups(end)).pipe(sidx).sbjXpro = sbjXpro{sidx};
-                treeStats(nups(end)).pipe(sidx).subj = tmp(s);
-                treeStats(nups(end)).pipe(sidx).group = grps{g};
-                treeStats(nups(end)).pipe(sidx).proto = cnds{c};
-                MATS = cellfun(@(x) x{:,:}, MATS, 'Un', 0);
-                MAT = reshape(cell2mat(MATS), nrow, nvar, numel(MATS));
-                [treeStats(nups(end)).pipe(sidx).stat, I] = max(MAT, [], 3);
-                [~, sortn] = sort(hist(I(:), numel(unique(I))), 'descend');
-                bestn = mode(I, [1 2]);
-                treeStats(nups(end)).pipe(sidx).best = lvl_nms{bestn};
-                treeStats(nups(end)).pipe(sidx).bestn = bestn;
-                treeStats(nups(end)).pipe(sidx).best2wrst = sortn;
-                treeStats(nups(end)).pipe(sidx).mean_stats = statmn;
+            if isfield(treeRej(lix).pipe(idx), 'total_badpc')
+%                     ~isempty([treeRej(lix).pipe(idx).total_badpc])
+                testvec(lvl == lix) = [treeRej(lix).pipe(idx).total_badpc];
             end
         end
+        if exist('testvec', 'var') == 1
+            low_lvl = lvl(testvec ==  min(testvec));
+            treeRej(end).pipe(idx).subj = treeRej(lvl(1)).pipe(idx).subj;
+            treeRej(end).pipe(idx).badness = testvec;
+            treeRej(end).pipe(idx).bestn = find(ismember(lvl, low_lvl));
+        end
     end
-    save(fullfile(oud, 'peek_stats.mat'), 'treeStats')
+    save(fullfile(oud, 'rej_stats.mat'), 'treeRej')
 end
 
 

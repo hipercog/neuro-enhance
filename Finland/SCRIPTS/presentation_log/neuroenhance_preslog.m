@@ -25,24 +25,8 @@ isswitch = px(3);
 
 
 %% Combine events in EEG
-[EEG, allclear, preslog, eegfname] = combine_events(EEG, eventfile, isswitch);
+[EEG, allclear, ~, ~] = combine_events(EEG, eventfile, isswitch);
 
-
-%% Save events as separate files.
-%NOTE: THIS IS ALREADY DONE, NEED ONLY BE DONE ONCE, AND IS SKIPPED
-%{
-[savepath, eegfn, ~] = fileparts(eegfname);
-eventpath = fullfile(savepath, [eegfn '-' Arg.proto{px} '-recoded.evt']);
-savename = [eegfn '-' Arg.proto{px} '-recoded.set'];
-
-if allclear == 1
-    writeEVT(EEG.event, EEG.srate, eventpath, Arg.proto)
-    EEG = pop_saveset(EEG, 'filename', savename, 'filepath', savepath);
-else
-    eventpath_notOK = fullfile(savepath...
-        , [eegfn '-' Arg.proto{px} '-recoded_missingTriggers.evt']);
-    writeEVT(EEG.event, EEG.srate, eventpath_notOK, Arg.proto{px})
-end
-%}
+EEG.CTAP.err.preslog_evt = allclear;
 
 end

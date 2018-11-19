@@ -42,18 +42,19 @@ else
 end
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
+para_dir = para_dir(2);
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
 ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[-130 -132] [] [] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[130 132] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
-DEBUG = false;
+DEBUG = true;
 PREPRO = true;
-STOP_ON_ERROR = false;
+STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 
@@ -64,13 +65,13 @@ if DEBUG
 else
   parforArg = Inf;
 end
-parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
-% for ix = 1:numel(group_dir) * numel(para_dir)
+% parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
+for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by modulo. Loop order is not as for 
     %nested loops, but parfor mixes order anyway. First is group index:
     gix = mod(ix - 1, numel(group_dir)) + 1;
     if parforArg == 0
-        sbj_filt = grpXsbj_filt{gix}; %#ok<PFBNS>
+        sbj_filt = grpXsbj_filt{gix}; %%#ok<PFBNS>
     else
         sbj_filt = [];
     end
@@ -95,8 +96,9 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
                @nefi_pipe2B,...
                @nefi_pipe3A,...
                @nefi_pipe3B,...
-               @nefi_peekpipe};
-    runps = 1:6;
+               @nefi_peekpipe,...
+               @nefi_segout};
+    runps = 7;
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
 

@@ -36,6 +36,8 @@ function [Cfg, out] = nefi_cfg(project_root_folder, group_dir, para_dir, ID)
     % NOTE! EOG channel specification for artifact detection purposes
     Cfg.eeg.veogChannelNames = {'VEOG'};
     Cfg.eeg.heogChannelNames = {'Fp1' 'Fp2'};
+    
+    Cfg.grfx.on = false;
 
     % dummy var
     out = struct([]);
