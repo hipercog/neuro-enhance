@@ -42,7 +42,7 @@ else
 end
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
-group_dir = group_dir(1);
+% group_dir = group_dir(1);
 para_dir = para_dir(2);
 
 % use ctapID to uniquely name the base folder of the output directory tree
@@ -50,12 +50,12 @@ ctapID = {'pre' 'post'};
 ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[130] [] [] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
-DEBUG = true;
+DEBUG = false;
 PREPRO = true;
-STOP_ON_ERROR = true;
+STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 
 
@@ -98,8 +98,9 @@ for ix = 1:numel(group_dir) * numel(para_dir)
                @nefi_pipe3A,...
                @nefi_pipe3B,...
                @nefi_peekpipe,...
-               @nefi_epout};
-    runps = 7;
+               @nefi_epout,...
+               @nefi_segout};
+    runps = 7:8;
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
 
