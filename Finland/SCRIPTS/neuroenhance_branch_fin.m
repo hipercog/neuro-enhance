@@ -55,7 +55,7 @@ grpXsbj_filt = {[] [] [] []}; %setdiff(1:12, [3 7]);
 % Runtime options for CTAP:
 DEBUG = false;
 PREPRO = true;
-STOP_ON_ERROR = false;
+STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 
@@ -100,7 +100,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
                @nefi_peekpipe,...
                @nefi_epout,...
                @nefi_segout};
-    runps = 7:8;
+    runps = 8;
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 
 
