@@ -50,12 +50,12 @@ ctapID = {'pre' 'post'};
 ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[] [] [] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[132:136] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
 DEBUG = false;
 PREPRO = true;
-STOP_ON_ERROR = false;
+STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 
@@ -71,8 +71,8 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by modulo. Loop order is not as for 
     %nested loops, but parfor mixes order anyway. First is group index:
     gix = mod(ix - 1, numel(group_dir)) + 1;
-    if parforArg == 0
-        sbj_filt = grpXsbj_filt{gix}; %%#ok<PFBNS>
+    if DEBUG
+        sbj_filt = grpXsbj_filt{gix};
     else
         sbj_filt = [];
     end
@@ -95,13 +95,18 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     pipeArr = {@nefi_pipe1,...
                @nefi_pipe2A,...
                @nefi_pipe2B,...
+               @nefi_pipe2C,...
                @nefi_pipe3A,...
                @nefi_pipe3B,...
-               @nefi_peekpipe,...
                @nefi_epout,...
-               @nefi_segout};
-    runps = 7:8;
+               @nefi_segout,...
+               @nefi_peekpipe};
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
+    runps = [5 8];
+    
+    %You can parameterize the sources for each pipe
+    Cfg.pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
+                    , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
 
 
     %% Run the pipe

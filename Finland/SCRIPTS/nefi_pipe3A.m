@@ -4,7 +4,12 @@ function [Cfg, out] = nefi_pipe3A(Cfg)
     %%%%%%%% Define hierarchy %%%%%%%%
     Cfg.id = 'pipe3A';
     Cfg.srcid = {'pipe1#pipe2A#1_ICcor_ADJblk'... 
-                 'pipe1#pipe2B#1_IC_corr_FSTR'};
+                 'pipe1#pipe2B#1_IC_corr_FSTR'...
+                 'pipe1#pipe2C#1_IC_FSTrcublk'};
+    if isfield(Cfg, 'pipe_src')
+        idx = Cfg.pipe_src{ismember(Cfg.pipe_src(:,1), mfilename), 2};
+        Cfg.srcid = Cfg.srcid(idx);
+    end
 
     %%%%%%%% Define pipeline %%%%%%%%
     % IC correction
@@ -17,8 +22,10 @@ function [Cfg, out] = nefi_pipe3A(Cfg)
     out.detect_bad_channels = struct(...
         'method', 'variance',...
         'bounds', [-5; 2.5],...
-        'take_worst_n', 2,...
-        'channelType', {'EEG'}); %tune thresholds compared to basic pipe!
+        'channelType', {'EEG'});
+%         'take_worst_n', 2,...
+
+    out.interp_chan = struct('select', 'bad');
     
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.runSets = {stepSet(:).id}; % step sets to run, default: whole thing
