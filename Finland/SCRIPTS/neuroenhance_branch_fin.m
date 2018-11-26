@@ -42,21 +42,22 @@ else
 end
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
-% group_dir = group_dir(1);
-para_dir = para_dir(2);
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
-ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[132:136] [] [] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[152] [] [] []}; %setdiff(1:12, [3 7]);
 
 % Runtime options for CTAP:
 DEBUG = false;
 PREPRO = true;
-STOP_ON_ERROR = true;
+STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
+%Subsetting groups and paradigms
+% group_dir = group_dir(1);
+para_dir = para_dir(2);
+ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 
 %% Loop the available data sources
@@ -66,15 +67,15 @@ if DEBUG
 else
   parforArg = Inf;
 end
-% parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
-for ix = 1:numel(group_dir) * numel(para_dir)
+parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
+% for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by modulo. Loop order is not as for 
     %nested loops, but parfor mixes order anyway. First is group index:
     gix = mod(ix - 1, numel(group_dir)) + 1;
     if DEBUG
         sbj_filt = grpXsbj_filt{gix};
     else
-        sbj_filt = [];
+        sbj_filt = 'all';
     end
     %Second is protocol index
     pix = mod(ix - 1, numel(para_dir)) + 1;
@@ -102,11 +103,11 @@ for ix = 1:numel(group_dir) * numel(para_dir)
                @nefi_segout,...
                @nefi_peekpipe};
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-    runps = [5 8];
+    runps = [5:6 9];
     
     %You can parameterize the sources for each pipe
     Cfg.pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                    , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
+                    , {NaN 1 1 1 1:3 1:3 1:6 1:6 5:10}'];
 
 
     %% Run the pipe

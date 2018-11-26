@@ -21,10 +21,9 @@ function [Cfg, out] = nefi_pipe3B(Cfg)
 
     out.detect_bad_channels = struct(...
         'method', 'maha_fast',...
-        'factorVal', 2.8,...
-        'channelType', {'EEG'});
+        'factorVal', 2.8);
 
-    out.interp_chan = struct('select', 'bad');
+    out.interp_chan = struct('missing_types', 'EEG');
     
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.runSets = {stepSet(:).id}; % step sets to run, default: whole thing
