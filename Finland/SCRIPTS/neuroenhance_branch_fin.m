@@ -55,7 +55,7 @@ PREPRO = true;
 STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 %Subsetting groups and paradigms
-% group_dir = group_dir(1);
+group_dir = group_dir(1);
 para_dir = para_dir(2);
 ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
@@ -103,11 +103,11 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
                @nefi_segout,...
                @nefi_peekpipe};
     %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-    runps = [5:6 9];
+    runps = 8;%[5:6 9];
     
     %You can parameterize the sources for each pipe
     Cfg.pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                    , {NaN 1 1 1 1:3 1:3 1:6 1:6 5:10}'];
+                    , {NaN 1 1 1 1:3 1:3 1:6 1:5 5:10}'];
 
 
     %% Run the pipe
