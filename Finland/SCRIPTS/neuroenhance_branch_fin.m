@@ -52,7 +52,7 @@ grpXsbj_filt = {[152] [] [] []}; %setdiff(1:12, [3 7]);
 % Runtime options for CTAP:
 DEBUG = false;
 PREPRO = true;
-STOP_ON_ERROR = false;
+STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 %Subsetting groups and paradigms
 % group_dir = group_dir(1);
@@ -67,8 +67,8 @@ if DEBUG
 else
   parforArg = Inf;
 end
-parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
-% for ix = 1:numel(group_dir) * numel(para_dir)
+% parfor (ix = 1:numel(group_dir) * numel(para_dir), parforArg)
+for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by modulo. Loop order is not as for 
     %nested loops, but parfor mixes order anyway. First is group index:
     gix = mod(ix - 1, numel(group_dir)) + 1;
