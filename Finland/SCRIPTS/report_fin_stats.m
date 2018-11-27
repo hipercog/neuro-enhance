@@ -12,19 +12,10 @@ end
 %spec groups and protocol conditions
 grps = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 cnds = {'AV' 'multiMMN' 'switching'};
+cnds = cnds(2);
 
-plvls = {'2A' '2B' '3A' '3B'};
+plvls = {'2A' '2B' '2C' '3A' '3B'};
 plotnsave = false;
-
-
-% %% READ SUBJxGROUP INFO
-% if exist(fullfile(oud, 'subjectXgroup.mat'), 'file') == 2
-%     load(fullfile(oud, 'subjectXgroup.mat'))
-% else
-%     %read list of subjects per group
-%     sbjXgrp = readtable(fullfile(ind, 'subjectXgroup.csv'));
-%     save(fullfile(oud, 'subjectXgroup.mat'), 'sbjXgrp')
-% end
 
 
 %% FIND PEEK STAT FILES 
