@@ -51,7 +51,7 @@ ctapID = {'pre' 'post'};
 STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 %Subsetting groups and paradigms
-% group_dir = group_dir(3);
+group_dir = group_dir(1);
 para_dir = para_dir(2);
 ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
@@ -66,7 +66,7 @@ pipeArr = {@nefi_pipe1,...
            @nefi_segout,...
            @nefi_peekpipe};
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 7;
+runps = 8;
 
 %You can parameterize the sources for each pipe
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
@@ -86,6 +86,7 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     %First, define important paths; plus step sets and their parameters
     grp = group_dir(gix);
     [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
+    Cfg.pipe_src = pipe_src;
 
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
@@ -93,7 +94,6 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
-    Cfg.pipe_src = pipe_src;
 
     % Run (and time) the pipe
     tic %#ok<*UNRCH>

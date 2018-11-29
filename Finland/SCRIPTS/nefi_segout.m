@@ -23,6 +23,7 @@ function [Cfg, out] = nefi_segout(Cfg)
     
     % Amplitude thresholding from continuous data (bad segments)
     out.detect_bad_segments = struct(...
+        'coOcurrencePrc', 0.01,...
         'normalEEGAmpLimits', [-120, 120]); %in muV
     % channels {'VEOG', 'Fp1', 'Fp2'} are frontal and contain large
     % blinks. They are removed in order to not detect blinks in

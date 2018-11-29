@@ -32,12 +32,12 @@ pipeArr = {@nefi_pipe1,...
            @nefi_peekpipe};
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[134] [] [171] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[130:140] [] [171] []}; %setdiff(1:12, [3 7]);
 
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 7:8;%[5:6 9];
+runps = 8;%[5:6 9];
 
 DEBUG = true;
 PREPRO = true;
@@ -76,7 +76,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     
     %You can parameterize the sources for each pipe
     Cfg.pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                    , {NaN 1 1 1 1:3 1:3 6 1:6 5:10}'];
+                    , {NaN 1 1 1 1:3 1:3 6 6 5:10}'];
 
 
     %% Run the pipe
