@@ -43,17 +43,11 @@ end
 %define collection of groups and paradigms
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
+grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
+par_short_name = {'AV' 'Multi' 'Swi'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
-
-% Runtime options for CTAP:
-STOP_ON_ERROR = false;
-OVERWRITE_OLD_RESULTS = true;
-%Subsetting groups and paradigms
-group_dir = group_dir(1);
-para_dir = para_dir(2);
-ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
 
 %Select pipe array and first and last pipe to run
 pipeArr = {@nefi_pipe1,...
@@ -65,12 +59,24 @@ pipeArr = {@nefi_pipe1,...
            @nefi_epout,...
            @nefi_segout,...
            @nefi_peekpipe};
+
+
+%% Runtime options for CTAP:
+STOP_ON_ERROR = false;
+OVERWRITE_OLD_RESULTS = true;
+%Subsetting groups and paradigms
+group_dir = group_dir(1);
+para_dir = para_dir(2);
+
+%PICK YOUR TIMEPOINT HERE! PRE or POST...
+timept = 1;
+ctapID = ctapID{timept};
+
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 runps = 8;
 
 %You can parameterize the sources for each pipe
-pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                , {NaN 1 1 1 1:3 1:3 6 1:6 1:10}'];
+pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 1 1 1 1:3 1:3 6 1:6 1:10}'];
 
 
 %% Loop the available data sources
@@ -87,6 +93,8 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     grp = group_dir(gix);
     [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
     Cfg.pipe_src = pipe_src;
+    Cfg.MC.export_name_root =...
+        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
