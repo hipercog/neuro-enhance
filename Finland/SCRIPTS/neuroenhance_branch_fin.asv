@@ -66,12 +66,11 @@ pipeArr = {@nefi_pipe1,...
 STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = false;
 
-%You can parameterize the sources for each pipe
-if nargin < 5, pipesrc = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}; end
-pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', pipesrc'];
-
 %You can run only a subset of pipes, e.g. 2:length(pipeArr)
 if nargin < 4, runps = 1:length(pipeArr); end
+
+%You can parameterize the sources for each pipe
+pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 1 1 1 1:3 1:3 1:6 1:6 4:10}'];
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 if nargin < 3, timept = 1; end
