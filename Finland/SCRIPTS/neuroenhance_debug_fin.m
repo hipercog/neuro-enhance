@@ -16,6 +16,8 @@ else
 end
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
+grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
+par_short_name = {'AV' 'Multi' 'Swi'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
@@ -39,9 +41,8 @@ grpXsbj_filt = {[134] [] [171] []}; %setdiff(1:12, [3 7]);
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 runps = 7;%[5:6 9];
 
-DEBUG = true;
 PREPRO = true;
-STOP_ON_ERROR = false;
+STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
@@ -50,7 +51,13 @@ group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
 para_dir = para_dir(2);
 
-ctapID = ctapID{1};%PICK YOUR TIMEPOINT HERE! PRE or POST...
+%PICK YOUR TIMEPOINT HERE! PRE or POST...
+timept = 1;
+ctapID = ctapID{timept};
+    
+%You can parameterize the sources for each pipe
+pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
+                , {NaN 1 1 1 1:3 1:3 6 6 5:10}'];
 
 
 %% Loop the available data sources
@@ -66,6 +73,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     %First, define important paths; plus step sets and their parameters
     grp = group_dir(gix);
     [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
+    Cfg.pipe_src = pipe_src;
 
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
@@ -73,13 +81,10 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type, 'sbj_filt', sbj_filt...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
-    
-    %You can parameterize the sources for each pipe
-    Cfg.pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                    , {NaN 1 1 1 1:3 1:3 6 6 5:10}'];
+    Cfg.MC.export_name_root =...
+        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
-
-    %% Run the pipe
+    % Run the pipe
     if PREPRO
         tic %#ok<*UNRCH>
         CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps...

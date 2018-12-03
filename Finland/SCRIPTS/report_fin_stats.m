@@ -40,9 +40,9 @@ else
     [treeStats, sort_ix] = subdir_parse(peek_stat_files...
         , ind, 'peekpipe/this/', 'pipename');
     for tidx = 1:numel(treeStats)
-        for stix = 1:numel(treeStats(tidx).file)
+        for stix = 1:numel(treeStats(tidx).name)
             treeStats(tidx).pipe(stix).stat = readtable(...
-                fullfile(treeStats(tidx).path, treeStats(tidx).file{stix})...
+                fullfile(treeStats(tidx).path, treeStats(tidx).name{stix})...
                 , 'ReadRowNames', true);
         end
     end
@@ -74,12 +74,12 @@ else
     end
     
     for s = 1:numel(treeStats(1).pipe)
-        rowname = treeStats(1).file{s};
+        rowname = treeStats(1).name{s};
         grpname = grps{cellfun(@(x) contains(rowname, x, 'Ig', 0), grps)};
         cndname = cnds{cellfun(@(x) contains(rowname, x, 'Ig', 0), cnds)};
         
         for ldx = 1:numel(lvl)
-            rni = ismember(treeStats(lvl(ldx)).file, rowname);
+            rni = ismember(treeStats(lvl(ldx)).name, rowname);
             if ~any(rni), continue; end            
             treeStats(lvl(ldx)).pipe(rni).subj = rowname(1:5);
             treeStats(lvl(ldx)).pipe(rni).subj_num = str2double(rowname(3:5));
@@ -106,7 +106,7 @@ else
             end
         end
         % make entry holding best pipe info
-        treeStats(nups(end)).file{rni} = rowname;
+        treeStats(nups(end)).name{rni} = rowname;
         treeStats(nups(end)).pipe(rni).subj = rowname(1:5);
         treeStats(nups(end)).pipe(rni).group = grpname;
         treeStats(nups(end)).pipe(rni).proto = cndname;
@@ -146,9 +146,9 @@ else
         , 'this/logs/all_rejections.txt', 'pipename');
     %load rejection data text files to structure
     for tidx = 1:numel(treeRej)
-        for stix = 1:numel(treeRej(tidx).file)
+        for stix = 1:numel(treeRej(tidx).name)
             treeRej(tidx).pipe = table2struct(readtable(...
-                fullfile(treeRej(tidx).path, treeRej(tidx).file{stix})...
+                fullfile(treeRej(tidx).path, treeRej(tidx).name{stix})...
                 , 'Delimiter', ',', 'Format', '%s%s%s'));
         end
     end
