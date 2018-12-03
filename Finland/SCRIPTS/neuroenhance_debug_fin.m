@@ -75,8 +75,6 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     grp = group_dir(gix);
     [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
     Cfg.pipe_src = pipe_src;
-    Cfg.MC.export_name_root =...
-        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
@@ -84,6 +82,8 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type, 'sbj_filt', sbj_filt...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
+    Cfg.MC.export_name_root =...
+        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     % Run the pipe
     if PREPRO
