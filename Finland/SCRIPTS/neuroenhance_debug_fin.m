@@ -103,7 +103,4 @@ for ix = 1:numel(group_dir) * numel(para_dir)
 %     end
 end
 
-%cleanup the global workspace
-clear DEBUG PREPRO STOP_ON_ERROR OVERWRITE_OLD_RESULTS sbj_filt pipeArr
-
 end %neuroenhance_branch_dev()

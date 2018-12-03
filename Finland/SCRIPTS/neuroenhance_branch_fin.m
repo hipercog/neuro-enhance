@@ -65,7 +65,7 @@ pipeArr = {@nefi_pipe1,...
 STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 %Subsetting groups and paradigms
-group_dir = group_dir(1);
+% group_dir = group_dir(1);
 para_dir = para_dir(2);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
@@ -73,10 +73,10 @@ timept = 1;
 ctapID = ctapID{timept};
 
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 8;
+runps = 7;
 
 %You can parameterize the sources for each pipe
-pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 1 1 1 1:3 1:3 6 1:6 1:10}'];
+pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
 
 
 %% Loop the available data sources
@@ -93,8 +93,6 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     grp = group_dir(gix);
     [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
     Cfg.pipe_src = pipe_src;
-    Cfg.MC.export_name_root =...
-        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
@@ -102,6 +100,8 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
+    Cfg.MC.export_name_root =...
+        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     % Run (and time) the pipe
     tic %#ok<*UNRCH>
@@ -110,8 +110,5 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     toc
 
 end
-
-%cleanup the global workspace
-clear STOP_ON_ERROR OVERWRITE_OLD_RESULTS sbj_filt pipeArr runps gix pix grp
 
 end %neuroenhance_branch_dev()
