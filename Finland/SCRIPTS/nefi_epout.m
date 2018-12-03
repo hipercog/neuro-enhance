@@ -54,5 +54,5 @@ function [Cfg, out] = nefi_epout(Cfg)
 
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.stepSets = stepSet;
-    Cfg.pipe.runSets = {stepSet(2).id};
+    Cfg.pipe.runSets = {stepSet(:).id};
 end
