@@ -34,22 +34,22 @@ pipeArr = {@nefi_pipe1,...
            @nefi_peekpipe};
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[134] [102] [171] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[130] [102] [171] []}; %setdiff(1:12, [3 7]);
 
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 7;%[5:6 9];
+runps = 1   ;%[5:6 9];
 
 PREPRO = true;
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 1;
+gix = 2;
 group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
-para_dir = para_dir(2);
+para_dir = para_dir(3);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 1;
