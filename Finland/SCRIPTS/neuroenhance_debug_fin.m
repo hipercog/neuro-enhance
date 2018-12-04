@@ -34,7 +34,7 @@ pipeArr = {@nefi_pipe1,...
            @nefi_peekpipe};
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {[134] [] [171] []}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {[134] [102] [171] []}; %setdiff(1:12, [3 7]);
 
 
 %% Runtime options for CTAP:
