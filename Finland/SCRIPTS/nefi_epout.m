@@ -16,7 +16,7 @@ function [Cfg, out] = nefi_epout(Cfg)
     
 
     %%%%%%%% Define contingent parameters %%%%%%%%
-    time = [[-100 300];
+    time = [[-100 500];
             [-100 500];
             [-100 500]];
     evty = {{'' ''};
