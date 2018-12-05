@@ -50,7 +50,7 @@ par_short_name = {'AV' 'Multi' 'Swi'};
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
 
-%Select pipe array and first and last pipe to run
+%Dfine pipe array
 pipeArr = {@nefi_pipe1,...
            @nefi_pipe2A,...
            @nefi_pipe2B,...
@@ -89,11 +89,16 @@ par_short_name = par_short_name(parix);
 %% Loop the available data sources
 % Use non-nested loop for groups X protocols; allows parfor parallel processing
 parfor (ix = 1:numel(group_dir) * numel(para_dir))
+    %get sub-index S from global index G by Matlab's combvec
+    A = combvec(1:numel(group_dir), 1:numel(para_dir));
     %get sub-index S from global index G by modulo. Loop order is not as for 
-    %nested loops, but parfor mixes order anyway. First is group index:
-    gix = mod(ix - 1, numel(group_dir)) + 1;
+    %nested loops, but parfor mixes order anyway. 
+%     gix = mod(ix - 1, numel(group_dir)) + 1;
+%     pix = mod(ix - 1, numel(para_dir)) + 1;
+    %First is group index:
+    gix = A(1, ix);
     %Second is protocol index
-    pix = mod(ix - 1, numel(para_dir)) + 1;
+    pix = A(2, ix);
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters

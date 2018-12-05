@@ -39,17 +39,17 @@ grpXsbj_filt = {[130] [102] [171] []}; %setdiff(1:12, [3 7]);
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 1   ;%[5:6 9];
+runps = 4;%[5:6 9];
 
 PREPRO = true;
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 2;
+gix = 1:4;
 group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
-para_dir = para_dir(3);
+para_dir = para_dir([1 3]);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 1;
@@ -62,12 +62,12 @@ pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
 
 %% Loop the available data sources
 for ix = 1:numel(group_dir) * numel(para_dir)
-    %get sub-index S from global index G by modulo. Loop order is not as for 
-    %nested loops, but parfor mixes order anyway. First is group index:
-    gix = mod(ix - 1, numel(group_dir)) + 1;
-    sbj_filt = grpXsbj_filt{gix};
+    %get sub-index S from global index G by Matlab's combvec
+    A = combvec(1:numel(group_dir), 1:numel(para_dir));
+    %First is group index:
+    gix = A(1, ix);
     %Second is protocol index
-    pix = mod(ix - 1, numel(para_dir)) + 1;
+    pix = A(2, ix);
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
