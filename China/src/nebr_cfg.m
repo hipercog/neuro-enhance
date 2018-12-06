@@ -25,7 +25,8 @@ function [Cfg, out] = nebr_cfg(project_root_folder, group_dir, para_dir, ID)
 
     % Channel location file
     [p, ~, ~] = fileparts(mfilename('fullpath'));
-    Cfg.eeg.chanlocs = fullfile(p, '..', 'EGI_chanlocs', '2_9AverageNet128_v1.sfp');
+    Cfg.eeg.chanlocs = ...
+        fullfile(p, '..', 'res', 'EGI_chanlocs', '2_9AverageNet128_v1.sfp');
 
     % specify the file type of your data
     Cfg.eeg.data_type = '*.raw';

@@ -10,7 +10,7 @@ function [Cfg, out] = nebr_pipe2B(Cfg)
     i = 1;  %stepSet
     stepSet(i).funH = { @CTAP_detect_bad_comps,... %FASTER bad IC detection
                         @CTAP_reject_data };
-    stepSet(i).id = [num2str(i) '_IC_correction'];
+    stepSet(i).id = [num2str(i) '_IC_corr_FSTR'];
 
     out.detect_bad_comps = struct(...
         'method', 'faster',...

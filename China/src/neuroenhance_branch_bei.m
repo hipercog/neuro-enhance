@@ -1,5 +1,5 @@
-function neuroenhance_branch_fin(grpix, parix, timept, runps, pipesrc)
-%% Branching CTAP script to clean NEURO-ENHANCE Finnish PRE- POST-test data
+function neuroenhance_branch_bei(grpix, parix, timept, runps, pipesrc)
+%% Branching CTAP script to clean NEURO-ENHANCE Chinese PRE- POST-test data
 %
 % OPERATION STEPS
 % # 1
@@ -20,46 +20,44 @@ function neuroenhance_branch_fin(grpix, parix, timept, runps, pipesrc)
 % update_matlab_path_ctap.m at CTAP repository root
 
 % # 4
-% Set up a directory to contain the data files:
-%   * EEG datasets (BrainAmp .eeg format) from NeuroEnhance Finland pre/post-test
+% Set up directories to contain the data files:
+%   * EEG datasets (EGI .raw format) from NeuroEnhance Beijing pre- and post-test
 % Pass the complete path to this directory into the variable 'proj_root', below
 
 % # 5
-% On the Matlab console, execute >> neuroenhance_branch_fin
+% On the Matlab console, execute >> neuroenhance_branch_bei
 
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored
-linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
+linux = '~/Benslab';
 pc3 = 'D:\LocalData\bcowley';
-if isunix
-    % Code to run on Linux platform
-    proj_root = fullfile(linux{2}, 'PROJECT_NEUROENHANCE', 'Finland', '');
-elseif ispc
-    % Code to run on Windows platform
-    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
+if isunix % Code to run on Linux platform
+    proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'China');
+elseif ispc % Code to run on Windows platform
+    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'China');
 else
     disp('Platform not supported')
 end
-%define collection of groups and paradigms
-group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
-para_dir = {'AV' 'multiMMN' 'switching'};
-grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
-par_short_name = {'AV' 'Multi' 'Swi'};
+group_dir = {'control' 'english' 'music'};
+para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
 
 %Dfine pipe array
-pipeArr = {@nefi_pipe1,...
-           @nefi_pipe2A,...
-           @nefi_pipe2B,...
-           @nefi_pipe2C,...
-           @nefi_pipe3A,...
-           @nefi_pipe3B,...
-           @nefi_epout,...
-           @nefi_segout,...
-           @nefi_peekpipe};
+pipeArr = {@nebr_pipe1,...
+           @nebr_pipe2A,...
+           @nebr_pipe2B,...
+           @nebr_pipe2C,...
+           @nebr_pipe3A,...
+           @nebr_pipe3B,...
+           @nebr_epout,...
+           @nebr_segcheck,...
+           @nebr_peekpipe};
+
+% set the electrode for which to calculate and plot ERPs after preprocessing
+% erploc = {'A31'};
 
 
 %% Runtime options for CTAP:
@@ -81,9 +79,7 @@ ctapID = ctapID{timept};
 if nargin < 2, parix = 1:3; end
 if nargin < 1, grpix = 1:4; end
 group_dir = group_dir(grpix);
-grp_short_name = grp_short_name(grpix);
 para_dir = para_dir(parix);
-par_short_name = par_short_name(parix);
 
 
 %% Loop the available data sources
@@ -91,10 +87,6 @@ par_short_name = par_short_name(parix);
 parfor (ix = 1:numel(group_dir) * numel(para_dir))
     %get sub-index S from global index G by Matlab's combvec
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
-    %get sub-index S from global index G by modulo. Loop order is not as for 
-    %nested loops, but parfor mixes order anyway. 
-%     gix = mod(ix - 1, numel(group_dir)) + 1;
-%     pix = mod(ix - 1, numel(para_dir)) + 1;
     %First is group index:
     gix = A(1, ix);
     %Second is protocol index
@@ -102,8 +94,7 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
-    grp = group_dir(gix);
-    [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
+    [Cfg, ~] = nebr_cfg(proj_root, group_dir{gix}, para_dir{pix}, ctapID);
     Cfg.pipe_src = pipe_src;
 
     %Then create measurement config (MC) based on a directory and filetype
@@ -112,15 +103,23 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
-    Cfg.MC.export_name_root =...
-        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
+    Cfg.MC.export_name_root = sprintf('%d_%s_%s_', timept...
+        , upper(group_dir{gix}(1:3)), upper(para_dir{pix}([1 end])));
 
     % Run (and time) the pipe
-    tic %#ok<*UNRCH>
+    tic
         CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps...
                 , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
     toc
 
+
+    %% Finally, compare pre-post improvements of stats for each branch
+    % ...use CTAP_postproc_brancher helper function to rebuild branching
+    % tree of paths to the export directories??
+%     CTAP_postproc_brancher(Cfg, @dynamic_func, {'name', value}...
+%                     , 'runPipes', runps...
+%                     , 'dbg', STOP_ON_ERROR)
+
 end
 
-end %neuroenhance_branch_fin()
+end %neuroenhance_branch_bei()

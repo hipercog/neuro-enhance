@@ -63,7 +63,7 @@ pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
 %% Loop the available data sources
 for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by Matlab's combvec
-    A = combvec(1:numel(group_dir), 1:numel(para_dir));
+    A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
     gix = A(1, ix);
     %Second is protocol index
@@ -78,6 +78,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     %Then create measurement config (MC) based on a directory and filetype
     % - subselect subjects using numeric or name indexing in 'sbj_filt'
     % - name the session/group, and the measurement/condition (pass cells)
+    sbj_filt = grpXsbj_filt{gix};
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type, 'sbj_filt', sbj_filt...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
