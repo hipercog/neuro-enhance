@@ -43,7 +43,8 @@ ctapID = ctapID{1};
 % use sbj_filt to select all (or a subset) of available recordings
 grpXsbj_filt = {'all' 'all' 'all'}; %setdiff(1:12, [3 7]);
 
-pipe_src = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10};
+pipe_src = ...
+    [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
 group_dir = group_dir(1);
 para_dir = para_dir(1:4);
 

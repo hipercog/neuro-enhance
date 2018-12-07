@@ -85,7 +85,7 @@ para_dir = para_dir(parix);
 %% Loop the available data sources
 % Use non-nested loop for groups X protocols; allows parfor parallel processing
 parfor (ix = 1:numel(group_dir) * numel(para_dir))
-    %get sub-index S from global index G by Matlab's combvec
+    %get sub-index S from global index G by Cartesian product of input vectors
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
     gix = A(1, ix);
