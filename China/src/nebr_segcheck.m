@@ -1,8 +1,8 @@
 %% Configure pipe to perform final bad epoch detection and grand avg export
-function [Cfg, out] = nefi_segout(Cfg)
+function [Cfg, out] = nebr_segcheck(Cfg)
 
     %%%%%%%% Define hierarchy %%%%%%%%
-    Cfg.id = 'segout';
+    Cfg.id = 'segcheck';
     Cfg.srcid= {'pipe1#pipe2A#pipe3A#1_chan_corr_vari'...
                 'pipe1#pipe2A#pipe3B#1_chan_corr_maha'...
                 'pipe1#pipe2B#pipe3A#1_chan_corr_vari'...
@@ -23,9 +23,13 @@ function [Cfg, out] = nefi_segout(Cfg)
     
     % Amplitude thresholding from continuous data (bad segments)
     out.detect_bad_segments = struct(...
-        'channels', {{'F3' 'Fz' 'F4' 'C3' 'Cz' 'C4' 'P3' 'Pz' 'P4'}},...
-        'coOcurrencePrc', 0.01,...
+        'coOcurrencePrc', 0.1,... %require 10% chans > AmpLimits
         'normalEEGAmpLimits', [-120, 120]); %in muV
+    % frontal channels contain large blinks, and are removed in order to not 
+    % detect blinks in CTAP_detect_bad_segments()
+    out.detect_bad_segments.exclude_channels = [Cfg.eeg.reference(:)',...
+                                           Cfg.eeg.heogChannelNames(:)',...
+                                           Cfg.eeg.veogChannelNames(:)'];
 
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.stepSets = stepSet;

@@ -63,7 +63,7 @@ pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
 %% Loop the available data sources
 for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by Matlab's combvec
-    A = combvec(1:numel(group_dir), 1:numel(para_dir));
+    A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
     gix = A(1, ix);
     %Second is protocol index
