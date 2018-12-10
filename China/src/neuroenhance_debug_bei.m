@@ -36,17 +36,17 @@ STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = false;
 
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 9;% [1:6 8 9];
+runps = 4;% [1:6 8 9];
 
-ctapID = ctapID{1};
+ctapID = ctapID{2};
 
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {'all' 'all' 'all'}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {'all' 'all' 105030302}; %setdiff(1:12, [3 7]);
 
 pipe_src = ...
     [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
-group_dir = group_dir(1);
-para_dir = para_dir(1:4);
+group_dir = group_dir(3);
+para_dir = para_dir(1);
 
 
 %% Loop the available data sources
@@ -54,10 +54,10 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by Matlab's combvec
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
-    gix = A(1, ix);
+    gix = A(ix, 1);
     %Second is protocol index
-    pix = A(2, ix);
-    
+    pix = A(ix, 2);
+
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
     [Cfg, ~] = nebr_cfg(proj_root, group_dir{gix}, para_dir{pix}, ctapID);

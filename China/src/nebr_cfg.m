@@ -2,7 +2,7 @@ function [Cfg, out] = nebr_cfg(project_root_folder, group_dir, para_dir, ID)
 %NEBR_CFG Return configuration structure
 
     %% Fixed path options
-    data_dir = {'CHINA_PRETEST' 'CHINA_POSTEST'};
+    data_dir = {'BEI_PRETEST' 'BEI_POSTEST'};
     data_dir = data_dir{contains(data_dir, ID, 'IgnoreCase', true)};
     anal_dir = 'ANALYSIS';
     

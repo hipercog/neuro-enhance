@@ -32,6 +32,7 @@ function neuroenhance_branch_bei(grpix, parix, timept, runps, pipesrc)
 % set the input directory where your data is stored
 linux = '~/Benslab';
 pc3 = 'D:\LocalData\bcowley';
+% pc3 = 'I:';
 if isunix % Code to run on Linux platform
     proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'China');
 elseif ispc % Code to run on Windows platform
@@ -88,9 +89,9 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     %get sub-index S from global index G by Cartesian product of input vectors
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
-    gix = A(1, ix);
+    gix = A(ix, 1);
     %Second is protocol index
-    pix = A(2, ix);
+    pix = A(ix, 2);
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
