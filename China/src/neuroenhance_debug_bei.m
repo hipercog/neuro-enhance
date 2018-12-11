@@ -36,7 +36,7 @@ STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = false;
 
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 4;% [1:6 8 9];
+runps = 4:5;% [1:6 8 9];
 
 ctapID = ctapID{2};
 
