@@ -1,21 +1,21 @@
 %% INIT
 %make paths
-proj = {'neuroenhance_fin_pre', 'neuroenhance_fin_post'};%PICK PRE-POST STAGE!!
-% 'PROJECT_NEUROENHANCE', 'Finland', 'ANALYSIS'...
-ind = fullfile(filesep, 'media', 'ben', 'USB1', proj{1});
-% /media/ben/USB1/neuroenhance_fin_pre
-oud = fullfile(filesep, 'home', 'ben', 'Benslab', 'PROJECT_NEUROENHANCE'...
-                                     , 'Finland', 'ANALYSIS', proj{1});
-if ~isfolder(fullfile(oud, 'STAT_HISTS'))
-    mkdir(fullfile(oud, 'STAT_HISTS'))
-end
+t = 1;
+proj = {'_fin_pre', '_fin_post'};%PICK PRE-POST STAGE!!
+rootNE = fullfile('PROJECT_NEUROENHANCE', 'Finland', 'ANALYSIS');
+ind = fullfile('/media', 'ben', 'Transcend', rootNE, ['neuroenhance' proj{t}]);
+oud = fullfile('/home', 'ben', 'Benslab', rootNE, ['report' proj{t}]);
 %spec groups and protocol conditions
 grps = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 cnds = {'AV' 'multiMMN' 'switching'};
-cnds = cnds(2);
+% cnds = cnds(2);
 
-plvls = {'2A' '2B' '2C' '3A' '3B'};
+plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}};
+
 plotnsave = false;
+if plotnsave && ~isfolder(fullfile(oud, 'STAT_HISTS'))
+    mkdir(fullfile(oud, 'STAT_HISTS'))
+end
 
 
 %% FIND PEEK STAT FILES 
@@ -297,12 +297,12 @@ end
 for g = grps
     ix = ismember({treeStats(nups(end)).pipe.group}, g);
     dat = [treeStats(nups(end)).pipe(ix).bestn];
-    figure('Name', g{:}); hist(dat, numel(unique(dat)));
+    figure('Name', g{:}); histogram(dat, numel(unique(dat)));
 end
 for c = cnds
     ix = ismember({treeStats(nups(end)).pipe.proto}, c);
     dat = [treeStats(nups(end)).pipe(ix).bestn];
-    figure('Name', c{:}); hist(dat, numel(unique(dat)));
+    figure('Name', c{:}); histogram(dat, numel(unique(dat)));
 end
 
 
