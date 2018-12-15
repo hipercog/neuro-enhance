@@ -64,7 +64,7 @@ pipeArr = {@nefi_pipe1,...
 
 %% Runtime options for CTAP:
 STOP_ON_ERROR = false;
-OVERWRITE_OLD_RESULTS = false;
+OVERWRITE_OLD_RESULTS = true;
 
 %You can parameterize the sources for each pipe
 if nargin < 5, pipesrc = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}; end
@@ -96,9 +96,9 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
 %     gix = mod(ix - 1, numel(group_dir)) + 1;
 %     pix = mod(ix - 1, numel(para_dir)) + 1;
     %First is group index:
-    gix = A(1, ix);
+    gix = A(ix, 1);
     %Second is protocol index
-    pix = A(2, ix);
+    pix = A(ix, 2);
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters

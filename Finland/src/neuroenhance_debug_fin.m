@@ -39,15 +39,15 @@ grpXsbj_filt = {'all' 'all' 168 'all'}; %setdiff(1:12, [3 7]);
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 9;
+runps = 8:9;%[5:6 9];
 
 PREPRO = true;
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = false;
 
 %Subsetting groups and paradigms
-gix = 3;
-pix = 2:3;
+gix = 2;
+pix = 1;
 group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
 para_dir = para_dir(pix);
@@ -66,9 +66,9 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     %get sub-index S from global index G by Matlab's combvec
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
-    gix = A(1, ix);
+    gix = A(ix, 1);
     %Second is protocol index
-    pix = A(2, ix);
+    pix = A(ix, 2);
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
