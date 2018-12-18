@@ -89,12 +89,8 @@ par_short_name = par_short_name(parix);
 %% Loop the available data sources
 % Use non-nested loop for groups X protocols; allows parfor parallel processing
 parfor (ix = 1:numel(group_dir) * numel(para_dir))
-    %get sub-index S from global index G by Matlab's combvec
+    %get sub-index S from global index G by allcomb()
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
-    %get sub-index S from global index G by modulo. Loop order is not as for 
-    %nested loops, but parfor mixes order anyway. 
-%     gix = mod(ix - 1, numel(group_dir)) + 1;
-%     pix = mod(ix - 1, numel(para_dir)) + 1;
     %First is group index:
     gix = A(ix, 1);
     %Second is protocol index

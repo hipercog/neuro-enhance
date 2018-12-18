@@ -39,18 +39,20 @@ grpXsbj_filt = {'all' 'all' 168 'all'}; %setdiff(1:12, [3 7]);
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 8:9;%[5:6 9];
+runps = 7;%[5:6 9];
 
 PREPRO = true;
 STOP_ON_ERROR = true;
-OVERWRITE_OLD_RESULTS = false;
+OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 2;
-pix = 1;
+gix = 1:4;
+pix = 3;
 group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
+grp_short_name = grp_short_name(gix);
 para_dir = para_dir(pix);
+par_short_name = par_short_name(pix);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 1;

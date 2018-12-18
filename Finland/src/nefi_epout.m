@@ -16,12 +16,24 @@ function [Cfg, out] = nefi_epout(Cfg)
     
 
     %%%%%%%% Define contingent parameters %%%%%%%%
-    time = [[-100 500];
+    time = [[-100 500];%parameterise this in case needs changed later
             [-100 500];
             [-100 500]];
-    evty = {{'' ''};
+    evty = {{'sound_NO' 'pic_'};
             {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'};
-            {'' ''}};
+            {'std1' 
+            'std_aft1' 
+            'std_aft2' 
+            'std_aft3' 
+            'Cat_A_S1_Cat_V'
+            'Cat_A_S1_Dog_V'
+            'Cat_A_S2_Cat_V'
+            'Cat_A_S2_Dog_V'
+            'Dog_A_S1_Cat_V'
+            'Dog_A_S1_Dog_V'
+            'Dog_A_S2_Cat_V'
+            'Dog_A_S2_Dog_V'}'};
+    match = {'starts' 'exact' 'exact'};
     pix = contains({'AV' 'Multi' 'Swi'}, Cfg.MC.export_name_root(end - 2:end - 1));
     
 
@@ -39,7 +51,8 @@ function [Cfg, out] = nefi_epout(Cfg)
 
     out.epoch_data = struct(...
         'method', 'epoch',...
-        'timelim', time(pix),...
+        'match',  match{pix},...
+        'timelim', time(pix, :),...
         'evtype', evty(pix));
     
     out.detect_bad_epochs = struct(...
@@ -55,5 +68,5 @@ function [Cfg, out] = nefi_epout(Cfg)
 
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.stepSets = stepSet;
-    Cfg.pipe.runSets = {stepSet(:).id};
+    Cfg.pipe.runSets = {stepSet(1).id};
 end
