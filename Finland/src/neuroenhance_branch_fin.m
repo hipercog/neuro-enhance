@@ -26,7 +26,7 @@ function neuroenhance_branch_fin(grpix, parix, timept, runps, pipesrc)
 
 % # 5
 % On the Matlab console, execute >> neuroenhance_branch_fin
-
+    
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored

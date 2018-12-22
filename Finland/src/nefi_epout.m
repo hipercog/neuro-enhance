@@ -19,54 +19,66 @@ function [Cfg, out] = nefi_epout(Cfg)
     time = [[-100 500];%parameterise this in case needs changed later
             [-100 500];
             [-100 500]];
-    evty = {{'sound_NO' 'pic_'};
+    evtype = {{{'sound_NOTNOV'}
+              {'sound_NOV'} 
+              {'pic_ANIMALnn' 'pic_THINGnn'}
+              {'pic_ANIMALnov' 'pic_THINGnov'}};
             {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'};
-            {'std1' 
-            'std_aft1' 
-            'std_aft2' 
-            'std_aft3' 
-            'Cat_A_S1_Cat_V'
-            'Cat_A_S1_Dog_V'
+            {{'std1'
+            'std_aft1'
+            'std_aft2'
+            'std_aft3'}
+            {'Cat_A_S1_Cat_V'
             'Cat_A_S2_Cat_V'
+            'Dog_A_S1_Dog_V'
+            'Dog_A_S2_Dog_V'}
+            {'Cat_A_S1_Dog_V'
             'Cat_A_S2_Dog_V'
             'Dog_A_S1_Cat_V'
-            'Dog_A_S1_Dog_V'
-            'Dog_A_S2_Cat_V'
-            'Dog_A_S2_Dog_V'}'};
+            'Dog_A_S2_Cat_V'}}};
+    newevs = {{'std' 'novel' 'pic_NNo' 'pic_Nov'}
+        {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'}
+        {'std' 'AV_same' 'AV_diff'}};
     match = {'starts' 'exact' 'exact'};
     pix = contains({'AV' 'Multi' 'Swi'}, Cfg.MC.export_name_root(end - 2:end - 1));
-    
+    epoch_evtype = {unpackCellStr(evtype(pix))};
 
     %%%%%%%% Define pipeline %%%%%%%%
     i = 1; %next stepSet
     stepSet(i).funH = { @CTAP_epoch_data,...
                         @CTAP_detect_bad_epochs,...
-                        @CTAP_reject_data };
+                        @CTAP_reject_data,...
+                        @CTAP_event_agg };
     stepSet(i).id = [num2str(i) '_epoch'];
     
     i = i + 1; %next stepSet
-    stepSet(i).funH = repmat({@CTAP_export_data}, 1, numel(evty{pix}));
+    stepSet(i).funH = repmat({@CTAP_export_data}, 1, numel(newevs{pix}));
     stepSet(i).id = [num2str(i) '_export'];
     stepSet(i).save = false;
+
+    out.event_agg = struct(...
+        'evtype', evtype(pix),...
+        'newevs', newevs(pix),...
+        'match', match{pix});
 
     out.epoch_data = struct(...
         'method', 'epoch',...
         'match',  match{pix},...
         'timelim', time(pix, :),...
-        'evtype', evty(pix));
-    
+        'evtype', epoch_evtype);
+
     out.detect_bad_epochs = struct(...
         'channels', {{'F3' 'Fz' 'F4' 'C3' 'Cz' 'C4' 'P3' 'Pz' 'P4'}},...
         'method', 'eegthresh',...
         'uV_thresh', [-120 120]);
-    
+
     out.export_data = struct(...
         'type', 'mul',...
         'outdir', fullfile('exportRoot', 'MUL_EXPORT'),...
-        'lock_event', evty{pix});
+        'lock_event', newevs{pix});
 
 
     %%%%%%%% Store to Cfg %%%%%%%%
     Cfg.pipe.stepSets = stepSet;
-    Cfg.pipe.runSets = {stepSet(1).id};
+    Cfg.pipe.runSets = {stepSet(:).id};
 end

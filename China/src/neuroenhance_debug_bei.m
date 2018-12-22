@@ -3,10 +3,10 @@ function neuroenhance_debug_bei()
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored
-linux = '~/Benslab';
+linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
 pc3 = 'D:\LocalData\bcowley';
 if isunix % Code to run on Linux platform
-    proj_root = fullfile(linux, 'PROJECT_NEUROENHANCE', 'China');
+    proj_root = fullfile(linux{2}, 'PROJECT_NEUROENHANCE', 'China');
 elseif ispc % Code to run on Windows platform
     proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'China');
 else
@@ -31,14 +31,13 @@ pipeArr = {@nebr_pipe1,...
 
 
 %% RUNTIME OPTIONS for CTAP:
-PREPRO = true;
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = false;
 
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 4:5;% [1:6 8 9];
+runps = 1;% [1:6 8 9];
 
-ctapID = ctapID{2};
+ctapID = ctapID{1};
 
 % use sbj_filt to select all (or a subset) of available recordings
 grpXsbj_filt = {'all' 'all' 105030302}; %setdiff(1:12, [3 7]);

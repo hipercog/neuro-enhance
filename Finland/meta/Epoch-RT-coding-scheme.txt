@@ -1,0 +1,26 @@
+AV
+
+Epochs:
+	soundNOTNOVEL -> std
+	sound_NOVELxx -> novel
+	pic_ANIMALnnxx & pic_THINGnnxx -> pic_NNo
+	pic_ANIMALnovxx & pic_THINGnovxx -> pic_Nov
+
+RTs:
+	response '1' after pic_NNo -> RT_NNo
+	response '3' after pic_Nov -> RT_Nov
+		(counted from the previous picture, not previous sound)
+
+
+SWI
+
+Epochs:
+	std1 & std_aft1-3 -> std 
+	std1_nov & std2_nov & std3_nov -> std_nov
+		(do not use these, they have overlapping behavioural responses)
+	Dog_A_S2_Cat_V & Cat_A_S2_Dog_V & Dog_A_S1_Cat_V & Cat_A_S1_Dog_V -> AV_diff
+	Dog_A_S2_Dog_V & Cat_A_S2_Cat_V & Dog_A_S1_Dog_V & Cat_A_S1_Cat_V -> AV_same
+
+RTs:
+	response '1' after AV_diff -> RT_diff
+	response '1' after AV_same -> RT_same

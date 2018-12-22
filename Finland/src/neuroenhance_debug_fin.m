@@ -33,9 +33,6 @@ pipeArr = {@nefi_pipe1,...
            @nefi_segout,...
            @nefi_peekpipe};
 
-% use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {'all' 'all' 168 'all'}; %setdiff(1:12, [3 7]);
-
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
@@ -46,21 +43,26 @@ STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 1:4;
-pix = 3;
+gix = 1;
+pix = 1;
+% use sbj_filt to select all (or a subset) of available recordings
+grpXsbj_filt = {130:134 'all' 'all' 'all'}; %setdiff(1:12, [3 7]);
+
+%PICK YOUR TIMEPOINT HERE! PRE or POST...
+timept = 1;
+    
+%You can parameterize the sources for each pipe
+pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
+                , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
+
+            
+%% Use runtime options
 group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
 grp_short_name = grp_short_name(gix);
 para_dir = para_dir(pix);
 par_short_name = par_short_name(pix);
-
-%PICK YOUR TIMEPOINT HERE! PRE or POST...
-timept = 1;
 ctapID = ctapID{timept};
-    
-%You can parameterize the sources for each pipe
-pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
 
 
 %% Loop the available data sources
