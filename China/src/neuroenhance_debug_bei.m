@@ -1,4 +1,3 @@
-function neuroenhance_debug_bei()
 %% Debug script for branching CTAP of NEURO-ENHANCE Chinese PRE- POST-test data
 
 %% Setup MAIN parameters
@@ -89,4 +88,4 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     toc
 end
 
-end %neuroenhance_debug_bei()
+clear

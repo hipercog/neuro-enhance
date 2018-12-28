@@ -11,19 +11,19 @@ function neuroenhance_branch_fin(grpix, parix, timept, runps, pipesrc)
 %       git clone https://github.com/bwrc/ctap.git
 %   * NeuroEnhance repo,
 %       git clone https://github.com/zenBen/neuro-enhance.git
-
+% 
 % # 2
 % Set your working directory to CTAP root (wherever you cloned CTAP)
-
+% 
 % # 3
 % Add EEGLAB and CTAP to your Matlab path. For a script to do this see
 % update_matlab_path_ctap.m at CTAP repository root
-
+% 
 % # 4
 % Set up a directory to contain the data files:
 %   * EEG datasets (BrainAmp .eeg format) from NeuroEnhance Finland pre/post-test
 % Pass the complete path to this directory into the variable 'proj_root', below
-
+% 
 % # 5
 % On the Matlab console, execute >> neuroenhance_branch_fin
     

@@ -1,4 +1,3 @@
-function neuroenhance_debug_fin()
 %% Debug script for branching CTAP of NEURO-ENHANCE Finnish PRE- POST-test data
 
 %% Setup MAIN parameters
@@ -96,4 +95,4 @@ for ix = 1:numel(group_dir) * numel(para_dir)
     toc
 end
 
-end %neuroenhance_debug_fin()
+clear
