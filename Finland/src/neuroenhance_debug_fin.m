@@ -30,26 +30,26 @@ pipeArr = {@nefi_pipe1,...
            @nefi_pipe3A,...
            @nefi_pipe3B,...
            @nefi_epout,...
-           @nefi_segout,...
+           @nefi_segcheck,...
            @nefi_peekpipe};
 
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 7;%[5:6 9];
+runps = 1;%[5:6 9];
 
-PREPRO = true;
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 1;
-pix = 1;
+gix = 2;
+pix = 2;
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {130:134 'all' 'all' 'all'}; %setdiff(1:12, [3 7]);
+bad_preslog_con_mul = [101 104 106:109 163:165 172];
+grpXsbj_filt = {130:134 bad_preslog_con_mul 'all' 'all'}; %setdiff(1:12, [3 7]);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
-timept = 1;
+timept = 2;
     
 %You can parameterize the sources for each pipe
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
@@ -76,8 +76,7 @@ for ix = 1:numel(group_dir) * numel(para_dir)
 
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
-    grp = group_dir(gix);
-    [Cfg, ~] = nefi_cfg(proj_root, grp{1}, para_dir{pix}, ctapID);
+    [Cfg, ~] = nefi_cfg(proj_root, group_dir{gix}, para_dir{pix}, ctapID);
     Cfg.pipe_src = pipe_src;
 
     %Then create measurement config (MC) based on a directory and filetype
@@ -91,22 +90,10 @@ for ix = 1:numel(group_dir) * numel(para_dir)
         sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     % Run the pipe
-    if PREPRO
-        tic %#ok<*UNRCH>
+    tic
         CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps...
                     , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
-        toc
-    end
-
-
-    %% Finally, compare pre-post improvements of stats for each branch
-    % ...use CTAP_postproc_brancher helper function to rebuild branching
-    % tree of paths to the export directories??
-%     CTAP_postproc_brancher(Cfg, @dynamic_func, {'name', value}...
-%                     , 'runPipes', runps...
-%                     , 'dbg', STOP_ON_ERROR)
-
-%     end
+    toc
 end
 
-end %neuroenhance_branch_dev()
+end %neuroenhance_debug_fin()

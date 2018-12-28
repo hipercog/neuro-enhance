@@ -40,8 +40,8 @@ elseif ispc % Code to run on Windows platform
 else
     disp('Platform not supported')
 end
-group_dir = {'control' 'english' 'music'};
-para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'};
+group_dir = {'control' 'english' 'music'}; %CON ENG MUS
+para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'}; %ATTE AV MULT MUSM
 
 % use ctapID to uniquely name the base folder of the output directory tree
 ctapID = {'pre' 'post'};
@@ -56,9 +56,6 @@ pipeArr = {@nebr_pipe1,...
            @nebr_epout,...
            @nebr_segcheck,...
            @nebr_peekpipe};
-
-% set the electrode for which to calculate and plot ERPs after preprocessing
-% erploc = {'A31'};
 
 
 %% Runtime options for CTAP:
@@ -86,7 +83,7 @@ para_dir = para_dir(parix);
 %% Loop the available data sources
 % Use non-nested loop for groups X protocols; allows parfor parallel processing
 parfor (ix = 1:numel(group_dir) * numel(para_dir))
-    %get sub-index S from global index G by Cartesian product of input vectors
+    %get sub-index S from global index G by allcomb()
     A = allcomb(1:numel(group_dir), 1:numel(para_dir));
     %First is group index:
     gix = A(ix, 1);
@@ -105,21 +102,13 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
     Cfg.MC.export_name_root = sprintf('%d_%s_%s_', timept...
-        , upper(group_dir{gix}(1:3)), upper(para_dir{pix}([1 end])));
+        , upper(group_dir{gix}(1:3)), upper(para_dir{pix}(1:min([4 end]))));
 
     % Run (and time) the pipe
     tic
         CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps...
                 , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
     toc
-
-
-    %% Finally, compare pre-post improvements of stats for each branch
-    % ...use CTAP_postproc_brancher helper function to rebuild branching
-    % tree of paths to the export directories??
-%     CTAP_postproc_brancher(Cfg, @dynamic_func, {'name', value}...
-%                     , 'runPipes', runps...
-%                     , 'dbg', STOP_ON_ERROR)
 
 end
 

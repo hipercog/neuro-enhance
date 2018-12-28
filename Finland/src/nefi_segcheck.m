@@ -1,8 +1,8 @@
 %% Configure pipe to perform final bad epoch detection and grand avg export
-function [Cfg, out] = nefi_segout(Cfg)
+function [Cfg, out] = nefi_segcheck(Cfg)
 
     %%%%%%%% Define hierarchy %%%%%%%%
-    Cfg.id = 'segout';
+    Cfg.id = 'segcheck';
     Cfg.srcid= {'pipe1#pipe2A#pipe3A#1_chan_corr_vari'...
                 'pipe1#pipe2A#pipe3B#1_chan_corr_maha'...
                 'pipe1#pipe2B#pipe3A#1_chan_corr_vari'...

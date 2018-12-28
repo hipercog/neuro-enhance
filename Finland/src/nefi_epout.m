@@ -13,7 +13,7 @@ function [Cfg, out] = nefi_epout(Cfg)
         idx = Cfg.pipe_src{ismember(Cfg.pipe_src(:,1), mfilename), 2};
         Cfg.srcid = Cfg.srcid(idx);
     end
-    
+
 
     %%%%%%%% Define contingent parameters %%%%%%%%
     time = [[-100 500];%parameterise this in case needs changed later
@@ -40,7 +40,8 @@ function [Cfg, out] = nefi_epout(Cfg)
         {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'}
         {'std' 'AV_same' 'AV_diff'}};
     match = {'starts' 'exact' 'exact'};
-    pix = contains({'AV' 'Multi' 'Swi'}, Cfg.MC.export_name_root(end - 2:end - 1));
+    protos = {'AV' 'Multi' 'Swi'};
+    pix = contains(protos, Cfg.MC.export_name_root(end - 2:end - 1));
     epoch_evtype = {unpackCellStr(evtype(pix))};
 
     %%%%%%%% Define pipeline %%%%%%%%
@@ -48,7 +49,8 @@ function [Cfg, out] = nefi_epout(Cfg)
     stepSet(i).funH = { @CTAP_epoch_data,...
                         @CTAP_detect_bad_epochs,...
                         @CTAP_reject_data,...
-                        @CTAP_event_agg };
+                        @CTAP_event_agg,...
+                        @CTAP_clock_stop };
     stepSet(i).id = [num2str(i) '_epoch'];
     
     i = i + 1; %next stepSet
@@ -74,7 +76,7 @@ function [Cfg, out] = nefi_epout(Cfg)
 
     out.export_data = struct(...
         'type', 'mul',...
-        'outdir', fullfile('exportRoot', 'MUL_EXPORT'),...
+        'outdir', fullfile('exportRoot', ['MUL_EXPORT_' protos{pix}]),...
         'lock_event', newevs{pix});
 
 
