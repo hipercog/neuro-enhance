@@ -1,46 +1,32 @@
-function neuroenhance_branch_fin(grpix, parix, timept, runps, pipesrc)
+function neuroenhance_branch_fin(proj_root, varargin)
 %% Branching CTAP script to clean NEURO-ENHANCE Finnish PRE- POST-test data
 %
-% OPERATION STEPS
-% # 1
-% Download + Install:
-%   * Matlab R2016b or newer
-%   * EEGLAB, latest version,
-%       git clone https://adelorme@bitbucket.org/sccn_eeglab/eeglab.git
-%   * CTAP,
-%       git clone https://github.com/bwrc/ctap.git
-%   * NeuroEnhance repo,
-%       git clone https://github.com/zenBen/neuro-enhance.git
+% Syntax:
+%   On the Matlab console, execute >> neuroenhance_branch_bei
 % 
-% # 2
-% Set your working directory to CTAP root (wherever you cloned CTAP)
+% Inputs:
+%   proj_root   string, path to data: see example_starter.m for examples
+% Varargin:
+%   grpix       vector, group index to include, default = 1:3
+%   parix       vector, paradigm index to include, default = 1:4
+%   timept      scalar, time point (pre-or post-test) to attack, default = 1
+%   runps       vector, pipes to run, default = all of them
+%   pipesrc     cell array, sources for each pipe, 
+%                           default = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}
 % 
-% # 3
-% Add EEGLAB and CTAP to your Matlab path. For a script to do this see
-% update_matlab_path_ctap.m at CTAP repository root
-% 
-% # 4
-% Set up a directory to contain the data files:
-%   * EEG datasets (BrainAmp .eeg format) from NeuroEnhance Finland pre/post-test
-% Pass the complete path to this directory into the variable 'proj_root', below
-% 
-% # 5
-% On the Matlab console, execute >> neuroenhance_branch_fin
-    
+%
+% Version History:
+% 01.09.2018 Created (Benjamin Cowley, UoH)
+%
+% Copyright(c) 2018:
+% Benjamin Cowley (Ben.Cowley@helsinki.fi)
+%
+% This code is released under the MIT License
+% http://opensource.org/licenses/mit-license.php
+% Please see the file LICENSE for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Setup MAIN parameters
-% set the input directory where your data is stored
-linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
-pc3 = 'D:\LocalData\bcowley';
-if isunix
-    % Code to run on Linux platform
-    proj_root = fullfile(linux{2}, 'PROJECT_NEUROENHANCE', 'Finland', '');
-elseif ispc
-    % Code to run on Windows platform
-    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
-else
-    disp('Platform not supported')
-end
+
 %define collection of groups and paradigms
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
@@ -62,28 +48,34 @@ pipeArr = {@nefi_pipe1,...
            @nefi_peekpipe};
 
 
+%% Setup MAIN parameters
+p = inputParser;
+p.addRequired('proj_root', @ischar)
+p.addParameter('grpix', 1:4, @(x) any(x == 1:4))
+p.addParameter('parix', 1:3, @(x) any(x == 1:3))
+p.addParameter('timept', 1, @(x) x == 1 || x == 2)
+p.addParameter('runps', 1:length(pipeArr), @(x) any(x == 1:length(pipeArr)))
+p.addParameter('pipesrc', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}, @iscell)
+
+p.parse(proj_root, varargin{:});
+Arg = p.Results;
+
+
 %% Runtime options for CTAP:
 STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 
 %You can parameterize the sources for each pipe
-if nargin < 5, pipesrc = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}; end
-pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', pipesrc'];
+pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
 
-%You can run only a subset of pipes, e.g. 2:length(pipeArr)
-if nargin < 4, runps = 1:length(pipeArr); end
-
-%PICK YOUR TIMEPOINT HERE! PRE or POST...
-if nargin < 3, timept = 1; end
-ctapID = ctapID{timept};
+%Set timepoint here: PRE or POST...
+ctapID = ctapID{Arg.timept};
 
 %Subsetting groups and paradigms
-if nargin < 2, parix = 1:3; end
-if nargin < 1, grpix = 1:4; end
-group_dir = group_dir(grpix);
-grp_short_name = grp_short_name(grpix);
-para_dir = para_dir(parix);
-par_short_name = par_short_name(parix);
+group_dir = group_dir(Arg.grpix);
+grp_short_name = grp_short_name(Arg.grpix);
+para_dir = para_dir(Arg.parix);
+par_short_name = par_short_name(Arg.parix);
 
 
 %% Loop the available data sources
