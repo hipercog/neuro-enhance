@@ -30,4 +30,5 @@ Set up a directory to contain the data files:
 
 # 5
 On the Matlab console, execute >> neuroenhance_branch_fin
+
 Parameterise as wished, see code for details
