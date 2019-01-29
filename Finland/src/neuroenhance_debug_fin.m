@@ -19,7 +19,7 @@ grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
 par_short_name = {'AV' 'Multi' 'Swi'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
-ctapID = {'pre' 'post'};
+ctapID = {'pre_dbg_preslog' 'post_dbg_preslog'};
 
 %Select pipe array and first and last pipe to run
 pipeArr = {@nefi_pipe1,...
@@ -37,7 +37,7 @@ pipeArr = {@nefi_pipe1,...
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
 runps = 1;%[5:6 9];
 
-STOP_ON_ERROR = true;
+STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
@@ -45,7 +45,8 @@ gix = 2;
 pix = 2;
 % use sbj_filt to select all (or a subset) of available recordings
 bad_preslog_con_mul = [101 104 106:109 163:165 172];
-grpXsbj_filt = {130:134 bad_preslog_con_mul 'all' 'all'}; %setdiff(1:12, [3 7]);
+% grpXsbj_filt = {'all' 'all' 'all' 'all'};
+grpXsbj_filt = {[] 164 [] []};
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 2;

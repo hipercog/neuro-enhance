@@ -20,12 +20,13 @@ px = cell2mat(cellfun(@(x) contains(eventfile, x, 'Ig', true), Arg.proto, 'Un', 
 isswitch = px(3);
 
 % prompt mode asks for some parameters and allows retrying
+prompt = true;
 %   -->  disable if looping
 % prompt = false;
 
 
 %% Combine events in EEG
-[EEG, allclear, ~, ~] = combine_events(EEG, eventfile, isswitch);
+[EEG, allclear, ~, ~] = combine_events(EEG, eventfile, isswitch, prompt);
 
 EEG.CTAP.err.preslog_evt = allclear;
 

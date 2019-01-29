@@ -3,7 +3,7 @@ function [Cfg, out] = nefi_cfg(project_root_folder, group_dir, para_dir, ID)
 
     %% Fixed path options
     data_dir = {'FIN_PRETEST' 'FIN_POSTEST'};
-    idx = find(contains(data_dir, ID, 'IgnoreCase', true));
+    idx = find(contains(data_dir, ID(1:3), 'IgnoreCase', true));
     data_dir = data_dir{idx};
     anal_dir = 'ANALYSIS';
 

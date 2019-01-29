@@ -68,27 +68,27 @@ while tryagain
     
     % Define the event no to be used for syncing (in eeg data)
     syncevent = 2;
-%     % If in prompt mode
-%     if prompt
-%         syncevent = input('Which eeg trigger no. should be used for syncing? (To use default, press Enter): ');
-%         if isempty(syncevent) || ~(isnumeric(syncevent))
-%             syncevent = 2;
-%         end
-%     end
+    % If in prompt mode
+    if prompt
+        syncevent = input('Which eeg trigger no. should be used for syncing? (To use default, press Enter): ');
+        if isempty(syncevent) || ~(isnumeric(syncevent))
+            syncevent = 2;
+        end
+    end
     
     % Try to sync
     pres.newlatency = calculate_latencies(...
-                            eegfile.event, pres, syncevent, eegfile, prompt);
+                        eegfile.event, pres, syncevent, eegfname, prompt);
     
     % Define the tolerance
     tolerance = 11;
-%     % If in prompt mode
-%     if prompt
-%         tolerance = input('How many samples of tolerance for matching? (To use default 11, press Enter): ');
-%         if isempty(tolerance) || ~(isnumeric(tolerance))
-%            tolerance = 11;
-%         end
-%     end
+    % If in prompt mode
+    if prompt
+        tolerance = input('How many samples of tolerance for matching? (To use default 11, press Enter): ');
+        if isempty(tolerance) || ~(isnumeric(tolerance))
+           tolerance = 11;
+        end
+    end
 
     % Try to match
     [newevent, bad_log_ind, bad_eeg_ind] = match_events(...
@@ -116,28 +116,28 @@ while tryagain
     end
     
     tryagain = 0;
-%     % Allow for retry or termination (in prompt mode)
-%     if isempty(newevent) && prompt
-%         inp = input('Press Enter to try matching again or [x] to give up. ', 's');
-%         if strcmp(inp, 'x')
-%             disp('Quitting.');
-%             allclear = 0;
-%             EEGOUT = [];
-%             return;
-%         else
-%             tryagain = 1;
-%         end
-%     elseif prompt
-%         inp = input('Press Enter to proceed, [a] to try matching again, or [x] to give up. ', 's');
-%         if strcmp(inp, 'x')
-%             disp('Quitting.');
-%             allclear = 0;
-%             EEGOUT = [];
-%             return;
-%         elseif isempty(inp)
-%             tryagain = 0;
-%         end
-%     end
+    % Allow for retry or termination (in prompt mode)
+    if isempty(newevent) && prompt
+        inp = input('Press Enter to try matching again or [x] to give up. ', 's');
+        if strcmp(inp, 'x')
+            disp('Quitting.');
+            allclear = 0;
+            eegfile = [];
+            return;
+        else
+            tryagain = 1;
+        end
+    elseif prompt
+        inp = input('Press Enter to proceed, [a] to try matching again, or [x] to give up. ', 's');
+        if strcmp(inp, 'x')
+            disp('Quitting.');
+            allclear = 0;
+            eegfile = [];
+            return;
+        elseif isempty(inp)
+            tryagain = 0;
+        end
+    end
 end
 
 % Replace old events with new
@@ -182,48 +182,32 @@ function pres = clean_log(fields, prompt)
         disp('Cleaning Presentation log...')
     end
 
+    data = fields(2:end, :);
+    fields = fields(1, :);
+
     % Find columns
-    for c = 1:length(fields(1,:))
-        if strcmp(fields(1,c), 'Event Type')
-            i_type = c;
-        elseif strcmp(fields(1,c), 'Code')
-            i_code = c;
-        elseif strcmp(fields(1,c), 'Time')
-            i_latency = c;
-        elseif strcmp(fields(1,c), 'Duration')
-            i_dur = c;
-        end
-    end
+    i_type = ismember(fields, 'Event Type');
+    i_code = ismember(fields, 'Code');
+    i_latency = ismember(fields, 'Time');
+    i_dur = ismember(fields, 'Duration');
 
     % Copy and clean
-    latency = fields(:,i_latency);
+    lat = data(:, i_latency);
 
-    for i = 2:length(latency)
-        if ~isnumeric(latency{i}) || isempty(latency{i})
-            indend = i-1;
-            break;
-        elseif i == length(latency)
-            indend = i;
-        end
+    indend = find(cell2mat(cellfun(...
+                    @(x) ~isnumeric(x) | isempty(x), lat, 'Un', 0)), 1) - 1;
+    if isempty(indend)
+        indend = length(lat);
     end
 
-    latency = latency(2:indend);
-
-    type = fields(:,i_type);
-    type = type(2:indend);
-
-    code = fields(:,i_code);
-    code = code(2:indend);
-
-    duration = fields(:,i_dur);
-    duration = duration(2:indend);
+    latency = cell2mat(lat(1:indend));
+    type = data(1:indend, i_type);
+    code = data(1:indend, i_code);
+    duration = data(1:indend, i_dur);
 
     % replace empty duration cells with zeros
-    for i = 1:length(duration)
-        if isempty(duration{i})
-            duration{i} = 0;
-        end
-    end
+    duration(cell2mat(cellfun(@isempty, duration, 'Un', 0))) = {0};
+    duration = cell2mat(duration);
 
     if prompt
         disp('Done.')
@@ -263,23 +247,14 @@ function newlatency = calculate_latencies(event, pres, syncevent, eegname, promp
         disp('Calculating latencies and drifts...')
     end
 
-    diff = event(syncevent).latency - pres.latency{1}*0.05;
-    newlatency = pres.latency;
-
-    for i = 1:length(newlatency)
-        newlatency{i} = newlatency{i}*0.05 + diff;
-    end
+    offest = event(syncevent).latency - pres.latency(1) * 0.05;
+    
+    newlatency = int64((pres.latency .* 0.05) + offest);
 
     % See whether there are drifts
-    drifts = zeros(1,length(newlatency));
-    if length(event)-1-syncevent < length(newlatency)
-        k = length(event)-syncevent;
-    else
-        k = length(newlatency);
-    end
-
-    for i = 1:k
-        drifts(i) = event(syncevent-1+i).latency - newlatency{i};
+    drifts = zeros(1, length(newlatency));
+    for i = 1:min(length(event) - syncevent, length(newlatency))
+        drifts(i) = event(syncevent - 1 + i).latency - newlatency(i);
     end
 
     if prompt
@@ -309,7 +284,7 @@ function [newevent, bad_log_ind, bad_eeg_ind] = match_events(...
     end
 
     lkg_j = syncevent-1;
-    bad_log_ind = zeros(length(pres.newlatency), 1);
+    bad_log_ind = false(length(pres.newlatency), 1);
     for i = 1:length(pres.newlatency)
         % if no more event triggers in eeg, stop
         if lkg_j > length(newevent)
@@ -318,7 +293,7 @@ function [newevent, bad_log_ind, bad_eeg_ind] = match_events(...
         end
         for j = lkg_j+1:length(newevent)
             % a match (inside tolerance limits) and copy
-            if abs(newevent(j).latency - pres.newlatency{i}) < tolerance
+            if abs(newevent(j).latency - pres.newlatency(i)) < tolerance
                 % fun stuff bc of editeventvals function!
                 if isnumeric(pres.code{i})
                     newevent(j).type = int2str(pres.code{i});
@@ -326,13 +301,13 @@ function [newevent, bad_log_ind, bad_eeg_ind] = match_events(...
                     newevent(j).type = pres.code{i};
                 end
                 newevent(j).code = pres.type{i};
-                newevent(j).duration = pres.duration{i};
+                newevent(j).duration = pres.duration(i);
                 % a new last known good index
                 lkg_j = j;
                 break;
             end
             % way past useful tolerance -> give up
-            if newevent(j).latency-pres.newlatency{i} > 50
+            if newevent(j).latency - pres.newlatency(i) > 50
                 bad_log_ind(i) = 1;
                 if sum(bad_log_ind) < 10
                     disp(['Giving up on log index ', num2str(i)]);
@@ -375,9 +350,9 @@ function [add_ok, not_ok_mask] = check_adding(bad_log_vec, pres, tolerance)
     min_dists = bad_log_ind;
     for i = 2:length(bad_log_ind)
         j = bad_log_ind(i);
-        if j < size(pres.newlatency,2) && j > 1
+        if j < size(pres.newlatency,1) && j > 1
             lats = pres.newlatency(j-1:j+1);
-            min_dists(i) = floor(min([lats{2}-lats{1} lats{3}-lats{2}]));
+            min_dists(i) = floor(min([lats(2) - lats(1) lats(3) - lats(2)]));
         end
     end
     add_ok = max(min_dists) < tolerance;
@@ -399,7 +374,7 @@ end
 function EEG = add_unresolved(EEG, bad_log_ind, syncevent, tolerance, pres, prompt)
 
     bad_log_ind(find(bad_log_ind, 1)) = 0;
-    badpres = pres(bad_log_ind,:);
+    badpres = pres(bad_log_ind, :);
 
     if prompt
         disp('Adding unresolved events...');
@@ -415,19 +390,22 @@ function EEG = add_unresolved(EEG, bad_log_ind, syncevent, tolerance, pres, prom
         end
         for j = lkg_j+1:length(EEG.event)
             % a match --> add event
-            if abs(EEG.event(j).latency - badpres.newlatency{i}) < tolerance
+            if abs(EEG.event(j).latency - badpres.newlatency(i)) < tolerance
                 eegtime = EEG.event(j).latency;
-                row = badpres{i,:};
+%                 row = badpres(i,:);
                 % more fun stuff bc of editeventvals!
-                code = row{3};
-                if isnumeric(row{4}) 
-                    type = int2str(row{4});
-                else
-                    type = row{4}; 
+                code = badpres.code{i};
+                if isnumeric(code)
+                    code = int2str(code);
                 end
+                type = badpres.type{i};
+                if isnumeric(type)
+                    type = int2str(type);
+                end
+                dur = badpres.duration(i) / EEG.srate;
                 % index latency duration channel bvtime bvmknum type code
-                EEG = pop_editeventvals(EEG, 'add', {j+1 eegtime/EEG.srate ...
-                    row{2}/EEG.srate 0 [] 0 type code});
+                EEG = pop_editeventvals(EEG, 'add', {...
+                    j+1 eegtime/EEG.srate dur 0 [] 0 type code});
                 if prompt
                     disp(['Event was added at latency ' int2str(eegtime) '.']);
                 end
@@ -436,8 +414,8 @@ function EEG = add_unresolved(EEG, bad_log_ind, syncevent, tolerance, pres, prom
                 break
             end
             % way past useful tolerance -> give up
-            if EEG.event(j).latency - badpres.newlatency{i} > 50
-                disp('Trouble! This shouldn''t happen - event wasn''t added!');
+            if EEG.event(j).latency - badpres.newlatency(i) > 50
+                disp('Trouble! This should not happen - event not added!');
                 break
             end
         end
