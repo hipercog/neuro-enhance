@@ -38,9 +38,9 @@ OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
 gix = 1;
-pix = 4;
+pix = 1;
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {105020102 'all' 105030302}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {'all' 'all' [105030307]}; %setdiff(1:12, [3 7]);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 1;
