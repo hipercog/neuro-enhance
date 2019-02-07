@@ -19,28 +19,26 @@ function [Cfg, out] = nebr_epout(Cfg)
     time = [[-100 500];%parameterise this in case needs changed later
             [-100 500];
             [-100 500]];
-    evtype = {{{'sound_NOTNOV'}
-              {'sound_NOV'} 
-              {'pic_ANIMALnn' 'pic_THINGnn'}
-              {'pic_ANIMALnov' 'pic_THINGnov'}};
-            {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'};
-            {{'std1'
-            'std_aft1'
-            'std_aft2'
-            'std_aft3'}
-            {'Cat_A_S1_Cat_V'
-            'Cat_A_S2_Cat_V'
-            'Dog_A_S1_Dog_V'
-            'Dog_A_S2_Dog_V'}
-            {'Cat_A_S1_Dog_V'
-            'Cat_A_S2_Dog_V'
-            'Dog_A_S1_Cat_V'
-            'Dog_A_S2_Cat_V'}};
-            {''}};
-    newevs = {{'std' 'novel' 'pic_NNo' 'pic_Nov'}
+    evtype = {{{'DI51'}
+              {'DIN1' 'DIN2' 'DIN3' 'DIN4' 'DIN5' 'DIN6' 'DIN7' 'DIN8' 'DIN9' 'DI10' 'DI11' 'DI12' 'DI13' 'DI14' 'DI15' 'DI16' 'DI17' 'DI18' 'DI19' 'DI20' 'DI21' 'DI22' 'DI23' 'DI24' 'DI25' 'DI26' 'DI27' 'DI28' 'DI29' 'DI30' 'DI31' 'DI32' 'DI33' 'DI34'}
+              {'D101' 'D102' 'D103' 'D104' 'D105' 'D106' 'D107' 'D108' 'D109' 'D110' 'D111' 'D112' 'D113' 'D114' 'D115' 'D116' 'D117' 'D118' 'D119' 'D120' 'D121' 'D122' 'D123' 'D124' 'D125' 'D126' 'D127' 'D128' 'D129' 'D130' 'D131' 'D132' 'D133' 'D134'}};
+            {'DIN5' 'DIN2' 'DIN3' 'DIN8' 'DIN4' 'DIN6' 'DIN7' 'DIN9' 'DIN1'};
+            {{'DIN1'}
+            {'DI21' 'DI31'}
+            {'DI22' 'DI32'}};
+            {{'DIN1'}
+            {'DIN2' }
+            {'DIN3' }
+            {'DIN4'}
+            {'DIN5' }
+            {'DIN6'}
+            {'DIN7'}
+            {'DIN8' 'DIN9'}
+            {'D101' 'DI10'}}};
+    newevs = {{'std' 'novel' 'pic'}
         {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'}
         {'std' 'AV_same' 'AV_diff'}
-        {''}};
+        {'std_key' 'std_rhythm' 'std' 'std_timbre' 'key' 'melody' 'tune' 'timbre' 'rhythm'}};
     match = {'starts' 'exact' 'exact' '?'};
     protos = {'ATTE' 'AV' 'MULT' 'MUSM'};
     pix = contains(protos, Cfg.MC.export_name_root);
@@ -55,7 +53,7 @@ function [Cfg, out] = nebr_epout(Cfg)
                         @CTAP_event_agg,...
                         @CTAP_clock_stop };
     stepSet(i).id = [num2str(i) '_epoch'];
-    
+
     i = i + 1; %next stepSet
     stepSet(i).funH = repmat({@CTAP_export_data}, 1, numel(newevs{pix}));
     stepSet(i).id = [num2str(i) '_export'];
@@ -71,7 +69,7 @@ function [Cfg, out] = nebr_epout(Cfg)
         'channels', {{'F3' 'Fz' 'F4' 'C3' 'Cz' 'C4' 'P3' 'Pz' 'P4'}},...
         'method', 'eegthresh',...
         'uV_thresh', [-120 120]);
-    %TODO: Use EGI-chlocs for selected channels to include 
+    %TODO: Use EGI-chlocs for selected channels to include
 
     out.event_agg = struct(...
         'evtype', evtype(pix),...
