@@ -3,7 +3,7 @@
 %% Setup MAIN parameters
 % set the input directory where your data is stored
 linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
-pc3 = 'D:\LocalData\bcowley';
+pc3 = 'D:\';
 if isunix
     % Code to run on Linux platform
     proj_root = fullfile(linux{2}, 'PROJECT_NEUROENHANCE', 'Finland', '');
@@ -41,21 +41,21 @@ STOP_ON_ERROR = false;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 2;
-pix = 2;
+gix = 1:4;
+pix = 1:3;
 % use sbj_filt to select all (or a subset) of available recordings
 bad_preslog_con_mul = [101 104 106:109 163:165 172];
-% grpXsbj_filt = {'all' 'all' 'all' 'all'};
-grpXsbj_filt = {[] 164 [] []};
+grpXsbj_filt = {'all' 'all' 'all' 'all'};
+% grpXsbj_filt = {[] [] 158 []};
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
-timept = 2;
-    
+timept = 1;
+
 %You can parameterize the sources for each pipe
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
                 , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
 
-            
+
 %% Use runtime options
 group_dir = group_dir(gix);
 grpXsbj_filt = grpXsbj_filt(gix);
