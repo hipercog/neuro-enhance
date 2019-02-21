@@ -39,8 +39,8 @@ function [Cfg, out] = nebr_epout(Cfg)
         {'dur' 'freq1' 'freq2' 'gap' 'int' 'loc1' 'loc2' 'novel' 'stand'}
         {'std' 'AV_same' 'AV_diff'}
         {'std_key' 'std_rhythm' 'std' 'std_timbre' 'key' 'melody' 'tune' 'timbre' 'rhythm'}};
-    match = {'starts' 'exact' 'exact' 'exact'};
-    protos = {'ATTE' 'AV' 'MULT' 'MUSM'};
+    match = {'exact' 'exact' 'exact' 'exact'};
+    protos = {'AV' 'MULT' 'ATTE' 'MUSM'};
     pix = contains(protos, Cfg.MC.export_name_root);
     epoch_evtype = {unpackCellStr(evtype(pix))};
 
