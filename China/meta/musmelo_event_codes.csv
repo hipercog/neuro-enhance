@@ -1,0 +1,2161 @@
+"evt","SOA","Latency","Offset","evt_num","evt_descr","note"
+"DIN1",0,52006,0,1,"std_key","standard for key"
+"DIN2",349,52355,349,2,"std_rhythm","standard for rhythm"
+"DIN3",180,52535,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,52895,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,53075,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,53435,360,4,"std_timbre","standard for timbre"
+"DIN1",710,54145,710,1,"std_key","standard for key"
+"DIN2",360,54505,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,54685,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,55045,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,55225,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,55585,360,4,"std_timbre","standard for timbre"
+"DIN5",710,56295,710,5,"key","key change"
+"DI22",360,56655,360,22,NA,NA
+"DI23",180,56835,180,23,NA,NA
+"DI22",360,57195,360,22,NA,NA
+"DI23",180,57375,180,23,NA,NA
+"DI24",360,57735,360,24,NA,NA
+"DIN1",710,58445,710,1,"std_key","standard for key"
+"DIN2",360,58805,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,58985,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,59165,180,14,NA,NA
+"DIN3",360,59525,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,59885,360,4,"std_timbre","standard for timbre"
+"DIN1",710,60595,710,1,"std_key","standard for key"
+"DIN2",360,60955,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,61135,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,61315,180,6,"melody","melody change"
+"DI14",360,61675,360,14,NA,NA
+"DIN4",360,62035,360,4,"std_timbre","standard for timbre"
+"DIN5",710,62745,710,5,"key","key change"
+"DI22",360,63105,360,22,NA,NA
+"DI22",180,63285,180,22,NA,NA
+"DI23",180,63465,180,23,NA,NA
+"DI23",360,63825,360,23,NA,NA
+"DIN9",360,64185,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,64885,700,1,"std_key","standard for key"
+"DIN2",360,65245,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,65425,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,65605,180,6,"melody","melody change"
+"DI14",360,65965,360,14,NA,NA
+"DI15",360,66325,360,15,NA,NA
+"DIN5",710,67035,710,5,"key","key change"
+"D101",360,67395,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,67755,360,13,NA,NA
+"DI13",180,67935,180,13,NA,NA
+"DIN8",180,68115,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,68475,360,4,"std_timbre","standard for timbre"
+"DIN1",710,69185,710,1,"std_key","standard for key"
+"DIN3",360,69545,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,69905,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,70085,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,70265,180,6,"melody","melody change"
+"DIN9",360,70625,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,71335,710,1,"std_key","standard for key"
+"DIN7",360,71695,360,7,"tune","mistuning"
+"DI13",360,72055,360,13,NA,NA
+"DIN2",180,72235,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,72415,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,72775,360,4,"std_timbre","standard for timbre"
+"DIN1",710,73485,710,1,"std_key","standard for key"
+"DIN3",360,73845,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,74205,360,2,"std_rhythm","standard for rhythm"
+"D101",180,74385,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,74745,360,13,NA,NA
+"DIN4",180,74925,180,4,"std_timbre","standard for timbre"
+"DIN1",710,75635,710,1,"std_key","standard for key"
+"DIN3",360,75995,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,76355,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,76535,180,7,"tune","mistuning"
+"DI13",360,76895,360,13,NA,NA
+"DIN9",180,77075,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,77785,710,1,"std_key","standard for key"
+"DIN3",360,78145,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,78505,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,78685,180,6,"melody","melody change"
+"DI13",360,79045,360,13,NA,NA
+"DIN4",180,79225,180,4,"std_timbre","standard for timbre"
+"DIN1",710,79935,710,1,"std_key","standard for key"
+"DIN3",360,80295,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,80655,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,81015,360,13,NA,NA
+"DIN2",180,81195,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,81375,180,4,"std_timbre","standard for timbre"
+"DIN1",710,82085,710,1,"std_key","standard for key"
+"DIN7",360,82445,360,7,"tune","mistuning"
+"DI14",360,82805,360,14,NA,NA
+"DIN2",360,83165,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,83345,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,83525,180,4,"std_timbre","standard for timbre"
+"DIN1",710,84235,710,1,"std_key","standard for key"
+"DIN3",360,84595,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,84955,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,85135,180,13,NA,NA
+"DI13",360,85495,360,13,NA,NA
+"DI15",180,85675,180,15,NA,NA
+"DIN1",710,86385,710,1,"std_key","standard for key"
+"DIN3",360,86745,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,87105,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,87285,180,6,"melody","melody change"
+"DI13",360,87645,360,13,NA,NA
+"DIN4",180,87825,180,4,"std_timbre","standard for timbre"
+"DIN1",710,88535,710,1,"std_key","standard for key"
+"DIN3",360,88895,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,89255,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,89435,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,89615,180,14,NA,NA
+"DIN4",360,89975,360,4,"std_timbre","standard for timbre"
+"DIN1",710,90685,710,1,"std_key","standard for key"
+"DIN8",360,91045,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,91405,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,91585,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,91765,180,6,"melody","melody change"
+"DI15",360,92125,360,15,NA,NA
+"DIN5",710,92835,710,5,"key","key change"
+"DI23",360,93195,360,23,NA,NA
+"DI22",360,93555,360,22,NA,NA
+"DI22",180,93735,180,22,NA,NA
+"DIN8",180,93915,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,94275,360,4,"std_timbre","standard for timbre"
+"DIN1",700,94975,700,1,"std_key","standard for key"
+"DIN3",360,95335,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,95695,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,96055,360,13,NA,NA
+"DI13",180,96235,180,13,NA,NA
+"DIN4",180,96415,180,4,"std_timbre","standard for timbre"
+"DIN1",710,97125,710,1,"std_key","standard for key"
+"DIN3",360,97485,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,97845,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,98205,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,98385,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,98565,180,4,"std_timbre","standard for timbre"
+"DIN5",710,99275,710,5,"key","key change"
+"DI23",350,99625,350,23,NA,NA
+"DI10",360,99985,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,100165,180,14,NA,NA
+"DI13",360,100525,360,13,NA,NA
+"DI24",180,100705,180,24,NA,NA
+"DIN1",710,101415,710,1,"std_key","standard for key"
+"DIN3",360,101775,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,102135,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,102315,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,102675,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,102855,180,4,"std_timbre","standard for timbre"
+"DIN1",710,103565,710,1,"std_key","standard for key"
+"DIN3",360,103925,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,104285,360,2,"std_rhythm","standard for rhythm"
+"DIN6",170,104455,170,6,"melody","melody change"
+"DI13",360,104815,360,13,NA,NA
+"DIN4",180,104995,180,4,"std_timbre","standard for timbre"
+"DIN1",710,105705,710,1,"std_key","standard for key"
+"DIN4",360,106065,360,4,"std_timbre","standard for timbre"
+"DI13",360,106425,360,13,NA,NA
+"DIN3",180,106605,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,106965,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,107145,180,4,"std_timbre","standard for timbre"
+"DIN1",710,107855,710,1,"std_key","standard for key"
+"DIN3",360,108215,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,108575,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,108755,180,6,"melody","melody change"
+"DI13",360,109115,360,13,NA,NA
+"DIN4",180,109295,180,4,"std_timbre","standard for timbre"
+"DIN1",710,110005,710,1,"std_key","standard for key"
+"DIN3",360,110365,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,110725,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,110905,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,111265,360,2,"std_rhythm","standard for rhythm"
+"DIN4",170,111435,170,4,"std_timbre","standard for timbre"
+"DIN1",710,112145,710,1,"std_key","standard for key"
+"DIN3",360,112505,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,112865,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,113045,180,6,"melody","melody change"
+"DI13",360,113405,360,13,NA,NA
+"DIN4",180,113585,180,4,"std_timbre","standard for timbre"
+"DIN1",710,114295,710,1,"std_key","standard for key"
+"DIN3",360,114655,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,115015,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,115195,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,115555,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,115735,180,4,"std_timbre","standard for timbre"
+"DIN5",710,116445,710,5,"key","key change"
+"DI23",360,116805,360,23,NA,NA
+"DI22",360,117165,360,22,NA,NA
+"DI23",180,117345,180,23,NA,NA
+"DI22",360,117705,360,22,NA,NA
+"DI24",180,117885,180,24,NA,NA
+"DIN1",710,118595,710,1,"std_key","standard for key"
+"DIN3",360,118955,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,119315,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,119495,180,6,"melody","melody change"
+"DI13",350,119845,350,13,NA,NA
+"DIN9",180,120025,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,120725,700,1,"std_key","standard for key"
+"DIN7",360,121085,360,7,"tune","mistuning"
+"DI13",360,121445,360,13,NA,NA
+"DIN3",180,121625,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,121975,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,122155,180,4,"std_timbre","standard for timbre"
+"DIN5",710,122865,710,5,"key","key change"
+"DI23",360,123225,360,23,NA,NA
+"DI22",360,123585,360,22,NA,NA
+"DI23",180,123765,180,23,NA,NA
+"DI22",360,124125,360,22,NA,NA
+"DI24",180,124305,180,24,NA,NA
+"DIN1",710,125015,710,1,"std_key","standard for key"
+"DIN3",360,125375,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,125735,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,125915,180,7,"tune","mistuning"
+"DI13",360,126275,360,13,NA,NA
+"DIN4",170,126445,170,4,"std_timbre","standard for timbre"
+"DIN5",710,127155,710,5,"key","key change"
+"DIN8",360,127515,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,127875,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,128055,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,128235,180,14,NA,NA
+"DIN4",360,128595,360,4,"std_timbre","standard for timbre"
+"DIN1",710,129305,710,1,"std_key","standard for key"
+"DIN7",359,129664,359,7,"tune","mistuning"
+"DI13",350,130014,350,13,NA,NA
+"DIN2",179,130193,179,2,"std_rhythm","standard for rhythm"
+"DIN3",182,130375,182,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,130735,360,4,"std_timbre","standard for timbre"
+"DIN5",710,131445,710,5,"key","key change"
+"DI10",359,131804,359,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,131984,180,13,NA,NA
+"DIN3",180,132164,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",361,132525,361,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",359,132884,359,4,"std_timbre","standard for timbre"
+"DIN1",711,133595,711,1,"std_key","standard for key"
+"DIN2",359,133954,359,2,"std_rhythm","standard for rhythm"
+"DIN2",180,134134,180,2,"std_rhythm","standard for rhythm"
+"DIN3",181,134315,181,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,134675,360,7,"tune","mistuning"
+"DI15",359,135034,359,15,NA,NA
+"DIN5",711,135745,711,5,"key","key change"
+"DI22",359,136104,359,22,NA,NA
+"DI22",180,136284,180,22,NA,NA
+"DI23",171,136455,171,23,NA,NA
+"DI23",359,136814,359,23,NA,NA
+"DIN9",360,137174,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,137884,710,1,"std_key","standard for key"
+"DIN2",360,138244,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,138424,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,138604,180,7,"tune","mistuning"
+"DI14",360,138964,360,14,NA,NA
+"DIN4",361,139325,361,4,"std_timbre","standard for timbre"
+"DIN5",709,140034,709,5,"key","key change"
+"DI22",361,140395,361,22,NA,NA
+"DI22",180,140575,180,22,NA,NA
+"DI23",180,140755,180,23,NA,NA
+"DI23",359,141114,359,23,NA,NA
+"DI24",360,141474,360,24,NA,NA
+"DIN1",710,142184,710,1,"std_key","standard for key"
+"DIN2",360,142544,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,142724,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,142904,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,143264,360,7,"tune","mistuning"
+"DI15",351,143615,351,15,NA,NA
+"DIN5",710,144325,710,5,"key","key change"
+"DI22",360,144685,360,22,NA,NA
+"DI22",179,144864,179,22,NA,NA
+"DI23",180,145044,180,23,NA,NA
+"DI23",361,145405,361,23,NA,NA
+"DIN9",360,145765,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,146475,710,1,"std_key","standard for key"
+"DIN2",359,146834,359,2,"std_rhythm","standard for rhythm"
+"DIN2",180,147014,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,147194,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",361,147555,361,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,147915,360,4,"std_timbre","standard for timbre"
+"DIN1",710,148625,710,1,"std_key","standard for key"
+"DIN2",360,148985,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,149165,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,149525,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,149705,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,150065,360,4,"std_timbre","standard for timbre"
+"DIN1",710,150775,710,1,"std_key","standard for key"
+"DIN2",360,151135,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,151315,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,151675,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,151855,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,152215,360,4,"std_timbre","standard for timbre"
+"DIN5",710,152925,710,5,"key","key change"
+"DI22",360,153285,360,22,NA,NA
+"DI23",179,153464,179,23,NA,NA
+"DI22",360,153824,360,22,NA,NA
+"DI23",181,154005,181,23,NA,NA
+"DI24",360,154365,360,24,NA,NA
+"DIN1",709,155074,709,1,"std_key","standard for key"
+"DIN2",360,155434,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,155614,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,155794,180,14,NA,NA
+"DIN3",360,156154,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,156514,360,4,"std_timbre","standard for timbre"
+"DIN1",710,157224,710,1,"std_key","standard for key"
+"DIN2",360,157584,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,157764,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,157944,180,6,"melody","melody change"
+"DI14",360,158304,360,14,NA,NA
+"DIN4",360,158664,360,4,"std_timbre","standard for timbre"
+"DIN5",710,159374,710,5,"key","key change"
+"DI22",360,159734,360,22,NA,NA
+"DI22",180,159914,180,22,NA,NA
+"DI23",180,160094,180,23,NA,NA
+"DI23",360,160454,360,23,NA,NA
+"DIN9",360,160814,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,161514,700,1,"std_key","standard for key"
+"DIN2",360,161874,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,162054,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,162234,180,6,"melody","melody change"
+"DI14",360,162594,360,14,NA,NA
+"DI15",360,162954,360,15,NA,NA
+"DIN5",710,163664,710,5,"key","key change"
+"D101",360,164024,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,164384,360,13,NA,NA
+"DI13",180,164564,180,13,NA,NA
+"DIN8",180,164744,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,165104,360,4,"std_timbre","standard for timbre"
+"DIN1",710,165814,710,1,"std_key","standard for key"
+"DIN3",360,166174,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,166534,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,166714,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,166894,180,6,"melody","melody change"
+"DIN9",360,167254,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,167964,710,1,"std_key","standard for key"
+"DIN7",360,168324,360,7,"tune","mistuning"
+"DI13",360,168684,360,13,NA,NA
+"DIN2",180,168864,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,169044,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,169404,360,4,"std_timbre","standard for timbre"
+"DIN1",710,170114,710,1,"std_key","standard for key"
+"DIN3",360,170474,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,170834,360,2,"std_rhythm","standard for rhythm"
+"D101",180,171014,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,171374,360,13,NA,NA
+"DIN4",180,171554,180,4,"std_timbre","standard for timbre"
+"DIN1",710,172264,710,1,"std_key","standard for key"
+"DIN3",360,172624,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,172984,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,173164,180,7,"tune","mistuning"
+"DI13",360,173524,360,13,NA,NA
+"DIN9",180,173704,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,174414,710,1,"std_key","standard for key"
+"DIN3",360,174774,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,175134,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,175314,180,6,"melody","melody change"
+"DI13",360,175674,360,13,NA,NA
+"DIN4",180,175854,180,4,"std_timbre","standard for timbre"
+"DIN1",710,176564,710,1,"std_key","standard for key"
+"DIN3",360,176924,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,177284,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,177644,360,13,NA,NA
+"DIN2",180,177824,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,178004,180,4,"std_timbre","standard for timbre"
+"DIN1",710,178714,710,1,"std_key","standard for key"
+"DIN7",360,179074,360,7,"tune","mistuning"
+"DI14",360,179434,360,14,NA,NA
+"DIN2",360,179794,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,179974,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,180154,180,4,"std_timbre","standard for timbre"
+"DIN1",710,180864,710,1,"std_key","standard for key"
+"DIN3",360,181224,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,181584,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,181764,180,13,NA,NA
+"DI13",360,182124,360,13,NA,NA
+"DI15",180,182304,180,15,NA,NA
+"DIN1",710,183014,710,1,"std_key","standard for key"
+"DIN3",360,183374,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,183734,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,183914,180,6,"melody","melody change"
+"DI13",360,184274,360,13,NA,NA
+"DIN4",180,184454,180,4,"std_timbre","standard for timbre"
+"DIN1",710,185164,710,1,"std_key","standard for key"
+"DIN3",360,185524,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,185884,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,186064,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,186244,180,14,NA,NA
+"DIN4",360,186604,360,4,"std_timbre","standard for timbre"
+"DIN1",710,187314,710,1,"std_key","standard for key"
+"DIN8",360,187674,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,188034,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,188214,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,188394,180,6,"melody","melody change"
+"DI15",360,188754,360,15,NA,NA
+"DIN5",710,189464,710,5,"key","key change"
+"DI23",360,189824,360,23,NA,NA
+"DI22",360,190184,360,22,NA,NA
+"DI22",180,190364,180,22,NA,NA
+"DIN8",180,190544,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,190904,360,4,"std_timbre","standard for timbre"
+"DIN1",710,191614,710,1,"std_key","standard for key"
+"DIN3",360,191974,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,192334,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,192694,360,13,NA,NA
+"DI13",180,192874,180,13,NA,NA
+"DIN4",180,193054,180,4,"std_timbre","standard for timbre"
+"DIN1",710,193764,710,1,"std_key","standard for key"
+"DIN3",360,194124,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,194484,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,194844,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,195024,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,195204,180,4,"std_timbre","standard for timbre"
+"DIN5",710,195914,710,5,"key","key change"
+"DI23",360,196274,360,23,NA,NA
+"DI10",360,196634,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,196814,180,14,NA,NA
+"DI13",360,197174,360,13,NA,NA
+"DI24",180,197354,180,24,NA,NA
+"DIN1",710,198064,710,1,"std_key","standard for key"
+"DIN3",360,198424,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,198784,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,198964,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,199324,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,199504,180,4,"std_timbre","standard for timbre"
+"DIN1",710,200214,710,1,"std_key","standard for key"
+"DIN3",360,200574,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,200934,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,201114,180,6,"melody","melody change"
+"DI13",360,201474,360,13,NA,NA
+"DIN4",180,201654,180,4,"std_timbre","standard for timbre"
+"DIN1",710,202364,710,1,"std_key","standard for key"
+"DIN4",360,202724,360,4,"std_timbre","standard for timbre"
+"DI13",360,203084,360,13,NA,NA
+"DIN3",180,203264,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,203614,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,203794,180,4,"std_timbre","standard for timbre"
+"DIN1",710,204504,710,1,"std_key","standard for key"
+"DIN3",360,204864,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,205224,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,205404,180,6,"melody","melody change"
+"DI13",360,205764,360,13,NA,NA
+"DIN4",180,205944,180,4,"std_timbre","standard for timbre"
+"DIN1",710,206654,710,1,"std_key","standard for key"
+"DIN3",360,207014,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,207374,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,207554,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,207914,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,208094,180,4,"std_timbre","standard for timbre"
+"DIN1",710,208804,710,1,"std_key","standard for key"
+"DIN3",360,209164,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,209524,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,209704,180,6,"melody","melody change"
+"DI13",360,210064,360,13,NA,NA
+"DIN4",180,210244,180,4,"std_timbre","standard for timbre"
+"DIN1",710,210954,710,1,"std_key","standard for key"
+"DIN3",360,211314,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,211674,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,211854,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,212214,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,212394,180,4,"std_timbre","standard for timbre"
+"DIN5",710,213104,710,5,"key","key change"
+"DI23",360,213464,360,23,NA,NA
+"DI22",360,213824,360,22,NA,NA
+"DI23",180,214004,180,23,NA,NA
+"DI22",360,214364,360,22,NA,NA
+"DI24",180,214544,180,24,NA,NA
+"DIN1",710,215254,710,1,"std_key","standard for key"
+"DIN3",360,215614,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,215974,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,216154,180,6,"melody","melody change"
+"DI13",350,216504,350,13,NA,NA
+"DIN9",180,216684,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,217384,700,1,"std_key","standard for key"
+"DIN7",360,217744,360,7,"tune","mistuning"
+"DI13",360,218104,360,13,NA,NA
+"DIN3",180,218284,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,218634,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,218814,180,4,"std_timbre","standard for timbre"
+"DIN5",710,219524,710,5,"key","key change"
+"DI23",360,219884,360,23,NA,NA
+"DI22",360,220244,360,22,NA,NA
+"DI23",180,220424,180,23,NA,NA
+"DI22",360,220784,360,22,NA,NA
+"DI24",180,220964,180,24,NA,NA
+"DIN1",710,221674,710,1,"std_key","standard for key"
+"DIN3",360,222034,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,222394,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,222574,180,7,"tune","mistuning"
+"DI13",360,222934,360,13,NA,NA
+"DIN4",180,223114,180,4,"std_timbre","standard for timbre"
+"DIN5",710,223824,710,5,"key","key change"
+"DIN8",360,224184,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,224544,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,224724,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,224904,180,14,NA,NA
+"DIN4",360,225264,360,4,"std_timbre","standard for timbre"
+"DIN1",710,225974,710,1,"std_key","standard for key"
+"DIN7",360,226334,360,7,"tune","mistuning"
+"DI13",350,226684,350,13,NA,NA
+"DIN2",180,226864,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,227044,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,227404,360,4,"std_timbre","standard for timbre"
+"DIN5",710,228114,710,5,"key","key change"
+"DI10",360,228474,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,228654,180,13,NA,NA
+"DIN3",180,228834,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,229194,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,229554,360,4,"std_timbre","standard for timbre"
+"DIN1",710,230264,710,1,"std_key","standard for key"
+"DIN2",360,230624,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,230804,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,230984,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,231344,360,7,"tune","mistuning"
+"DI15",360,231704,360,15,NA,NA
+"DIN5",710,232414,710,5,"key","key change"
+"DI22",360,232774,360,22,NA,NA
+"DI22",180,232954,180,22,NA,NA
+"DI23",180,233134,180,23,NA,NA
+"DI23",360,233494,360,23,NA,NA
+"DIN9",360,233854,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,234564,710,1,"std_key","standard for key"
+"DIN2",360,234924,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,235104,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,235284,180,7,"tune","mistuning"
+"DI14",350,235634,350,14,NA,NA
+"DIN4",360,235994,360,4,"std_timbre","standard for timbre"
+"DIN5",710,236704,710,5,"key","key change"
+"DI22",360,237064,360,22,NA,NA
+"DI22",180,237244,180,22,NA,NA
+"DI23",170,237414,170,23,NA,NA
+"DI23",360,237774,360,23,NA,NA
+"DI24",360,238134,360,24,NA,NA
+"DIN1",710,238844,710,1,"std_key","standard for key"
+"DIN2",360,239204,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,239384,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,239564,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,239924,360,7,"tune","mistuning"
+"DI15",360,240284,360,15,NA,NA
+"DIN5",700,240984,700,5,"key","key change"
+"DI22",360,241344,360,22,NA,NA
+"DI22",180,241524,180,22,NA,NA
+"DI23",180,241704,180,23,NA,NA
+"DI23",360,242064,360,23,NA,NA
+"DIN9",360,242424,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,243134,710,1,"std_key","standard for key"
+"DIN2",360,243494,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,243674,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,243854,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,244214,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,244574,360,4,"std_timbre","standard for timbre"
+"DIN1",710,245284,710,1,"std_key","standard for key"
+"DIN2",360,245644,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,245824,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,246184,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,246364,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,246724,360,4,"std_timbre","standard for timbre"
+"DIN1",710,247434,710,1,"std_key","standard for key"
+"DIN2",360,247794,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,247974,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,248334,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,248514,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,248874,360,4,"std_timbre","standard for timbre"
+"DIN5",710,249584,710,5,"key","key change"
+"DI22",360,249944,360,22,NA,NA
+"DI23",180,250124,180,23,NA,NA
+"DI22",360,250484,360,22,NA,NA
+"DI23",180,250664,180,23,NA,NA
+"DI24",360,251024,360,24,NA,NA
+"DIN1",710,251734,710,1,"std_key","standard for key"
+"DIN2",360,252094,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,252274,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",170,252444,170,14,NA,NA
+"DIN3",360,252804,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,253164,360,4,"std_timbre","standard for timbre"
+"DIN1",710,253874,710,1,"std_key","standard for key"
+"DIN2",360,254234,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,254414,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,254594,180,6,"melody","melody change"
+"DI14",360,254954,360,14,NA,NA
+"DIN4",360,255314,360,4,"std_timbre","standard for timbre"
+"DIN5",710,256024,710,5,"key","key change"
+"DI22",360,256384,360,22,NA,NA
+"DI22",180,256564,180,22,NA,NA
+"DI23",180,256744,180,23,NA,NA
+"DI23",359,257103,359,23,NA,NA
+"DIN9",361,257464,361,9,"timbre2","timbre (end of melody)"
+"DIN1",700,258164,700,1,"std_key","standard for key"
+"DIN2",360,258524,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,258704,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,258884,180,6,"melody","melody change"
+"DI14",360,259244,360,14,NA,NA
+"DI15",350,259594,350,15,NA,NA
+"DIN5",709,260303,709,5,"key","key change"
+"D101",361,260664,361,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,261024,360,13,NA,NA
+"DI13",180,261204,180,13,NA,NA
+"DIN8",180,261384,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,261744,360,4,"std_timbre","standard for timbre"
+"DIN1",710,262454,710,1,"std_key","standard for key"
+"DIN3",360,262814,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,263174,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,263354,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,263534,180,6,"melody","melody change"
+"DIN9",360,263894,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,264604,710,1,"std_key","standard for key"
+"DIN7",360,264964,360,7,"tune","mistuning"
+"DI13",360,265324,360,13,NA,NA
+"DIN2",180,265504,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,265684,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,266044,360,4,"std_timbre","standard for timbre"
+"DIN1",710,266754,710,1,"std_key","standard for key"
+"DIN3",360,267114,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,267474,360,2,"std_rhythm","standard for rhythm"
+"D101",180,267654,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,268014,360,13,NA,NA
+"DIN4",180,268194,180,4,"std_timbre","standard for timbre"
+"DIN1",710,268904,710,1,"std_key","standard for key"
+"DIN3",360,269264,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,269614,350,2,"std_rhythm","standard for rhythm"
+"DIN7",180,269794,180,7,"tune","mistuning"
+"DI13",360,270154,360,13,NA,NA
+"DIN9",180,270334,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,271044,710,1,"std_key","standard for key"
+"DIN3",360,271404,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,271764,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,271944,180,6,"melody","melody change"
+"DI13",360,272304,360,13,NA,NA
+"DIN4",180,272484,180,4,"std_timbre","standard for timbre"
+"DIN1",710,273194,710,1,"std_key","standard for key"
+"DIN3",360,273554,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,273914,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,274274,360,13,NA,NA
+"DIN2",170,274444,170,2,"std_rhythm","standard for rhythm"
+"DIN4",180,274624,180,4,"std_timbre","standard for timbre"
+"DIN1",710,275334,710,1,"std_key","standard for key"
+"DIN7",360,275694,360,7,"tune","mistuning"
+"DI14",360,276054,360,14,NA,NA
+"DIN2",360,276414,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,276594,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,276774,180,4,"std_timbre","standard for timbre"
+"DIN1",710,277484,710,1,"std_key","standard for key"
+"DIN3",360,277844,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,278204,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,278384,180,13,NA,NA
+"DI13",360,278744,360,13,NA,NA
+"DI15",180,278924,180,15,NA,NA
+"DIN1",710,279634,710,1,"std_key","standard for key"
+"DIN3",360,279994,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,280354,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,280534,180,6,"melody","melody change"
+"DI13",360,280894,360,13,NA,NA
+"DIN4",180,281074,180,4,"std_timbre","standard for timbre"
+"DIN1",710,281784,710,1,"std_key","standard for key"
+"DIN3",360,282144,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,282504,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,282684,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,282864,180,14,NA,NA
+"DIN4",360,283224,360,4,"std_timbre","standard for timbre"
+"DIN1",710,283934,710,1,"std_key","standard for key"
+"DIN8",360,284294,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,284654,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,284834,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,285014,180,6,"melody","melody change"
+"DI15",360,285374,360,15,NA,NA
+"DIN5",710,286084,710,5,"key","key change"
+"DI23",360,286444,360,23,NA,NA
+"DI22",360,286804,360,22,NA,NA
+"DI22",180,286984,180,22,NA,NA
+"DIN8",180,287164,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,287524,360,4,"std_timbre","standard for timbre"
+"DIN1",710,288234,710,1,"std_key","standard for key"
+"DIN3",360,288594,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,288954,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,289314,360,13,NA,NA
+"DI13",180,289494,180,13,NA,NA
+"DIN4",180,289674,180,4,"std_timbre","standard for timbre"
+"DIN1",710,290384,710,1,"std_key","standard for key"
+"DIN3",360,290744,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,291104,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,291464,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,291644,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,291824,180,4,"std_timbre","standard for timbre"
+"DIN5",710,292534,710,5,"key","key change"
+"DI23",360,292894,360,23,NA,NA
+"DI10",360,293254,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",170,293424,170,14,NA,NA
+"DI13",360,293784,360,13,NA,NA
+"DI24",180,293964,180,24,NA,NA
+"DIN1",710,294674,710,1,"std_key","standard for key"
+"DIN3",360,295034,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,295394,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,295574,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,295934,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,296114,180,4,"std_timbre","standard for timbre"
+"DIN1",710,296824,710,1,"std_key","standard for key"
+"DIN3",360,297184,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,297544,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,297724,180,6,"melody","melody change"
+"DI13",360,298084,360,13,NA,NA
+"DIN4",180,298264,180,4,"std_timbre","standard for timbre"
+"DIN1",710,298974,710,1,"std_key","standard for key"
+"DIN4",360,299334,360,4,"std_timbre","standard for timbre"
+"DI13",360,299694,360,13,NA,NA
+"DIN3",180,299874,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,300234,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,300414,180,4,"std_timbre","standard for timbre"
+"DIN1",710,301124,710,1,"std_key","standard for key"
+"DIN3",360,301484,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,301844,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,302024,180,6,"melody","melody change"
+"DI13",360,302384,360,13,NA,NA
+"DIN4",180,302564,180,4,"std_timbre","standard for timbre"
+"DIN1",710,303274,710,1,"std_key","standard for key"
+"DIN3",350,303624,350,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,303984,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,304164,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,304524,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,304704,180,4,"std_timbre","standard for timbre"
+"DIN1",710,305414,710,1,"std_key","standard for key"
+"DIN3",360,305774,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,306134,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,306314,180,6,"melody","melody change"
+"DI13",350,306664,350,13,NA,NA
+"DIN4",170,306834,170,4,"std_timbre","standard for timbre"
+"DIN1",710,307544,710,1,"std_key","standard for key"
+"DIN3",360,307904,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,308264,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,308444,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,308804,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,308984,180,4,"std_timbre","standard for timbre"
+"DIN5",710,309694,710,5,"key","key change"
+"DI23",360,310054,360,23,NA,NA
+"DI22",360,310414,360,22,NA,NA
+"DI23",180,310594,180,23,NA,NA
+"DI22",360,310954,360,22,NA,NA
+"DI24",180,311134,180,24,NA,NA
+"DIN1",710,311844,710,1,"std_key","standard for key"
+"DIN3",360,312204,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,312564,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,312744,180,6,"melody","melody change"
+"DI13",350,313094,350,13,NA,NA
+"DIN9",180,313274,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,313974,700,1,"std_key","standard for key"
+"DIN7",360,314334,360,7,"tune","mistuning"
+"DI13",360,314694,360,13,NA,NA
+"DIN3",180,314874,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,315224,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,315404,180,4,"std_timbre","standard for timbre"
+"DIN5",710,316114,710,5,"key","key change"
+"DI23",360,316474,360,23,NA,NA
+"DI22",360,316834,360,22,NA,NA
+"DI23",180,317014,180,23,NA,NA
+"DI22",360,317374,360,22,NA,NA
+"DI24",180,317554,180,24,NA,NA
+"DIN1",710,318264,710,1,"std_key","standard for key"
+"DIN3",360,318624,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,318984,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,319164,180,7,"tune","mistuning"
+"DI13",360,319524,360,13,NA,NA
+"DIN4",180,319704,180,4,"std_timbre","standard for timbre"
+"DIN5",710,320414,710,5,"key","key change"
+"DIN8",360,320774,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,321134,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,321314,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,321494,180,14,NA,NA
+"DIN4",360,321854,360,4,"std_timbre","standard for timbre"
+"DIN1",710,322564,710,1,"std_key","standard for key"
+"DIN7",360,322924,360,7,"tune","mistuning"
+"DI13",350,323274,350,13,NA,NA
+"DIN2",180,323454,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,323634,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,323994,360,4,"std_timbre","standard for timbre"
+"DIN5",710,324704,710,5,"key","key change"
+"DI10",360,325064,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,325244,180,13,NA,NA
+"DIN3",180,325424,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,325784,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,326144,360,4,"std_timbre","standard for timbre"
+"DIN1",710,326854,710,1,"std_key","standard for key"
+"DIN2",360,327214,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,327394,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,327574,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,327934,360,7,"tune","mistuning"
+"DI15",360,328294,360,15,NA,NA
+"DIN5",710,329004,710,5,"key","key change"
+"DI22",360,329364,360,22,NA,NA
+"DI22",180,329544,180,22,NA,NA
+"DI23",180,329724,180,23,NA,NA
+"DI23",360,330084,360,23,NA,NA
+"DIN9",360,330444,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,331154,710,1,"std_key","standard for key"
+"DIN2",360,331514,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,331694,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,331874,180,7,"tune","mistuning"
+"DI14",360,332234,360,14,NA,NA
+"DIN4",360,332594,360,4,"std_timbre","standard for timbre"
+"DIN5",710,333304,710,5,"key","key change"
+"DI22",360,333664,360,22,NA,NA
+"DI22",180,333844,180,22,NA,NA
+"DI23",180,334024,180,23,NA,NA
+"DI23",360,334384,360,23,NA,NA
+"DI24",360,334744,360,24,NA,NA
+"DIN1",710,335454,710,1,"std_key","standard for key"
+"DIN2",360,335814,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,335994,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,336174,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,336534,360,7,"tune","mistuning"
+"DI15",360,336894,360,15,NA,NA
+"DIN5",710,337604,710,5,"key","key change"
+"DI22",360,337964,360,22,NA,NA
+"DI22",180,338144,180,22,NA,NA
+"DI23",180,338324,180,23,NA,NA
+"DI23",360,338684,360,23,NA,NA
+"DIN9",360,339044,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,339754,710,1,"std_key","standard for key"
+"DIN2",360,340114,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,340294,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,340474,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,340834,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,341194,360,4,"std_timbre","standard for timbre"
+"DIN1",710,341904,710,1,"std_key","standard for key"
+"DIN2",360,342264,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,342444,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,342804,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,342984,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,343344,360,4,"std_timbre","standard for timbre"
+"DIN1",710,344054,710,1,"std_key","standard for key"
+"DIN2",360,344414,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,344594,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,344954,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,345134,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,345494,360,4,"std_timbre","standard for timbre"
+"DIN5",710,346204,710,5,"key","key change"
+"DI22",360,346564,360,22,NA,NA
+"DI23",180,346744,180,23,NA,NA
+"DI22",360,347104,360,22,NA,NA
+"DI23",180,347284,180,23,NA,NA
+"DI24",360,347644,360,24,NA,NA
+"DIN1",710,348354,710,1,"std_key","standard for key"
+"DIN2",360,348714,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,348894,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,349074,180,14,NA,NA
+"DIN3",360,349434,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,349794,360,4,"std_timbre","standard for timbre"
+"DIN1",710,350504,710,1,"std_key","standard for key"
+"DIN2",360,350864,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,351044,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,351224,180,6,"melody","melody change"
+"DI14",360,351584,360,14,NA,NA
+"DIN4",360,351944,360,4,"std_timbre","standard for timbre"
+"DIN5",710,352654,710,5,"key","key change"
+"DI22",360,353014,360,22,NA,NA
+"DI22",180,353194,180,22,NA,NA
+"DI23",180,353374,180,23,NA,NA
+"DI23",360,353734,360,23,NA,NA
+"DIN9",360,354094,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,354794,700,1,"std_key","standard for key"
+"DIN2",360,355154,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,355334,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,355514,180,6,"melody","melody change"
+"DI14",360,355874,360,14,NA,NA
+"DI15",360,356234,360,15,NA,NA
+"DIN5",710,356944,710,5,"key","key change"
+"D101",360,357304,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,357664,360,13,NA,NA
+"DI13",180,357844,180,13,NA,NA
+"DIN8",180,358024,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,358384,360,4,"std_timbre","standard for timbre"
+"DIN1",710,359094,710,1,"std_key","standard for key"
+"DIN3",360,359454,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,359814,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,359994,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,360174,180,6,"melody","melody change"
+"DIN9",360,360534,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,361244,710,1,"std_key","standard for key"
+"DIN7",350,361594,350,7,"tune","mistuning"
+"DI13",360,361954,360,13,NA,NA
+"DIN2",180,362134,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,362314,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,362674,360,4,"std_timbre","standard for timbre"
+"DIN1",710,363384,710,1,"std_key","standard for key"
+"DIN3",360,363744,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,364104,360,2,"std_rhythm","standard for rhythm"
+"D101",180,364284,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,364644,360,13,NA,NA
+"DIN4",180,364824,180,4,"std_timbre","standard for timbre"
+"DIN1",710,365534,710,1,"std_key","standard for key"
+"DIN3",360,365894,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,366254,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,366434,180,7,"tune","mistuning"
+"DI13",360,366794,360,13,NA,NA
+"DIN9",180,366974,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,367684,710,1,"std_key","standard for key"
+"DIN3",360,368044,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,368404,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,368584,180,6,"melody","melody change"
+"DI13",360,368944,360,13,NA,NA
+"DIN4",180,369124,180,4,"std_timbre","standard for timbre"
+"DIN1",710,369834,710,1,"std_key","standard for key"
+"DIN3",360,370194,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,370554,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,370914,360,13,NA,NA
+"DIN2",180,371094,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,371274,180,4,"std_timbre","standard for timbre"
+"DIN1",700,371974,700,1,"std_key","standard for key"
+"DIN7",360,372334,360,7,"tune","mistuning"
+"DI14",360,372694,360,14,NA,NA
+"DIN2",360,373054,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,373234,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,373414,180,4,"std_timbre","standard for timbre"
+"DIN1",710,374124,710,1,"std_key","standard for key"
+"DIN3",360,374484,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,374844,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,375024,180,13,NA,NA
+"DI13",360,375384,360,13,NA,NA
+"DI15",180,375564,180,15,NA,NA
+"DIN1",710,376274,710,1,"std_key","standard for key"
+"DIN3",360,376634,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,376994,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,377174,180,6,"melody","melody change"
+"DI13",360,377534,360,13,NA,NA
+"DIN4",180,377714,180,4,"std_timbre","standard for timbre"
+"DIN1",710,378424,710,1,"std_key","standard for key"
+"DIN3",360,378784,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,379144,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,379324,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,379504,180,14,NA,NA
+"DIN4",360,379864,360,4,"std_timbre","standard for timbre"
+"DIN1",710,380574,710,1,"std_key","standard for key"
+"DIN8",360,380934,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,381294,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,381474,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,381654,180,6,"melody","melody change"
+"DI15",360,382014,360,15,NA,NA
+"DIN5",710,382724,710,5,"key","key change"
+"DI23",360,383084,360,23,NA,NA
+"DI22",360,383444,360,22,NA,NA
+"DI22",180,383624,180,22,NA,NA
+"DIN8",180,383804,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,384164,360,4,"std_timbre","standard for timbre"
+"DIN1",710,384874,710,1,"std_key","standard for key"
+"DIN3",360,385234,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,385594,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,385954,360,13,NA,NA
+"DI13",180,386134,180,13,NA,NA
+"DIN4",180,386314,180,4,"std_timbre","standard for timbre"
+"DIN1",710,387024,710,1,"std_key","standard for key"
+"DIN3",360,387384,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,387744,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,388104,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,388284,180,2,"std_rhythm","standard for rhythm"
+"DIN4",170,388454,170,4,"std_timbre","standard for timbre"
+"DIN5",710,389164,710,5,"key","key change"
+"DI23",360,389524,360,23,NA,NA
+"DI10",360,389884,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,390064,180,14,NA,NA
+"DI13",360,390424,360,13,NA,NA
+"DI24",180,390604,180,24,NA,NA
+"DIN1",710,391314,710,1,"std_key","standard for key"
+"DIN3",360,391674,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,392034,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,392214,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,392574,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,392754,180,4,"std_timbre","standard for timbre"
+"DIN1",710,393464,710,1,"std_key","standard for key"
+"DIN3",360,393824,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,394184,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,394364,180,6,"melody","melody change"
+"DI13",360,394724,360,13,NA,NA
+"DIN4",180,394904,180,4,"std_timbre","standard for timbre"
+"DIN1",710,395614,710,1,"std_key","standard for key"
+"DIN4",360,395974,360,4,"std_timbre","standard for timbre"
+"DI13",360,396334,360,13,NA,NA
+"DIN3",180,396514,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,396874,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,397054,180,4,"std_timbre","standard for timbre"
+"DIN1",710,397764,710,1,"std_key","standard for key"
+"DIN3",360,398124,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,398484,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,398664,180,6,"melody","melody change"
+"DI13",360,399024,360,13,NA,NA
+"DIN4",180,399204,180,4,"std_timbre","standard for timbre"
+"DIN1",710,399914,710,1,"std_key","standard for key"
+"DIN3",360,400274,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,400634,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,400814,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,401174,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,401354,180,4,"std_timbre","standard for timbre"
+"DIN1",710,402064,710,1,"std_key","standard for key"
+"DIN3",360,402424,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,402784,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,402964,180,6,"melody","melody change"
+"DI13",360,403324,360,13,NA,NA
+"DIN4",180,403504,180,4,"std_timbre","standard for timbre"
+"DIN1",710,404214,710,1,"std_key","standard for key"
+"DIN3",360,404574,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,404934,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,405114,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,405474,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,405654,180,4,"std_timbre","standard for timbre"
+"DIN5",710,406364,710,5,"key","key change"
+"DI23",360,406724,360,23,NA,NA
+"DI22",360,407084,360,22,NA,NA
+"DI23",180,407264,180,23,NA,NA
+"DI22",360,407624,360,22,NA,NA
+"DI24",180,407804,180,24,NA,NA
+"DIN1",710,408514,710,1,"std_key","standard for key"
+"DIN3",360,408874,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,409234,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,409414,180,6,"melody","melody change"
+"DI13",350,409764,350,13,NA,NA
+"DIN9",180,409944,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,410644,700,1,"std_key","standard for key"
+"DIN7",360,411004,360,7,"tune","mistuning"
+"DI13",360,411364,360,13,NA,NA
+"DIN3",180,411544,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,411894,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,412074,180,4,"std_timbre","standard for timbre"
+"DIN5",710,412784,710,5,"key","key change"
+"DI23",360,413144,360,23,NA,NA
+"DI22",360,413504,360,22,NA,NA
+"DI23",180,413684,180,23,NA,NA
+"DI22",360,414044,360,22,NA,NA
+"DI24",180,414224,180,24,NA,NA
+"DIN1",710,414934,710,1,"std_key","standard for key"
+"DIN3",360,415294,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,415654,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,415834,180,7,"tune","mistuning"
+"DI13",360,416194,360,13,NA,NA
+"DIN4",180,416374,180,4,"std_timbre","standard for timbre"
+"DIN5",710,417084,710,5,"key","key change"
+"DIN8",360,417444,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,417804,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,417984,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,418164,180,14,NA,NA
+"DIN4",360,418524,360,4,"std_timbre","standard for timbre"
+"DIN1",710,419234,710,1,"std_key","standard for key"
+"DIN7",360,419594,360,7,"tune","mistuning"
+"DI13",350,419944,350,13,NA,NA
+"DIN2",180,420124,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,420304,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,420664,360,4,"std_timbre","standard for timbre"
+"DIN5",710,421374,710,5,"key","key change"
+"DI10",360,421734,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,421914,180,13,NA,NA
+"DIN3",180,422094,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,422454,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,422814,360,4,"std_timbre","standard for timbre"
+"DIN1",710,423524,710,1,"std_key","standard for key"
+"DIN2",360,423884,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,424064,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,424244,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",350,424594,350,7,"tune","mistuning"
+"DI15",360,424954,360,15,NA,NA
+"DIN5",710,425664,710,5,"key","key change"
+"DI22",360,426024,360,22,NA,NA
+"DI22",180,426204,180,22,NA,NA
+"DI23",180,426384,180,23,NA,NA
+"DI23",360,426744,360,23,NA,NA
+"DIN9",360,427104,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,427814,710,1,"std_key","standard for key"
+"DIN2",360,428174,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,428354,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,428534,180,7,"tune","mistuning"
+"DI14",360,428894,360,14,NA,NA
+"DIN4",360,429254,360,4,"std_timbre","standard for timbre"
+"DIN5",700,429954,700,5,"key","key change"
+"DI22",360,430314,360,22,NA,NA
+"DI22",180,430494,180,22,NA,NA
+"DI23",180,430674,180,23,NA,NA
+"DI23",360,431034,360,23,NA,NA
+"DI24",360,431394,360,24,NA,NA
+"DIN1",710,432104,710,1,"std_key","standard for key"
+"DIN2",360,432464,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,432644,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,432824,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,433184,360,7,"tune","mistuning"
+"DI15",360,433544,360,15,NA,NA
+"DIN5",710,434254,710,5,"key","key change"
+"DI22",350,434604,350,22,NA,NA
+"DI22",180,434784,180,22,NA,NA
+"DI23",180,434964,180,23,NA,NA
+"DI23",360,435324,360,23,NA,NA
+"DIN9",360,435684,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,436394,710,1,"std_key","standard for key"
+"DIN2",360,436754,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,436934,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,437114,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,437474,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,437834,360,4,"std_timbre","standard for timbre"
+"DIN1",710,438544,710,1,"std_key","standard for key"
+"DIN2",360,438904,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,439084,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,439444,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,439624,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,439984,360,4,"std_timbre","standard for timbre"
+"DIN1",710,440694,710,1,"std_key","standard for key"
+"DIN2",360,441054,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,441234,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,441594,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,441774,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,442134,360,4,"std_timbre","standard for timbre"
+"DIN5",710,442844,710,5,"key","key change"
+"DI22",360,443204,360,22,NA,NA
+"DI23",180,443384,180,23,NA,NA
+"DI22",360,443744,360,22,NA,NA
+"DI23",180,443924,180,23,NA,NA
+"DI24",360,444284,360,24,NA,NA
+"DIN1",700,444984,700,1,"std_key","standard for key"
+"DIN2",360,445344,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,445524,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,445704,180,14,NA,NA
+"DIN3",360,446064,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,446424,360,4,"std_timbre","standard for timbre"
+"DIN1",710,447134,710,1,"std_key","standard for key"
+"DIN2",360,447494,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,447674,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,447854,180,6,"melody","melody change"
+"DI14",360,448214,360,14,NA,NA
+"DIN4",360,448574,360,4,"std_timbre","standard for timbre"
+"DIN5",710,449284,710,5,"key","key change"
+"DI22",350,449634,350,22,NA,NA
+"DI22",180,449814,180,22,NA,NA
+"DI23",180,449994,180,23,NA,NA
+"DI23",360,450354,360,23,NA,NA
+"DIN9",360,450714,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,451414,700,1,"std_key","standard for key"
+"DIN2",360,451774,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,451954,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,452134,180,6,"melody","melody change"
+"DI14",360,452494,360,14,NA,NA
+"DI15",360,452854,360,15,NA,NA
+"DIN5",710,453564,710,5,"key","key change"
+"D101",360,453924,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,454284,360,13,NA,NA
+"DI13",170,454454,170,13,NA,NA
+"DIN8",180,454634,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,454994,360,4,"std_timbre","standard for timbre"
+"DIN1",710,455704,710,1,"std_key","standard for key"
+"DIN3",360,456064,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,456424,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,456604,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,456784,180,6,"melody","melody change"
+"DIN9",360,457144,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,457854,710,1,"std_key","standard for key"
+"DIN7",360,458214,360,7,"tune","mistuning"
+"DI13",360,458574,360,13,NA,NA
+"DIN2",180,458754,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,458934,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,459294,360,4,"std_timbre","standard for timbre"
+"DIN1",710,460004,710,1,"std_key","standard for key"
+"DIN3",360,460364,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,460724,360,2,"std_rhythm","standard for rhythm"
+"D101",180,460904,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,461264,360,13,NA,NA
+"DIN4",180,461444,180,4,"std_timbre","standard for timbre"
+"DIN1",710,462154,710,1,"std_key","standard for key"
+"DIN3",360,462514,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,462874,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,463054,180,7,"tune","mistuning"
+"DI13",360,463414,360,13,NA,NA
+"DIN9",180,463594,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,464304,710,1,"std_key","standard for key"
+"DIN3",360,464664,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,465024,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,465204,180,6,"melody","melody change"
+"DI13",360,465564,360,13,NA,NA
+"DIN4",180,465744,180,4,"std_timbre","standard for timbre"
+"DIN1",710,466454,710,1,"std_key","standard for key"
+"DIN3",360,466814,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,467174,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,467534,360,13,NA,NA
+"DIN2",180,467714,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,467894,180,4,"std_timbre","standard for timbre"
+"DIN1",710,468604,710,1,"std_key","standard for key"
+"DIN7",360,468964,360,7,"tune","mistuning"
+"DI14",360,469324,360,14,NA,NA
+"DIN2",360,469684,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,469864,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,470044,180,4,"std_timbre","standard for timbre"
+"DIN1",710,470754,710,1,"std_key","standard for key"
+"DIN3",360,471114,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,471474,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,471654,180,13,NA,NA
+"DI13",360,472014,360,13,NA,NA
+"DI15",180,472194,180,15,NA,NA
+"DIN1",710,472904,710,1,"std_key","standard for key"
+"DIN3",360,473264,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,473624,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,473804,180,6,"melody","melody change"
+"DI13",360,474164,360,13,NA,NA
+"DIN4",180,474344,180,4,"std_timbre","standard for timbre"
+"DIN1",710,475054,710,1,"std_key","standard for key"
+"DIN3",360,475414,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,475774,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,475954,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,476134,180,14,NA,NA
+"DIN4",360,476494,360,4,"std_timbre","standard for timbre"
+"DIN1",710,477204,710,1,"std_key","standard for key"
+"DIN8",360,477564,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,477924,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,478104,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,478284,180,6,"melody","melody change"
+"DI15",360,478644,360,15,NA,NA
+"DIN5",710,479354,710,5,"key","key change"
+"DI23",360,479714,360,23,NA,NA
+"DI22",360,480074,360,22,NA,NA
+"DI22",180,480254,180,22,NA,NA
+"DIN8",180,480434,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,480794,360,4,"std_timbre","standard for timbre"
+"DIN1",710,481504,710,1,"std_key","standard for key"
+"DIN3",360,481864,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,482224,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,482584,360,13,NA,NA
+"DI13",180,482764,180,13,NA,NA
+"DIN4",180,482944,180,4,"std_timbre","standard for timbre"
+"DIN1",710,483654,710,1,"std_key","standard for key"
+"DIN3",360,484014,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,484374,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,484734,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,484914,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,485094,180,4,"std_timbre","standard for timbre"
+"DIN5",710,485804,710,5,"key","key change"
+"DI23",360,486164,360,23,NA,NA
+"DI10",360,486524,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,486704,180,14,NA,NA
+"DI13",360,487064,360,13,NA,NA
+"DI24",180,487244,180,24,NA,NA
+"DIN1",710,487954,710,1,"std_key","standard for key"
+"DIN3",360,488314,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,488674,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,488854,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,489214,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,489394,180,4,"std_timbre","standard for timbre"
+"DIN1",710,490104,710,1,"std_key","standard for key"
+"DIN3",360,490464,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,490824,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,491004,180,6,"melody","melody change"
+"DI13",360,491364,360,13,NA,NA
+"DIN4",180,491544,180,4,"std_timbre","standard for timbre"
+"DIN1",710,492254,710,1,"std_key","standard for key"
+"DIN4",360,492614,360,4,"std_timbre","standard for timbre"
+"DI13",360,492974,360,13,NA,NA
+"DIN3",180,493154,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,493514,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,493694,180,4,"std_timbre","standard for timbre"
+"DIN1",710,494404,710,1,"std_key","standard for key"
+"DIN3",360,494764,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,495124,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,495304,180,6,"melody","melody change"
+"DI13",360,495664,360,13,NA,NA
+"DIN4",180,495844,180,4,"std_timbre","standard for timbre"
+"DIN1",710,496554,710,1,"std_key","standard for key"
+"DIN3",360,496914,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,497274,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,497454,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,497814,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,497994,180,4,"std_timbre","standard for timbre"
+"DIN1",710,498704,710,1,"std_key","standard for key"
+"DIN3",360,499064,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,499424,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,499604,180,6,"melody","melody change"
+"DI13",360,499964,360,13,NA,NA
+"DIN4",180,500144,180,4,"std_timbre","standard for timbre"
+"DIN1",710,500854,710,1,"std_key","standard for key"
+"DIN3",360,501214,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,501574,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,501754,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,502114,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,502294,180,4,"std_timbre","standard for timbre"
+"DIN5",710,503004,710,5,"key","key change"
+"DI23",360,503364,360,23,NA,NA
+"DI22",360,503724,360,22,NA,NA
+"DI23",180,503904,180,23,NA,NA
+"DI22",360,504264,360,22,NA,NA
+"DI24",180,504444,180,24,NA,NA
+"DIN1",710,505154,710,1,"std_key","standard for key"
+"DIN3",360,505514,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,505874,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,506054,180,6,"melody","melody change"
+"DI13",350,506404,350,13,NA,NA
+"DIN9",180,506584,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,507284,700,1,"std_key","standard for key"
+"DIN7",360,507644,360,7,"tune","mistuning"
+"DI13",360,508004,360,13,NA,NA
+"DIN3",180,508184,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,508534,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,508714,180,4,"std_timbre","standard for timbre"
+"DIN5",710,509424,710,5,"key","key change"
+"DI23",360,509784,360,23,NA,NA
+"DI22",360,510144,360,22,NA,NA
+"DI23",180,510324,180,23,NA,NA
+"DI22",360,510684,360,22,NA,NA
+"DI24",180,510864,180,24,NA,NA
+"DIN1",710,511574,710,1,"std_key","standard for key"
+"DIN3",360,511934,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,512294,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,512474,180,7,"tune","mistuning"
+"DI13",359,512833,359,13,NA,NA
+"DIN4",181,513014,181,4,"std_timbre","standard for timbre"
+"DIN5",710,513724,710,5,"key","key change"
+"DIN8",359,514083,359,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,514443,360,2,"std_rhythm","standard for rhythm"
+"DI10",181,514624,181,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,514804,180,14,NA,NA
+"DIN4",360,515164,360,4,"std_timbre","standard for timbre"
+"DIN1",710,515874,710,1,"std_key","standard for key"
+"DIN7",360,516234,360,7,"tune","mistuning"
+"DI13",349,516583,349,13,NA,NA
+"DIN2",181,516764,181,2,"std_rhythm","standard for rhythm"
+"DIN3",179,516943,179,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",361,517304,361,4,"std_timbre","standard for timbre"
+"DIN5",710,518014,710,5,"key","key change"
+"DI10",360,518374,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,518554,180,13,NA,NA
+"DIN3",180,518734,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,519094,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",359,519453,359,4,"std_timbre","standard for timbre"
+"DIN1",711,520164,711,1,"std_key","standard for key"
+"DIN2",360,520524,360,2,"std_rhythm","standard for rhythm"
+"DIN2",179,520703,179,2,"std_rhythm","standard for rhythm"
+"DIN3",181,520884,181,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,521244,360,7,"tune","mistuning"
+"DI15",350,521594,350,15,NA,NA
+"DIN5",710,522304,710,5,"key","key change"
+"DI22",360,522664,360,22,NA,NA
+"DI22",180,522844,180,22,NA,NA
+"DI23",180,523024,180,23,NA,NA
+"DI23",360,523384,360,23,NA,NA
+"DIN9",360,523744,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,524454,710,1,"std_key","standard for key"
+"DIN2",360,524814,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,524994,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,525174,180,7,"tune","mistuning"
+"DI14",360,525534,360,14,NA,NA
+"DIN4",360,525894,360,4,"std_timbre","standard for timbre"
+"DIN5",710,526604,710,5,"key","key change"
+"DI22",360,526964,360,22,NA,NA
+"DI22",180,527144,180,22,NA,NA
+"DI23",180,527324,180,23,NA,NA
+"DI23",360,527684,360,23,NA,NA
+"DI24",360,528044,360,24,NA,NA
+"DIN1",710,528754,710,1,"std_key","standard for key"
+"DIN2",360,529114,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,529294,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,529474,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,529834,360,7,"tune","mistuning"
+"DI15",360,530194,360,15,NA,NA
+"DIN5",710,530904,710,5,"key","key change"
+"DI22",360,531264,360,22,NA,NA
+"DI22",180,531444,180,22,NA,NA
+"DI23",180,531624,180,23,NA,NA
+"DI23",360,531984,360,23,NA,NA
+"DIN9",360,532344,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,533054,710,1,"std_key","standard for key"
+"DIN2",360,533414,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,533594,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,533774,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,534134,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,534494,360,4,"std_timbre","standard for timbre"
+"DIN1",710,535204,710,1,"std_key","standard for key"
+"DIN2",360,535564,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,535744,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,536104,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,536284,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,536644,360,4,"std_timbre","standard for timbre"
+"DIN1",710,537354,710,1,"std_key","standard for key"
+"DIN2",360,537714,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,537894,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,538254,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,538434,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,538794,360,4,"std_timbre","standard for timbre"
+"DIN5",710,539504,710,5,"key","key change"
+"DI22",360,539864,360,22,NA,NA
+"DI23",180,540044,180,23,NA,NA
+"DI22",360,540404,360,22,NA,NA
+"DI23",180,540584,180,23,NA,NA
+"DI24",360,540944,360,24,NA,NA
+"DIN1",710,541654,710,1,"std_key","standard for key"
+"DIN2",360,542014,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,542194,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,542374,180,14,NA,NA
+"DIN3",360,542734,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,543094,360,4,"std_timbre","standard for timbre"
+"DIN1",710,543804,710,1,"std_key","standard for key"
+"DIN2",360,544164,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,544344,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,544524,180,6,"melody","melody change"
+"DI14",360,544884,360,14,NA,NA
+"DIN4",360,545244,360,4,"std_timbre","standard for timbre"
+"DIN5",710,545954,710,5,"key","key change"
+"DI22",360,546314,360,22,NA,NA
+"DI22",180,546494,180,22,NA,NA
+"DI23",180,546674,180,23,NA,NA
+"DI23",360,547034,360,23,NA,NA
+"DIN9",360,547394,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,548094,700,1,"std_key","standard for key"
+"DIN2",360,548454,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,548634,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,548814,180,6,"melody","melody change"
+"DI14",360,549174,360,14,NA,NA
+"DI15",360,549534,360,15,NA,NA
+"DIN5",710,550244,710,5,"key","key change"
+"D101",360,550604,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,550964,360,13,NA,NA
+"DI13",180,551144,180,13,NA,NA
+"DIN8",180,551324,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,551684,360,4,"std_timbre","standard for timbre"
+"DIN1",710,552394,710,1,"std_key","standard for key"
+"DIN3",360,552754,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,553114,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,553294,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,553474,180,6,"melody","melody change"
+"DIN9",359,553833,359,9,"timbre2","timbre (end of melody)"
+"DIN1",710,554543,710,1,"std_key","standard for key"
+"DIN7",360,554903,360,7,"tune","mistuning"
+"DI13",360,555263,360,13,NA,NA
+"DIN2",180,555443,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,555623,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,555983,360,4,"std_timbre","standard for timbre"
+"DIN1",711,556694,711,1,"std_key","standard for key"
+"DIN3",359,557053,359,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,557413,360,2,"std_rhythm","standard for rhythm"
+"D101",180,557593,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,557953,360,13,NA,NA
+"DIN4",180,558133,180,4,"std_timbre","standard for timbre"
+"DIN1",710,558843,710,1,"std_key","standard for key"
+"DIN3",360,559203,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,559563,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,559743,180,7,"tune","mistuning"
+"DI13",360,560103,360,13,NA,NA
+"DIN9",180,560283,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,560993,710,1,"std_key","standard for key"
+"DIN3",361,561354,361,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,561714,360,2,"std_rhythm","standard for rhythm"
+"DIN6",179,561893,179,6,"melody","melody change"
+"DI13",360,562253,360,13,NA,NA
+"DIN4",180,562433,180,4,"std_timbre","standard for timbre"
+"DIN1",710,563143,710,1,"std_key","standard for key"
+"DIN3",361,563504,361,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",359,563863,359,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,564223,360,13,NA,NA
+"DIN2",180,564403,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,564583,180,4,"std_timbre","standard for timbre"
+"DIN1",710,565293,710,1,"std_key","standard for key"
+"DIN7",360,565653,360,7,"tune","mistuning"
+"DI14",360,566013,360,14,NA,NA
+"DIN2",360,566373,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,566553,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,566733,180,4,"std_timbre","standard for timbre"
+"DIN1",710,567443,710,1,"std_key","standard for key"
+"DIN3",360,567803,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,568163,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",181,568344,181,13,NA,NA
+"DI13",360,568704,360,13,NA,NA
+"DI15",179,568883,179,15,NA,NA
+"DIN1",710,569593,710,1,"std_key","standard for key"
+"DIN3",360,569953,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",361,570314,361,2,"std_rhythm","standard for rhythm"
+"DIN6",180,570494,180,6,"melody","melody change"
+"DI13",359,570853,359,13,NA,NA
+"DIN4",180,571033,180,4,"std_timbre","standard for timbre"
+"DIN1",711,571744,711,1,"std_key","standard for key"
+"DIN3",359,572103,359,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,572463,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,572643,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,572823,180,14,NA,NA
+"DIN4",360,573183,360,4,"std_timbre","standard for timbre"
+"DIN1",710,573893,710,1,"std_key","standard for key"
+"DIN8",360,574253,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",351,574604,351,2,"std_rhythm","standard for rhythm"
+"DIN2",180,574784,180,2,"std_rhythm","standard for rhythm"
+"DIN6",179,574963,179,6,"melody","melody change"
+"DI15",360,575323,360,15,NA,NA
+"DIN5",710,576033,710,5,"key","key change"
+"DI23",361,576394,361,23,NA,NA
+"DI22",360,576754,360,22,NA,NA
+"DI22",179,576933,179,22,NA,NA
+"DIN8",180,577113,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",361,577474,361,4,"std_timbre","standard for timbre"
+"DIN1",709,578183,709,1,"std_key","standard for key"
+"DIN3",360,578543,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,578903,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,579263,360,13,NA,NA
+"DI13",180,579443,180,13,NA,NA
+"DIN4",180,579623,180,4,"std_timbre","standard for timbre"
+"DIN1",711,580334,711,1,"std_key","standard for key"
+"DIN3",359,580693,359,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,581053,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,581413,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,581593,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,581773,180,4,"std_timbre","standard for timbre"
+"DIN5",710,582483,710,5,"key","key change"
+"DI23",360,582843,360,23,NA,NA
+"DI10",360,583203,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,583383,180,14,NA,NA
+"DI13",360,583743,360,13,NA,NA
+"DI24",180,583923,180,24,NA,NA
+"DIN1",710,584633,710,1,"std_key","standard for key"
+"DIN3",360,584993,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,585353,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,585533,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,585893,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,586073,180,4,"std_timbre","standard for timbre"
+"DIN1",710,586783,710,1,"std_key","standard for key"
+"DIN3",360,587143,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,587503,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,587683,180,6,"melody","melody change"
+"DI13",360,588043,360,13,NA,NA
+"DIN4",180,588223,180,4,"std_timbre","standard for timbre"
+"DIN1",710,588933,710,1,"std_key","standard for key"
+"DIN4",360,589293,360,4,"std_timbre","standard for timbre"
+"DI13",360,589653,360,13,NA,NA
+"DIN3",180,589833,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,590193,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,590373,180,4,"std_timbre","standard for timbre"
+"DIN1",710,591083,710,1,"std_key","standard for key"
+"DIN3",360,591443,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,591803,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,591983,180,6,"melody","melody change"
+"DI13",360,592343,360,13,NA,NA
+"DIN4",180,592523,180,4,"std_timbre","standard for timbre"
+"DIN1",710,593233,710,1,"std_key","standard for key"
+"DIN3",360,593593,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,593953,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,594133,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,594493,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,594673,180,4,"std_timbre","standard for timbre"
+"DIN1",710,595383,710,1,"std_key","standard for key"
+"DIN3",360,595743,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,596103,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,596283,180,6,"melody","melody change"
+"DI13",350,596633,350,13,NA,NA
+"DIN4",180,596813,180,4,"std_timbre","standard for timbre"
+"DIN1",710,597523,710,1,"std_key","standard for key"
+"DIN3",360,597883,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,598243,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,598423,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,598783,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,598963,180,4,"std_timbre","standard for timbre"
+"DIN5",710,599673,710,5,"key","key change"
+"DI23",360,600033,360,23,NA,NA
+"DI22",360,600393,360,22,NA,NA
+"DI23",180,600573,180,23,NA,NA
+"DI22",360,600933,360,22,NA,NA
+"DI24",180,601113,180,24,NA,NA
+"DIN1",710,601823,710,1,"std_key","standard for key"
+"DIN3",360,602183,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,602543,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,602723,180,6,"melody","melody change"
+"DI13",350,603073,350,13,NA,NA
+"DIN9",180,603253,180,9,"timbre2","timbre (end of melody)"
+"DIN1",690,603943,690,1,"std_key","standard for key"
+"DIN7",360,604303,360,7,"tune","mistuning"
+"DI13",360,604663,360,13,NA,NA
+"DIN3",180,604843,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,605193,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,605373,180,4,"std_timbre","standard for timbre"
+"DIN5",710,606083,710,5,"key","key change"
+"DI23",360,606443,360,23,NA,NA
+"DI22",360,606803,360,22,NA,NA
+"DI23",180,606983,180,23,NA,NA
+"DI22",360,607343,360,22,NA,NA
+"DI24",180,607523,180,24,NA,NA
+"DIN1",710,608233,710,1,"std_key","standard for key"
+"DIN3",360,608593,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,608953,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,609133,180,7,"tune","mistuning"
+"DI13",360,609493,360,13,NA,NA
+"DIN4",180,609673,180,4,"std_timbre","standard for timbre"
+"DIN5",710,610383,710,5,"key","key change"
+"DIN8",360,610743,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,611103,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,611283,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",170,611453,170,14,NA,NA
+"DIN4",360,611813,360,4,"std_timbre","standard for timbre"
+"DIN1",710,612523,710,1,"std_key","standard for key"
+"DIN7",360,612883,360,7,"tune","mistuning"
+"DI13",350,613233,350,13,NA,NA
+"DIN2",180,613413,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,613593,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,613953,360,4,"std_timbre","standard for timbre"
+"DIN5",710,614663,710,5,"key","key change"
+"DI10",360,615023,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,615203,180,13,NA,NA
+"DIN3",180,615383,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,615743,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,616103,360,4,"std_timbre","standard for timbre"
+"DIN1",710,616813,710,1,"std_key","standard for key"
+"DIN2",360,617173,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,617353,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,617533,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,617893,360,7,"tune","mistuning"
+"DI15",360,618253,360,15,NA,NA
+"DIN5",700,618953,700,5,"key","key change"
+"DI22",360,619313,360,22,NA,NA
+"DI22",180,619493,180,22,NA,NA
+"DI23",180,619673,180,23,NA,NA
+"DI23",360,620033,360,23,NA,NA
+"DIN9",360,620393,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,621103,710,1,"std_key","standard for key"
+"DIN2",360,621463,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,621643,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,621823,180,7,"tune","mistuning"
+"DI14",360,622183,360,14,NA,NA
+"DIN4",360,622543,360,4,"std_timbre","standard for timbre"
+"DIN5",710,623253,710,5,"key","key change"
+"DI22",360,623613,360,22,NA,NA
+"DI22",180,623793,180,22,NA,NA
+"DI23",180,623973,180,23,NA,NA
+"DI23",360,624333,360,23,NA,NA
+"DI24",360,624693,360,24,NA,NA
+"DIN1",710,625403,710,1,"std_key","standard for key"
+"DIN2",360,625763,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,625943,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,626123,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,626483,360,7,"tune","mistuning"
+"DI15",360,626843,360,15,NA,NA
+"DIN5",710,627553,710,5,"key","key change"
+"DI22",360,627913,360,22,NA,NA
+"DI22",180,628093,180,22,NA,NA
+"DI23",180,628273,180,23,NA,NA
+"DI23",360,628633,360,23,NA,NA
+"DIN9",360,628993,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,629703,710,1,"std_key","standard for key"
+"DIN2",360,630063,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,630243,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,630423,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,630783,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,631143,360,4,"std_timbre","standard for timbre"
+"DIN1",710,631853,710,1,"std_key","standard for key"
+"DIN2",360,632213,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,632393,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,632753,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,632933,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,633293,360,4,"std_timbre","standard for timbre"
+"DIN1",710,634003,710,1,"std_key","standard for key"
+"DIN2",360,634363,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,634543,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,634903,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,635083,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,635443,360,4,"std_timbre","standard for timbre"
+"DIN5",710,636153,710,5,"key","key change"
+"DI22",360,636513,360,22,NA,NA
+"DI23",180,636693,180,23,NA,NA
+"DI22",360,637053,360,22,NA,NA
+"DI23",180,637233,180,23,NA,NA
+"DI24",360,637593,360,24,NA,NA
+"DIN1",710,638303,710,1,"std_key","standard for key"
+"DIN2",360,638663,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,638843,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,639023,180,14,NA,NA
+"DIN3",360,639383,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,639743,360,4,"std_timbre","standard for timbre"
+"DIN1",710,640453,710,1,"std_key","standard for key"
+"DIN2",360,640813,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,640993,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,641173,180,6,"melody","melody change"
+"DI14",360,641533,360,14,NA,NA
+"DIN4",360,641893,360,4,"std_timbre","standard for timbre"
+"DIN5",710,642603,710,5,"key","key change"
+"DI22",360,642963,360,22,NA,NA
+"DI22",180,643143,180,22,NA,NA
+"DI23",180,643323,180,23,NA,NA
+"DI23",360,643683,360,23,NA,NA
+"DIN9",360,644043,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,644743,700,1,"std_key","standard for key"
+"DIN2",360,645103,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,645283,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,645463,180,6,"melody","melody change"
+"DI14",360,645823,360,14,NA,NA
+"DI15",360,646183,360,15,NA,NA
+"DIN5",710,646893,710,5,"key","key change"
+"D101",360,647253,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,647613,360,13,NA,NA
+"DI13",180,647793,180,13,NA,NA
+"DIN8",180,647973,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,648333,360,4,"std_timbre","standard for timbre"
+"DIN1",710,649043,710,1,"std_key","standard for key"
+"DIN3",360,649403,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,649763,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,649943,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,650123,180,6,"melody","melody change"
+"DIN9",360,650483,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,651193,710,1,"std_key","standard for key"
+"DIN7",360,651553,360,7,"tune","mistuning"
+"DI13",360,651913,360,13,NA,NA
+"DIN2",180,652093,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,652273,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,652633,360,4,"std_timbre","standard for timbre"
+"DIN1",710,653343,710,1,"std_key","standard for key"
+"DIN3",360,653703,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,654063,360,2,"std_rhythm","standard for rhythm"
+"D101",180,654243,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,654603,360,13,NA,NA
+"DIN4",180,654783,180,4,"std_timbre","standard for timbre"
+"DIN1",710,655493,710,1,"std_key","standard for key"
+"DIN3",360,655853,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,656213,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,656393,180,7,"tune","mistuning"
+"DI13",360,656753,360,13,NA,NA
+"DIN9",180,656933,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,657643,710,1,"std_key","standard for key"
+"DIN3",360,658003,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,658363,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,658543,180,6,"melody","melody change"
+"DI13",360,658903,360,13,NA,NA
+"DIN4",180,659083,180,4,"std_timbre","standard for timbre"
+"DIN1",710,659793,710,1,"std_key","standard for key"
+"DIN3",360,660153,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,660513,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,660873,360,13,NA,NA
+"DIN2",180,661053,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,661233,180,4,"std_timbre","standard for timbre"
+"DIN1",710,661943,710,1,"std_key","standard for key"
+"DIN7",360,662303,360,7,"tune","mistuning"
+"DI14",360,662663,360,14,NA,NA
+"DIN2",360,663023,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,663203,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,663383,180,4,"std_timbre","standard for timbre"
+"DIN1",710,664093,710,1,"std_key","standard for key"
+"DIN3",360,664453,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,664813,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,664993,180,13,NA,NA
+"DI13",360,665353,360,13,NA,NA
+"DI15",180,665533,180,15,NA,NA
+"DIN1",710,666243,710,1,"std_key","standard for key"
+"DIN3",360,666603,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,666963,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,667143,180,6,"melody","melody change"
+"DI13",360,667503,360,13,NA,NA
+"DIN4",180,667683,180,4,"std_timbre","standard for timbre"
+"DIN1",710,668393,710,1,"std_key","standard for key"
+"DIN3",360,668753,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,669113,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,669293,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,669473,180,14,NA,NA
+"DIN4",360,669833,360,4,"std_timbre","standard for timbre"
+"DIN1",710,670543,710,1,"std_key","standard for key"
+"DIN8",360,670903,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,671263,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,671443,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,671623,180,6,"melody","melody change"
+"DI15",360,671983,360,15,NA,NA
+"DIN5",710,672693,710,5,"key","key change"
+"DI23",360,673053,360,23,NA,NA
+"DI22",360,673413,360,22,NA,NA
+"DI22",180,673593,180,22,NA,NA
+"DIN8",180,673773,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,674133,360,4,"std_timbre","standard for timbre"
+"DIN1",710,674843,710,1,"std_key","standard for key"
+"DIN3",360,675203,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,675563,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,675923,360,13,NA,NA
+"DI13",180,676103,180,13,NA,NA
+"DIN4",180,676283,180,4,"std_timbre","standard for timbre"
+"DIN1",710,676993,710,1,"std_key","standard for key"
+"DIN3",360,677353,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,677713,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,678073,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,678253,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,678433,180,4,"std_timbre","standard for timbre"
+"DIN5",710,679143,710,5,"key","key change"
+"DI23",360,679503,360,23,NA,NA
+"DI10",360,679863,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,680043,180,14,NA,NA
+"DI13",360,680403,360,13,NA,NA
+"DI24",180,680583,180,24,NA,NA
+"DIN1",710,681293,710,1,"std_key","standard for key"
+"DIN3",360,681653,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,682013,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,682193,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,682553,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,682733,180,4,"std_timbre","standard for timbre"
+"DIN1",710,683443,710,1,"std_key","standard for key"
+"DIN3",360,683803,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,684163,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,684343,180,6,"melody","melody change"
+"DI13",360,684703,360,13,NA,NA
+"DIN4",180,684883,180,4,"std_timbre","standard for timbre"
+"DIN1",710,685593,710,1,"std_key","standard for key"
+"DIN4",360,685953,360,4,"std_timbre","standard for timbre"
+"DI13",360,686313,360,13,NA,NA
+"DIN3",180,686493,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,686853,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,687033,180,4,"std_timbre","standard for timbre"
+"DIN1",710,687743,710,1,"std_key","standard for key"
+"DIN3",360,688103,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,688463,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,688643,180,6,"melody","melody change"
+"DI13",360,689003,360,13,NA,NA
+"DIN4",180,689183,180,4,"std_timbre","standard for timbre"
+"DIN1",710,689893,710,1,"std_key","standard for key"
+"DIN3",360,690253,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,690613,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,690793,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,691153,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,691333,180,4,"std_timbre","standard for timbre"
+"DIN1",710,692043,710,1,"std_key","standard for key"
+"DIN3",360,692403,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,692763,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,692943,180,6,"melody","melody change"
+"DI13",360,693303,360,13,NA,NA
+"DIN4",180,693483,180,4,"std_timbre","standard for timbre"
+"DIN1",710,694193,710,1,"std_key","standard for key"
+"DIN3",360,694553,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,694913,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,695093,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,695453,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,695633,180,4,"std_timbre","standard for timbre"
+"DIN5",710,696343,710,5,"key","key change"
+"DI23",360,696703,360,23,NA,NA
+"DI22",360,697063,360,22,NA,NA
+"DI23",180,697243,180,23,NA,NA
+"DI22",360,697603,360,22,NA,NA
+"DI24",180,697783,180,24,NA,NA
+"DIN1",710,698493,710,1,"std_key","standard for key"
+"DIN3",360,698853,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,699213,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,699393,180,6,"melody","melody change"
+"DI13",350,699743,350,13,NA,NA
+"DIN9",180,699923,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,700623,700,1,"std_key","standard for key"
+"DIN7",360,700983,360,7,"tune","mistuning"
+"DI13",360,701343,360,13,NA,NA
+"DIN3",180,701523,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,701873,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,702053,180,4,"std_timbre","standard for timbre"
+"DIN5",710,702763,710,5,"key","key change"
+"DI23",360,703123,360,23,NA,NA
+"DI22",360,703483,360,22,NA,NA
+"DI23",180,703663,180,23,NA,NA
+"DI22",360,704023,360,22,NA,NA
+"DI24",180,704203,180,24,NA,NA
+"DIN1",710,704913,710,1,"std_key","standard for key"
+"DIN3",360,705273,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,705623,350,2,"std_rhythm","standard for rhythm"
+"DIN7",180,705803,180,7,"tune","mistuning"
+"DI13",360,706163,360,13,NA,NA
+"DIN4",180,706343,180,4,"std_timbre","standard for timbre"
+"DIN5",710,707053,710,5,"key","key change"
+"DIN8",360,707413,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,707773,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,707953,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,708133,180,14,NA,NA
+"DIN4",360,708493,360,4,"std_timbre","standard for timbre"
+"DIN1",710,709203,710,1,"std_key","standard for key"
+"DIN7",360,709563,360,7,"tune","mistuning"
+"DI13",350,709913,350,13,NA,NA
+"DIN2",180,710093,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,710273,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,710633,360,4,"std_timbre","standard for timbre"
+"DIN5",710,711343,710,5,"key","key change"
+"DI10",360,711703,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,711883,180,13,NA,NA
+"DIN3",180,712063,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,712423,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,712783,360,4,"std_timbre","standard for timbre"
+"DIN1",710,713493,710,1,"std_key","standard for key"
+"DIN2",360,713853,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,714033,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,714213,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,714573,360,7,"tune","mistuning"
+"DI15",360,714933,360,15,NA,NA
+"DIN5",710,715643,710,5,"key","key change"
+"DI22",360,716003,360,22,NA,NA
+"DI22",180,716183,180,22,NA,NA
+"DI23",180,716363,180,23,NA,NA
+"DI23",360,716723,360,23,NA,NA
+"DIN9",360,717083,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,717793,710,1,"std_key","standard for key"
+"DIN2",360,718153,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,718333,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,718513,180,7,"tune","mistuning"
+"DI14",360,718873,360,14,NA,NA
+"DIN4",360,719233,360,4,"std_timbre","standard for timbre"
+"DIN5",710,719943,710,5,"key","key change"
+"DI22",360,720303,360,22,NA,NA
+"DI22",180,720483,180,22,NA,NA
+"DI23",180,720663,180,23,NA,NA
+"DI23",360,721023,360,23,NA,NA
+"DI24",360,721383,360,24,NA,NA
+"DIN1",710,722093,710,1,"std_key","standard for key"
+"DIN2",360,722453,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,722633,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,722813,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,723173,360,7,"tune","mistuning"
+"DI15",360,723533,360,15,NA,NA
+"DIN5",710,724243,710,5,"key","key change"
+"DI22",360,724603,360,22,NA,NA
+"DI22",180,724783,180,22,NA,NA
+"DI23",180,724963,180,23,NA,NA
+"DI23",360,725323,360,23,NA,NA
+"DIN9",360,725683,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,726393,710,1,"std_key","standard for key"
+"DIN2",360,726753,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,726933,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,727113,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,727473,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,727833,360,4,"std_timbre","standard for timbre"
+"DIN1",710,728543,710,1,"std_key","standard for key"
+"DIN2",360,728903,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,729083,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,729443,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,729623,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,729983,360,4,"std_timbre","standard for timbre"
+"DIN1",710,730693,710,1,"std_key","standard for key"
+"DIN2",360,731053,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,731233,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,731593,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,731773,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,732133,360,4,"std_timbre","standard for timbre"
+"DIN5",710,732843,710,5,"key","key change"
+"DI22",360,733203,360,22,NA,NA
+"DI23",180,733383,180,23,NA,NA
+"DI22",360,733743,360,22,NA,NA
+"DI23",180,733923,180,23,NA,NA
+"DI24",360,734283,360,24,NA,NA
+"DIN1",710,734993,710,1,"std_key","standard for key"
+"DIN2",360,735353,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,735533,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,735713,180,14,NA,NA
+"DIN3",360,736073,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,736433,360,4,"std_timbre","standard for timbre"
+"DIN1",710,737143,710,1,"std_key","standard for key"
+"DIN2",360,737503,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,737683,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,737863,180,6,"melody","melody change"
+"DI14",360,738223,360,14,NA,NA
+"DIN4",360,738583,360,4,"std_timbre","standard for timbre"
+"DIN5",710,739293,710,5,"key","key change"
+"DI22",360,739653,360,22,NA,NA
+"DI22",180,739833,180,22,NA,NA
+"DI23",180,740013,180,23,NA,NA
+"DI23",360,740373,360,23,NA,NA
+"DIN9",360,740733,360,9,"timbre2","timbre (end of melody)"
+"DIN1",700,741433,700,1,"std_key","standard for key"
+"DIN2",360,741793,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,741973,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,742153,180,6,"melody","melody change"
+"DI14",360,742513,360,14,NA,NA
+"DI15",360,742873,360,15,NA,NA
+"DIN5",710,743583,710,5,"key","key change"
+"D101",360,743943,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,744303,360,13,NA,NA
+"DI13",180,744483,180,13,NA,NA
+"DIN8",180,744663,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,745023,360,4,"std_timbre","standard for timbre"
+"DIN1",710,745733,710,1,"std_key","standard for key"
+"DIN3",360,746093,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,746453,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,746633,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,746813,180,6,"melody","melody change"
+"DIN9",360,747173,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,747883,710,1,"std_key","standard for key"
+"DIN7",360,748243,360,7,"tune","mistuning"
+"DI13",350,748593,350,13,NA,NA
+"DIN2",180,748773,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,748953,180,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,749313,360,4,"std_timbre","standard for timbre"
+"DIN1",710,750023,710,1,"std_key","standard for key"
+"DIN3",360,750383,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,750743,360,2,"std_rhythm","standard for rhythm"
+"D101",180,750923,180,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,751283,360,13,NA,NA
+"DIN4",170,751453,170,4,"std_timbre","standard for timbre"
+"DIN1",710,752163,710,1,"std_key","standard for key"
+"DIN3",360,752523,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,752883,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,753063,180,7,"tune","mistuning"
+"DI13",360,753423,360,13,NA,NA
+"DIN9",180,753603,180,9,"timbre2","timbre (end of melody)"
+"DIN1",710,754313,710,1,"std_key","standard for key"
+"DIN3",360,754673,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,755033,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,755213,180,6,"melody","melody change"
+"DI13",360,755573,360,13,NA,NA
+"DIN4",180,755753,180,4,"std_timbre","standard for timbre"
+"DIN1",710,756463,710,1,"std_key","standard for key"
+"DIN3",360,756823,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,757183,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,757543,360,13,NA,NA
+"DIN2",180,757723,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,757903,180,4,"std_timbre","standard for timbre"
+"DIN1",710,758613,710,1,"std_key","standard for key"
+"DIN7",360,758973,360,7,"tune","mistuning"
+"DI14",360,759333,360,14,NA,NA
+"DIN2",360,759693,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,759873,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,760053,180,4,"std_timbre","standard for timbre"
+"DIN1",710,760763,710,1,"std_key","standard for key"
+"DIN3",360,761123,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DI10",360,761483,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,761663,180,13,NA,NA
+"DI13",360,762023,360,13,NA,NA
+"DI15",180,762203,180,15,NA,NA
+"DIN1",710,762913,710,1,"std_key","standard for key"
+"DIN3",360,763273,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,763623,350,2,"std_rhythm","standard for rhythm"
+"DIN6",180,763803,180,6,"melody","melody change"
+"DI13",360,764163,360,13,NA,NA
+"DIN4",180,764343,180,4,"std_timbre","standard for timbre"
+"DIN1",710,765053,710,1,"std_key","standard for key"
+"DIN3",360,765413,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,765773,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,765953,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,766133,180,14,NA,NA
+"DIN4",360,766493,360,4,"std_timbre","standard for timbre"
+"DIN1",710,767203,710,1,"std_key","standard for key"
+"DIN8",360,767563,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,767923,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,768103,180,2,"std_rhythm","standard for rhythm"
+"DIN6",180,768283,180,6,"melody","melody change"
+"DI15",360,768643,360,15,NA,NA
+"DIN5",710,769353,710,5,"key","key change"
+"DI23",360,769713,360,23,NA,NA
+"DI22",360,770073,360,22,NA,NA
+"DI22",180,770253,180,22,NA,NA
+"DIN8",170,770423,170,8,"timbre1","timbre (middle of melody)"
+"DIN4",360,770783,360,4,"std_timbre","standard for timbre"
+"DIN1",710,771493,710,1,"std_key","standard for key"
+"DIN3",360,771853,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"D101",360,772213,360,101,"rhythm1","rhythm change (long tone)"
+"DI13",360,772573,360,13,NA,NA
+"DI13",180,772753,180,13,NA,NA
+"DIN4",180,772933,180,4,"std_timbre","standard for timbre"
+"DIN1",710,773643,710,1,"std_key","standard for key"
+"DIN3",360,774003,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,774363,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,774723,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,774903,180,2,"std_rhythm","standard for rhythm"
+"DIN4",180,775083,180,4,"std_timbre","standard for timbre"
+"DIN5",710,775793,710,5,"key","key change"
+"DI23",360,776153,360,23,NA,NA
+"DI10",360,776513,360,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,776693,180,14,NA,NA
+"DI13",360,777053,360,13,NA,NA
+"DI24",180,777233,180,24,NA,NA
+"DIN1",710,777943,710,1,"std_key","standard for key"
+"DIN3",360,778303,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,778663,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,778843,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,779203,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,779383,180,4,"std_timbre","standard for timbre"
+"DIN1",710,780093,710,1,"std_key","standard for key"
+"DIN3",360,780453,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,780813,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,780993,180,6,"melody","melody change"
+"DI13",360,781353,360,13,NA,NA
+"DIN4",180,781533,180,4,"std_timbre","standard for timbre"
+"DIN1",710,782243,710,1,"std_key","standard for key"
+"DIN4",350,782593,350,4,"std_timbre","standard for timbre"
+"DI13",360,782953,360,13,NA,NA
+"DIN3",180,783133,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,783493,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,783673,180,4,"std_timbre","standard for timbre"
+"DIN1",710,784383,710,1,"std_key","standard for key"
+"DIN3",360,784743,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,785103,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,785283,180,6,"melody","melody change"
+"DI13",350,785633,350,13,NA,NA
+"DIN4",180,785813,180,4,"std_timbre","standard for timbre"
+"DIN1",710,786523,710,1,"std_key","standard for key"
+"DIN3",360,786883,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,787243,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,787423,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,787783,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,787963,180,4,"std_timbre","standard for timbre"
+"DIN1",710,788673,710,1,"std_key","standard for key"
+"DIN3",360,789033,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,789393,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,789573,180,6,"melody","melody change"
+"DI13",360,789933,360,13,NA,NA
+"DIN4",180,790113,180,4,"std_timbre","standard for timbre"
+"DIN1",710,790823,710,1,"std_key","standard for key"
+"DIN3",360,791183,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,791543,360,2,"std_rhythm","standard for rhythm"
+"DIN3",180,791723,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,792083,360,2,"std_rhythm","standard for rhythm"
+"DIN4",180,792263,180,4,"std_timbre","standard for timbre"
+"DIN5",710,792973,710,5,"key","key change"
+"DI23",360,793333,360,23,NA,NA
+"DI22",360,793693,360,22,NA,NA
+"DI23",180,793873,180,23,NA,NA
+"DI22",360,794233,360,22,NA,NA
+"DI24",180,794413,180,24,NA,NA
+"DIN1",710,795123,710,1,"std_key","standard for key"
+"DIN3",360,795483,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,795843,360,2,"std_rhythm","standard for rhythm"
+"DIN6",180,796023,180,6,"melody","melody change"
+"DI13",350,796373,350,13,NA,NA
+"DIN9",180,796553,180,9,"timbre2","timbre (end of melody)"
+"DIN1",700,797253,700,1,"std_key","standard for key"
+"DIN7",360,797613,360,7,"tune","mistuning"
+"DI13",360,797973,360,13,NA,NA
+"DIN3",180,798153,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",350,798503,350,2,"std_rhythm","standard for rhythm"
+"DIN4",180,798683,180,4,"std_timbre","standard for timbre"
+"DIN5",710,799393,710,5,"key","key change"
+"DI23",360,799753,360,23,NA,NA
+"DI22",360,800113,360,22,NA,NA
+"DI23",180,800293,180,23,NA,NA
+"DI22",360,800653,360,22,NA,NA
+"DI24",180,800833,180,24,NA,NA
+"DIN1",710,801543,710,1,"std_key","standard for key"
+"DIN3",360,801903,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN2",360,802263,360,2,"std_rhythm","standard for rhythm"
+"DIN7",180,802443,180,7,"tune","mistuning"
+"DI13",360,802803,360,13,NA,NA
+"DIN4",180,802983,180,4,"std_timbre","standard for timbre"
+"DIN5",710,803693,710,5,"key","key change"
+"DIN8",360,804053,360,8,"timbre1","timbre (middle of melody)"
+"DIN2",360,804413,360,2,"std_rhythm","standard for rhythm"
+"DI10",180,804593,180,10,"rhythm2","rhythm change (short tone)"
+"DI14",180,804773,180,14,NA,NA
+"DIN4",360,805133,360,4,"std_timbre","standard for timbre"
+"DIN1",710,805843,710,1,"std_key","standard for key"
+"DIN7",360,806203,360,7,"tune","mistuning"
+"DI13",350,806553,350,13,NA,NA
+"DIN2",180,806733,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,806913,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,807273,360,4,"std_timbre","standard for timbre"
+"DIN5",710,807983,710,5,"key","key change"
+"DI10",360,808343,360,10,"rhythm2","rhythm change (short tone)"
+"DI13",180,808523,180,13,NA,NA
+"DIN3",180,808703,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN3",360,809063,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,809423,360,4,"std_timbre","standard for timbre"
+"DIN1",710,810133,710,1,"std_key","standard for key"
+"DIN2",360,810493,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,810673,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,810853,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,811213,360,7,"tune","mistuning"
+"DI15",360,811573,360,15,NA,NA
+"DIN5",710,812283,710,5,"key","key change"
+"DI22",360,812643,360,22,NA,NA
+"DI22",180,812823,180,22,NA,NA
+"DI23",180,813003,180,23,NA,NA
+"DI23",360,813363,360,23,NA,NA
+"DIN9",360,813723,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,814433,710,1,"std_key","standard for key"
+"DIN2",360,814793,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,814973,180,2,"std_rhythm","standard for rhythm"
+"DIN7",180,815153,180,7,"tune","mistuning"
+"DI14",360,815513,360,14,NA,NA
+"DIN4",360,815873,360,4,"std_timbre","standard for timbre"
+"DIN5",710,816583,710,5,"key","key change"
+"DI22",360,816943,360,22,NA,NA
+"DI22",180,817123,180,22,NA,NA
+"DI23",180,817303,180,23,NA,NA
+"DI23",360,817663,360,23,NA,NA
+"DI24",360,818023,360,24,NA,NA
+"DIN1",710,818733,710,1,"std_key","standard for key"
+"DIN2",360,819093,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,819273,180,2,"std_rhythm","standard for rhythm"
+"DIN3",180,819453,180,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN7",360,819813,360,7,"tune","mistuning"
+"DI15",360,820173,360,15,NA,NA
+"DIN5",710,820883,710,5,"key","key change"
+"DI22",360,821243,360,22,NA,NA
+"DI22",180,821423,180,22,NA,NA
+"DI23",180,821603,180,23,NA,NA
+"DI23",360,821963,360,23,NA,NA
+"DIN9",360,822323,360,9,"timbre2","timbre (end of melody)"
+"DIN1",710,823033,710,1,"std_key","standard for key"
+"DIN2",360,823393,360,2,"std_rhythm","standard for rhythm"
+"DIN2",180,823573,180,2,"std_rhythm","standard for rhythm"
+"DIN8",180,823753,180,8,"timbre1","timbre (middle of melody)"
+"DIN3",360,824113,360,3,"std","standard for mistuning, rhythm, timbre, melody"
+"DIN4",360,824473,360,4,"std_timbre","standard for timbre"

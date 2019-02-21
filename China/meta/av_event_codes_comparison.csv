@@ -1,0 +1,1021 @@
+"evt","SOA","Latency","Offset","evt_num","evt_fin","note"
+"DI31",0,11822,0,31,"sound_NOVEL",NA
+"D108",198,12020,198,108,"pic_novel","animal or thing?"
+"DI42",184,12204,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,12720,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,13237,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,13737,500,51,"sound_NOTNOVEL",NA
+"D106",316,14053,316,106,"pic_nn","animal or thing?"
+"DI52",184,14237,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,14753,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,15270,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,15770,500,51,"sound_NOTNOVEL",NA
+"D107",317,16087,317,107,"pic_nn","animal or thing?"
+"DI52",183,16270,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,16787,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,17303,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,17803,500,51,"sound_NOTNOVEL",NA
+"D127",317,18120,317,127,"pic_nn","animal or thing?"
+"DI52",183,18303,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,18820,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,19337,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,19837,500,51,"sound_NOTNOVEL",NA
+"D133",316,20153,316,133,"pic_nn","animal or thing?"
+"DI52",184,20337,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,20853,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,21370,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI12",500,21870,500,12,"sound_NOVEL",NA
+"D110",317,22187,317,110,"pic_novel","animal or thing?"
+"DI42",183,22370,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,22887,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,23403,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN8",500,23903,500,8,"sound_NOVEL",NA
+"D115",317,24220,317,115,"pic_novel","animal or thing?"
+"DI42",183,24403,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,24920,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,25437,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,25937,500,51,"sound_NOTNOVEL",NA
+"D134",316,26253,316,134,"pic_nn","animal or thing?"
+"DI52",184,26437,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,26953,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,27470,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI28",500,27970,500,28,"sound_NOVEL",NA
+"D133",317,28287,317,133,"pic_novel","animal or thing?"
+"DI42",183,28470,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,28987,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,29503,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,30003,500,51,"sound_NOTNOVEL",NA
+"D109",317,30320,317,109,"pic_nn","animal or thing?"
+"DI52",183,30503,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,31020,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,31537,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN2",500,32037,500,2,"sound_NOVEL",NA
+"D122",316,32353,316,122,"pic_novel","animal or thing?"
+"DI42",184,32537,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,33053,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,33570,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,34070,500,51,"sound_NOTNOVEL",NA
+"D103",317,34387,317,103,"pic_nn","animal or thing?"
+"DI52",183,34570,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,35087,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,35603,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,36103,500,51,"sound_NOTNOVEL",NA
+"D128",317,36420,317,128,"pic_nn","animal or thing?"
+"DI52",183,36603,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,37120,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,37637,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI22",500,38137,500,22,"sound_NOVEL",NA
+"D114",316,38453,316,114,"pic_novel","animal or thing?"
+"DI42",184,38637,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,39153,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,39670,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI32",500,40170,500,32,"sound_NOVEL",NA
+"D119",317,40487,317,119,"pic_novel","animal or thing?"
+"DI42",183,40670,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,41187,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,41703,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,42203,500,51,"sound_NOTNOVEL",NA
+"D117",317,42520,317,117,"pic_nn","animal or thing?"
+"DI52",183,42703,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,43220,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,43737,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI13",500,44237,500,13,"sound_NOVEL",NA
+"D125",316,44553,316,125,"pic_novel","animal or thing?"
+"DI42",184,44737,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,45253,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,45770,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI20",500,46270,500,20,"sound_NOVEL",NA
+"D131",317,46587,317,131,"pic_novel","animal or thing?"
+"DI42",183,46770,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,47287,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,47803,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,48303,500,51,"sound_NOTNOVEL",NA
+"D120",317,48620,317,120,"pic_nn","animal or thing?"
+"DI52",183,48803,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,49320,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,49837,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,50337,500,51,"sound_NOTNOVEL",NA
+"D115",316,50653,316,115,"pic_nn","animal or thing?"
+"DI52",184,50837,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,51353,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,51870,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN1",500,52370,500,1,"sound_NOVEL",NA
+"D134",317,52687,317,134,"pic_novel","animal or thing?"
+"DI42",183,52870,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,53387,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,53903,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI11",500,54403,500,11,"sound_NOVEL",NA
+"D129",317,54720,317,129,"pic_novel","animal or thing?"
+"DI42",183,54903,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,55420,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,55937,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN4",500,56437,500,4,"sound_NOVEL",NA
+"D112",316,56753,316,112,"pic_novel","animal or thing?"
+"DI42",184,56937,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,57453,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,57970,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,58470,500,51,"sound_NOTNOVEL",NA
+"D116",317,58787,317,116,"pic_nn","animal or thing?"
+"DI52",183,58970,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,59487,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,60003,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN9",500,60503,500,9,"sound_NOVEL",NA
+"D123",317,60820,317,123,"pic_novel","animal or thing?"
+"DI42",183,61003,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,61520,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,62037,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,62537,500,51,"sound_NOTNOVEL",NA
+"D102",316,62853,316,102,"pic_nn","animal or thing?"
+"DI52",184,63037,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,63553,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,64069,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,64569,500,51,"sound_NOTNOVEL",NA
+"D130",318,64887,318,130,"pic_nn","animal or thing?"
+"DI52",182,65069,182,52,NA,"STD1nn or STD1nov"
+"DI53",518,65587,518,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,66103,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI26",500,66603,500,26,"sound_NOVEL",NA
+"D101",317,66920,317,101,"pic_novel","animal or thing?"
+"DI42",183,67103,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,67620,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,68137,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,68637,500,51,"sound_NOTNOVEL",NA
+"D121",316,68953,316,121,"pic_nn","animal or thing?"
+"DI52",184,69137,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,69653,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,70170,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI17",500,70670,500,17,"sound_NOVEL",NA
+"D116",316,70986,316,116,"pic_novel","animal or thing?"
+"DI42",184,71170,184,42,NA,"STD1nn or STD1nov"
+"DI43",517,71687,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,72203,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI27",500,72703,500,27,"sound_NOVEL",NA
+"D130",317,73020,317,130,"pic_novel","animal or thing?"
+"DI42",183,73203,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,73720,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,74237,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,74737,500,51,"sound_NOTNOVEL",NA
+"D117",316,75053,316,117,"pic_nn","animal or thing?"
+"DI52",184,75237,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,75753,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,76270,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,76770,500,51,"sound_NOTNOVEL",NA
+"D131",316,77086,316,131,"pic_nn","animal or thing?"
+"DI52",184,77270,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,77787,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,78303,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN3",500,78803,500,3,"sound_NOVEL",NA
+"D104",317,79120,317,104,"pic_novel","animal or thing?"
+"DI42",183,79303,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,79820,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,80337,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,80837,500,51,"sound_NOTNOVEL",NA
+"D127",316,81153,316,127,"pic_nn","animal or thing?"
+"DI52",184,81337,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,81853,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,82370,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,82870,500,51,"sound_NOTNOVEL",NA
+"D104",316,83186,316,104,"pic_nn","animal or thing?"
+"DI52",184,83370,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,83887,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,84403,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI34",500,84903,500,34,"sound_NOVEL",NA
+"D113",317,85220,317,113,"pic_novel","animal or thing?"
+"DI42",183,85403,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,85920,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,86437,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,86937,500,51,"sound_NOTNOVEL",NA
+"D124",316,87253,316,124,"pic_nn","animal or thing?"
+"DI52",184,87437,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,87953,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,88470,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI23",500,88970,500,23,"sound_NOVEL",NA
+"D123",316,89286,316,123,"pic_novel","animal or thing?"
+"DI42",184,89470,184,42,NA,"STD1nn or STD1nov"
+"DI43",517,89987,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,90503,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,91003,500,51,"sound_NOTNOVEL",NA
+"D113",317,91320,317,113,"pic_nn","animal or thing?"
+"DI52",183,91503,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,92020,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,92537,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI33",500,93037,500,33,"sound_NOVEL",NA
+"D132",316,93353,316,132,"pic_novel","animal or thing?"
+"DI42",184,93537,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,94053,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,94570,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,95070,500,51,"sound_NOTNOVEL",NA
+"D109",316,95386,316,109,"pic_nn","animal or thing?"
+"DI52",184,95570,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,96087,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,96603,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,97103,500,51,"sound_NOTNOVEL",NA
+"D119",317,97420,317,119,"pic_nn","animal or thing?"
+"DI52",183,97603,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,98120,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,98637,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,99137,500,51,"sound_NOTNOVEL",NA
+"D105",316,99453,316,105,"pic_nn","animal or thing?"
+"DI52",184,99637,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,100153,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,100670,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,101170,500,51,"sound_NOTNOVEL",NA
+"D132",316,101486,316,132,"pic_nn","animal or thing?"
+"DI52",184,101670,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,102187,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,102703,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI25",500,103203,500,25,"sound_NOVEL",NA
+"D129",317,103520,317,129,"pic_novel","animal or thing?"
+"DI42",183,103703,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,104220,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,104737,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,105237,500,51,"sound_NOTNOVEL",NA
+"D110",316,105553,316,110,"pic_nn","animal or thing?"
+"DI52",184,105737,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,106253,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,106770,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,107270,500,51,"sound_NOTNOVEL",NA
+"D101",316,107586,316,101,"pic_nn","animal or thing?"
+"DI52",184,107770,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,108287,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,108803,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,109303,500,51,"sound_NOTNOVEL",NA
+"D108",317,109620,317,108,"pic_nn","animal or thing?"
+"DI52",183,109803,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,110320,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,110837,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI29",500,111337,500,29,"sound_NOVEL",NA
+"D126",316,111653,316,126,"pic_novel","animal or thing?"
+"DI42",184,111837,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,112353,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,112870,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN5",500,113370,500,5,"sound_NOVEL",NA
+"D103",316,113686,316,103,"pic_novel","animal or thing?"
+"DI42",184,113870,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,114386,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,114903,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI24",500,115403,500,24,"sound_NOVEL",NA
+"D105",317,115720,317,105,"pic_novel","animal or thing?"
+"DI42",183,115903,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,116420,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,116936,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI14",501,117437,501,14,"sound_NOVEL",NA
+"D121",316,117753,316,121,"pic_novel","animal or thing?"
+"DI42",184,117937,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,118453,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,118970,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI15",500,119470,500,15,"sound_NOVEL",NA
+"D112",316,119786,316,112,"pic_novel","animal or thing?"
+"DI42",184,119970,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,120486,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,121003,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI10",500,121503,500,10,"sound_NOVEL",NA
+"D111",317,121820,317,111,"pic_novel","animal or thing?"
+"DI42",183,122003,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,122520,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,123036,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,123536,500,51,"sound_NOTNOVEL",NA
+"D118",317,123853,317,118,"pic_nn","animal or thing?"
+"DI52",184,124037,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,124553,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,125070,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN6",500,125570,500,6,"sound_NOVEL",NA
+"D118",316,125886,316,118,"pic_novel","animal or thing?"
+"DI42",184,126070,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,126586,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,127103,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI21",500,127603,500,21,"sound_NOVEL",NA
+"D106",317,127920,317,106,"pic_novel","animal or thing?"
+"DI42",183,128103,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,128620,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,129136,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI30",500,129636,500,30,"sound_NOVEL",NA
+"D125",317,129953,317,125,"pic_novel","animal or thing?"
+"DI42",184,130137,184,42,NA,"STD1nn or STD1nov"
+"DI43",515,130652,515,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",518,131170,518,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,131670,500,51,"sound_NOTNOVEL",NA
+"D126",316,131986,316,126,"pic_nn","animal or thing?"
+"DI52",184,132170,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,132686,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,133203,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,133703,500,51,"sound_NOTNOVEL",NA
+"D122",317,134020,317,122,"pic_nn","animal or thing?"
+"DI52",183,134203,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,134720,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,135236,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,135736,500,51,"sound_NOTNOVEL",NA
+"D128",317,136053,317,128,"pic_nn","animal or thing?"
+"DI52",183,136236,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,136753,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,137270,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,137770,500,51,"sound_NOTNOVEL",NA
+"D124",316,138086,316,124,"pic_nn","animal or thing?"
+"DI52",184,138270,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,138786,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,139303,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI18",500,139803,500,18,"sound_NOVEL",NA
+"D102",317,140120,317,102,"pic_novel","animal or thing?"
+"DI42",183,140303,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,140820,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,141336,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN7",500,141836,500,7,"sound_NOVEL",NA
+"D107",317,142153,317,107,"pic_novel","animal or thing?"
+"DI42",183,142336,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,142853,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,143370,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI16",500,143870,500,16,"sound_NOVEL",NA
+"D114",316,144186,316,114,"pic_novel","animal or thing?"
+"DI42",184,144370,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,144886,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,145403,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,145903,500,51,"sound_NOTNOVEL",NA
+"D111",317,146220,317,111,"pic_nn","animal or thing?"
+"DI52",183,146403,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,146920,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,147436,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI19",500,147936,500,19,"sound_NOVEL",NA
+"D120",317,148253,317,120,"pic_novel","animal or thing?"
+"DI42",183,148436,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,148953,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,149470,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,149970,500,51,"sound_NOTNOVEL",NA
+"D117",316,150286,316,117,"pic_nn","animal or thing?"
+"DI52",184,150470,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,150986,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,151503,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,152003,500,51,"sound_NOTNOVEL",NA
+"D107",317,152320,317,107,"pic_nn","animal or thing?"
+"DI52",183,152503,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,153020,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,153536,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,154036,500,51,"sound_NOTNOVEL",NA
+"D106",317,154353,317,106,"pic_nn","animal or thing?"
+"DI52",183,154536,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,155053,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,155570,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,156070,500,51,"sound_NOTNOVEL",NA
+"D101",316,156386,316,101,"pic_nn","animal or thing?"
+"DI52",184,156570,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,157086,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,157603,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI12",500,158103,500,12,"sound_NOVEL",NA
+"D105",317,158420,317,105,"pic_novel","animal or thing?"
+"DI42",183,158603,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,159120,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,159636,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,160136,500,51,"sound_NOTNOVEL",NA
+"D108",317,160453,317,108,"pic_nn","animal or thing?"
+"DI52",183,160636,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,161153,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,161670,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,162170,500,51,"sound_NOTNOVEL",NA
+"D119",316,162486,316,119,"pic_nn","animal or thing?"
+"DI52",184,162670,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,163186,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,163703,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI23",500,164203,500,23,"sound_NOVEL",NA
+"D124",317,164520,317,124,"pic_novel","animal or thing?"
+"DI42",183,164703,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,165220,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,165736,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,166236,500,51,"sound_NOTNOVEL",NA
+"D132",317,166553,317,132,"pic_nn","animal or thing?"
+"DI52",183,166736,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,167253,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,167770,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI20",500,168270,500,20,"sound_NOVEL",NA
+"D110",316,168586,316,110,"pic_novel","animal or thing?"
+"DI42",184,168770,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,169286,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,169803,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,170303,500,51,"sound_NOTNOVEL",NA
+"D105",317,170620,317,105,"pic_nn","animal or thing?"
+"DI52",183,170803,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,171320,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,171836,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,172336,500,51,"sound_NOTNOVEL",NA
+"D122",317,172653,317,122,"pic_nn","animal or thing?"
+"DI52",183,172836,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,173353,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,173870,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,174370,500,51,"sound_NOTNOVEL",NA
+"D112",316,174686,316,112,"pic_nn","animal or thing?"
+"DI52",184,174870,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,175386,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,175903,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,176403,500,51,"sound_NOTNOVEL",NA
+"D127",317,176720,317,127,"pic_nn","animal or thing?"
+"DI52",183,176903,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,177420,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,177936,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,178436,500,51,"sound_NOTNOVEL",NA
+"D116",317,178753,317,116,"pic_nn","animal or thing?"
+"DI52",183,178936,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,179453,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,179970,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI10",500,180470,500,10,"sound_NOVEL",NA
+"D111",316,180786,316,111,"pic_novel","animal or thing?"
+"DI42",184,180970,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,181486,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,182003,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,182503,500,51,"sound_NOTNOVEL",NA
+"D125",317,182820,317,125,"pic_nn","animal or thing?"
+"DI52",183,183003,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,183520,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,184036,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI16",500,184536,500,16,"sound_NOVEL",NA
+"D131",317,184853,317,131,"pic_novel","animal or thing?"
+"DI42",183,185036,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,185553,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,186070,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,186570,500,51,"sound_NOTNOVEL",NA
+"D112",316,186886,316,112,"pic_nn","animal or thing?"
+"DI52",184,187070,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,187586,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,188103,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,188603,500,51,"sound_NOTNOVEL",NA
+"D115",317,188920,317,115,"pic_nn","animal or thing?"
+"DI52",183,189103,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,189620,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,190136,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,190636,500,51,"sound_NOTNOVEL",NA
+"D121",317,190953,317,121,"pic_nn","animal or thing?"
+"DI52",183,191136,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,191653,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,192170,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,192670,500,51,"sound_NOTNOVEL",NA
+"D120",316,192986,316,120,"pic_nn","animal or thing?"
+"DI52",184,193170,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,193686,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,194203,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN1",500,194703,500,1,"sound_NOVEL",NA
+"D129",317,195020,317,129,"pic_novel","animal or thing?"
+"DI42",183,195203,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,195720,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,196236,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI26",500,196736,500,26,"sound_NOVEL",NA
+"D127",317,197053,317,127,"pic_novel","animal or thing?"
+"DI42",183,197236,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,197753,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,198270,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI22",500,198770,500,22,"sound_NOVEL",NA
+"D119",316,199086,316,119,"pic_novel","animal or thing?"
+"DI42",184,199270,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,199786,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,200303,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI13",500,200803,500,13,"sound_NOVEL",NA
+"D101",317,201120,317,101,"pic_novel","animal or thing?"
+"DI42",183,201303,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,201820,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,202336,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,202836,500,51,"sound_NOTNOVEL",NA
+"D130",317,203153,317,130,"pic_nn","animal or thing?"
+"DI52",183,203336,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,203853,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,204370,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI30",500,204870,500,30,"sound_NOVEL",NA
+"D115",316,205186,316,115,"pic_novel","animal or thing?"
+"DI42",184,205370,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,205886,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,206403,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN7",500,206903,500,7,"sound_NOVEL",NA
+"D102",317,207220,317,102,"pic_novel","animal or thing?"
+"DI42",183,207403,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,207920,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,208436,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN8",500,208936,500,8,"sound_NOVEL",NA
+"D109",317,209253,317,109,"pic_novel","animal or thing?"
+"DI42",183,209436,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,209953,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,210470,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI29",500,210970,500,29,"sound_NOVEL",NA
+"D126",316,211286,316,126,"pic_novel","animal or thing?"
+"DI42",184,211470,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,211986,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,212503,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,213003,500,51,"sound_NOTNOVEL",NA
+"D126",317,213320,317,126,"pic_nn","animal or thing?"
+"DI52",183,213503,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,214020,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,214536,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,215036,500,51,"sound_NOTNOVEL",NA
+"D117",317,215353,317,117,"pic_nn","animal or thing?"
+"DI52",183,215536,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,216053,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,216570,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN9",500,217070,500,9,"sound_NOVEL",NA
+"D104",316,217386,316,104,"pic_novel","animal or thing?"
+"DI42",184,217570,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,218086,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,218603,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI32",500,219103,500,32,"sound_NOVEL",NA
+"D106",317,219420,317,106,"pic_novel","animal or thing?"
+"DI42",183,219603,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,220120,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,220636,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,221136,500,51,"sound_NOTNOVEL",NA
+"D114",317,221453,317,114,"pic_nn","animal or thing?"
+"DI52",183,221636,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,222153,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,222670,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI27",500,223170,500,27,"sound_NOVEL",NA
+"D102",316,223486,316,102,"pic_novel","animal or thing?"
+"DI42",184,223670,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,224186,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,224703,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,225203,500,51,"sound_NOTNOVEL",NA
+"D130",317,225520,317,130,"pic_nn","animal or thing?"
+"DI52",183,225703,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,226220,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,226736,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI14",500,227236,500,14,"sound_NOVEL",NA
+"D133",317,227553,317,133,"pic_novel","animal or thing?"
+"DI42",183,227736,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,228253,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,228770,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI25",500,229270,500,25,"sound_NOVEL",NA
+"D133",316,229586,316,133,"pic_novel","animal or thing?"
+"DI42",184,229770,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,230286,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,230803,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN4",500,231303,500,4,"sound_NOVEL",NA
+"D113",317,231620,317,113,"pic_novel","animal or thing?"
+"DI42",183,231803,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,232320,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,232836,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI19",500,233336,500,19,"sound_NOVEL",NA
+"D122",317,233653,317,122,"pic_novel","animal or thing?"
+"DI42",183,233836,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,234353,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,234870,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI24",500,235370,500,24,"sound_NOVEL",NA
+"D134",316,235686,316,134,"pic_novel","animal or thing?"
+"DI42",184,235870,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,236386,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,236903,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,237403,500,51,"sound_NOTNOVEL",NA
+"D131",317,237720,317,131,"pic_nn","animal or thing?"
+"DI52",183,237903,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,238420,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,238936,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN3",500,239436,500,3,"sound_NOVEL",NA
+"D109",317,239753,317,109,"pic_novel","animal or thing?"
+"DI42",183,239936,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,240453,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,240970,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,241470,500,51,"sound_NOTNOVEL",NA
+"D114",316,241786,316,114,"pic_nn","animal or thing?"
+"DI52",184,241970,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,242486,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,243003,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI15",500,243503,500,15,"sound_NOVEL",NA
+"D113",316,243819,316,113,"pic_novel","animal or thing?"
+"DI42",184,244003,184,42,NA,"STD1nn or STD1nov"
+"DI43",517,244520,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,245036,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN5",500,245536,500,5,"sound_NOVEL",NA
+"D134",317,245853,317,134,"pic_novel","animal or thing?"
+"DI42",183,246036,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,246553,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,247070,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,247570,500,51,"sound_NOTNOVEL",NA
+"D132",316,247886,316,132,"pic_nn","animal or thing?"
+"DI52",184,248070,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,248586,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,249103,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN2",500,249603,500,2,"sound_NOVEL",NA
+"D116",316,249919,316,116,"pic_novel","animal or thing?"
+"DI42",184,250103,184,42,NA,"STD1nn or STD1nov"
+"DI43",517,250620,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,251136,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI28",500,251636,500,28,"sound_NOVEL",NA
+"D123",317,251953,317,123,"pic_novel","animal or thing?"
+"DI42",183,252136,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,252653,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,253170,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI11",500,253670,500,11,"sound_NOVEL",NA
+"D107",316,253986,316,107,"pic_novel","animal or thing?"
+"DI42",184,254170,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,254686,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,255203,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,255703,500,51,"sound_NOTNOVEL",NA
+"D128",316,256019,316,128,"pic_nn","animal or thing?"
+"DI52",183,256202,183,52,NA,"STD1nn or STD1nov"
+"DI53",518,256720,518,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,257236,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,257736,500,51,"sound_NOTNOVEL",NA
+"D129",317,258053,317,129,"pic_nn","animal or thing?"
+"DI52",183,258236,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,258753,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,259269,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI31",500,259769,500,31,"sound_NOVEL",NA
+"D103",317,260086,317,103,"pic_novel","animal or thing?"
+"DI42",183,260269,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,260786,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,261303,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI17",500,261803,500,17,"sound_NOVEL",NA
+"D108",316,262119,316,108,"pic_novel","animal or thing?"
+"DI42",184,262303,184,42,NA,"STD1nn or STD1nov"
+"DI43",517,262820,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,263336,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,263836,500,51,"sound_NOTNOVEL",NA
+"D118",317,264153,317,118,"pic_nn","animal or thing?"
+"DI52",183,264336,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,264853,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,265370,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,265870,500,51,"sound_NOTNOVEL",NA
+"D118",316,266186,316,118,"pic_nn","animal or thing?"
+"DI52",184,266370,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,266886,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,267403,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,267903,500,51,"sound_NOTNOVEL",NA
+"D103",316,268219,316,103,"pic_nn","animal or thing?"
+"DI52",184,268403,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,268920,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,269436,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN6",500,269936,500,6,"sound_NOVEL",NA
+"D123",317,270253,317,123,"pic_novel","animal or thing?"
+"DI42",183,270436,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,270953,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,271470,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI21",500,271970,500,21,"sound_NOVEL",NA
+"D110",316,272286,316,110,"pic_novel","animal or thing?"
+"DI42",184,272470,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,272986,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,273503,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,274003,500,51,"sound_NOTNOVEL",NA
+"D128",316,274319,316,128,"pic_nn","animal or thing?"
+"DI52",184,274503,184,52,NA,"STD1nn or STD1nov"
+"DI53",517,275020,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,275536,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI18",500,276036,500,18,"sound_NOVEL",NA
+"D124",317,276353,317,124,"pic_novel","animal or thing?"
+"DI42",183,276536,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,277053,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,277570,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,278070,500,51,"sound_NOTNOVEL",NA
+"D120",316,278386,316,120,"pic_nn","animal or thing?"
+"DI52",184,278570,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,279086,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,279603,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI34",500,280103,500,34,"sound_NOVEL",NA
+"D121",316,280419,316,121,"pic_novel","animal or thing?"
+"DI42",184,280603,184,42,NA,"STD1nn or STD1nov"
+"DI43",517,281120,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,281636,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,282136,500,51,"sound_NOTNOVEL",NA
+"D111",317,282453,317,111,"pic_nn","animal or thing?"
+"DI52",183,282636,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,283153,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,283670,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI33",500,284170,500,33,"sound_NOVEL",NA
+"D125",316,284486,316,125,"pic_novel","animal or thing?"
+"DI42",184,284670,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,285186,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,285703,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,286203,500,51,"sound_NOTNOVEL",NA
+"D104",316,286519,316,104,"pic_nn","animal or thing?"
+"DI52",184,286703,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,287219,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,287736,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI13",500,288236,500,13,"sound_NOVEL",NA
+"D120",317,288553,317,120,"pic_novel","animal or thing?"
+"DI42",183,288736,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,289253,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,289769,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI18",501,290270,501,18,"sound_NOVEL",NA
+"D127",316,290586,316,127,"pic_novel","animal or thing?"
+"DI42",184,290770,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,291286,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,291803,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI28",500,292303,500,28,"sound_NOVEL",NA
+"D117",316,292619,316,117,"pic_novel","animal or thing?"
+"DI42",184,292803,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,293319,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,293836,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,294336,500,51,"sound_NOTNOVEL",NA
+"D124",317,294653,317,124,"pic_nn","animal or thing?"
+"DI52",183,294836,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,295353,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,295869,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI24",501,296370,501,24,"sound_NOVEL",NA
+"D132",316,296686,316,132,"pic_novel","animal or thing?"
+"DI42",184,296870,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,297386,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,297903,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI23",500,298403,500,23,"sound_NOVEL",NA
+"D105",316,298719,316,105,"pic_novel","animal or thing?"
+"DI42",184,298903,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,299419,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,299936,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,300436,500,51,"sound_NOTNOVEL",NA
+"D104",317,300753,317,104,"pic_nn","animal or thing?"
+"DI52",183,300936,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,301453,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,301969,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,302469,500,51,"sound_NOTNOVEL",NA
+"D118",317,302786,317,118,"pic_nn","animal or thing?"
+"DI52",184,302970,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,303486,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,304003,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN5",500,304503,500,5,"sound_NOVEL",NA
+"D133",316,304819,316,133,"pic_novel","animal or thing?"
+"DI42",184,305003,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,305519,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,306036,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,306536,500,51,"sound_NOTNOVEL",NA
+"D119",317,306853,317,119,"pic_nn","animal or thing?"
+"DI52",183,307036,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,307553,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,308069,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,308569,500,51,"sound_NOTNOVEL",NA
+"D119",317,308886,317,119,"pic_nn","animal or thing?"
+"DI52",183,309069,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,309586,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,310103,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI25",500,310603,500,25,"sound_NOVEL",NA
+"D129",316,310919,316,129,"pic_novel","animal or thing?"
+"DI42",184,311103,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,311619,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,312136,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,312636,500,51,"sound_NOTNOVEL",NA
+"D105",317,312953,317,105,"pic_nn","animal or thing?"
+"DI52",183,313136,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,313653,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,314169,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI29",500,314669,500,29,"sound_NOVEL",NA
+"D110",317,314986,317,110,"pic_novel","animal or thing?"
+"DI42",183,315169,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,315686,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,316203,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,316703,500,51,"sound_NOTNOVEL",NA
+"D108",316,317019,316,108,"pic_nn","animal or thing?"
+"DI52",184,317203,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,317719,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,318236,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,318736,500,51,"sound_NOTNOVEL",NA
+"D110",317,319053,317,110,"pic_nn","animal or thing?"
+"DI52",183,319236,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,319753,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,320269,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,320769,500,51,"sound_NOTNOVEL",NA
+"D116",317,321086,317,116,"pic_nn","animal or thing?"
+"DI52",183,321269,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,321786,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,322303,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI10",500,322803,500,10,"sound_NOVEL",NA
+"D126",316,323119,316,126,"pic_novel","animal or thing?"
+"DI42",184,323303,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,323819,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,324336,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,324836,500,51,"sound_NOTNOVEL",NA
+"D103",317,325153,317,103,"pic_nn","animal or thing?"
+"DI52",183,325336,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,325853,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,326369,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI33",500,326869,500,33,"sound_NOVEL",NA
+"D101",317,327186,317,101,"pic_novel","animal or thing?"
+"DI42",183,327369,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,327886,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,328403,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI12",500,328903,500,12,"sound_NOVEL",NA
+"D106",316,329219,316,106,"pic_novel","animal or thing?"
+"DI42",184,329403,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,329919,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,330436,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,330936,500,51,"sound_NOTNOVEL",NA
+"D129",317,331253,317,129,"pic_nn","animal or thing?"
+"DI52",183,331436,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,331953,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,332469,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN2",500,332969,500,2,"sound_NOVEL",NA
+"D113",317,333286,317,113,"pic_novel","animal or thing?"
+"DI42",183,333469,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,333986,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,334503,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN1",500,335003,500,1,"sound_NOVEL",NA
+"D125",316,335319,316,125,"pic_novel","animal or thing?"
+"DI42",184,335503,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,336019,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,336536,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI17",500,337036,500,17,"sound_NOVEL",NA
+"D120",317,337353,317,120,"pic_novel","animal or thing?"
+"DI42",183,337536,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,338053,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,338569,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI19",500,339069,500,19,"sound_NOVEL",NA
+"D130",317,339386,317,130,"pic_novel","animal or thing?"
+"DI42",183,339569,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,340086,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,340603,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,341103,500,51,"sound_NOTNOVEL",NA
+"D128",316,341419,316,128,"pic_nn","animal or thing?"
+"DI52",184,341603,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,342119,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,342636,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,343136,500,51,"sound_NOTNOVEL",NA
+"D109",317,343453,317,109,"pic_nn","animal or thing?"
+"DI52",183,343636,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,344153,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,344669,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,345169,500,51,"sound_NOTNOVEL",NA
+"D115",317,345486,317,115,"pic_nn","animal or thing?"
+"DI52",183,345669,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,346186,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,346703,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN7",500,347203,500,7,"sound_NOVEL",NA
+"D103",316,347519,316,103,"pic_novel","animal or thing?"
+"DI42",184,347703,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,348219,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,348736,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,349236,500,51,"sound_NOTNOVEL",NA
+"D109",317,349553,317,109,"pic_nn","animal or thing?"
+"DI52",183,349736,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,350253,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,350769,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN9",500,351269,500,9,"sound_NOVEL",NA
+"D102",317,351586,317,102,"pic_novel","animal or thing?"
+"DI42",183,351769,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,352286,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,352803,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,353303,500,51,"sound_NOTNOVEL",NA
+"D132",316,353619,316,132,"pic_nn","animal or thing?"
+"DI52",184,353803,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,354319,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,354836,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN8",500,355336,500,8,"sound_NOVEL",NA
+"D102",317,355653,317,102,"pic_novel","animal or thing?"
+"DI42",183,355836,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,356353,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,356869,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,357369,500,51,"sound_NOTNOVEL",NA
+"D134",317,357686,317,134,"pic_nn","animal or thing?"
+"DI52",183,357869,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,358386,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,358903,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN6",500,359403,500,6,"sound_NOVEL",NA
+"D116",316,359719,316,116,"pic_novel","animal or thing?"
+"DI42",184,359903,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,360419,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,360936,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI32",500,361436,500,32,"sound_NOVEL",NA
+"D124",317,361753,317,124,"pic_novel","animal or thing?"
+"DI42",183,361936,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,362453,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,362969,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DIN3",500,363469,500,3,"sound_NOVEL",NA
+"D121",317,363786,317,121,"pic_novel","animal or thing?"
+"DI42",183,363969,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,364486,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,365003,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,365503,500,51,"sound_NOTNOVEL",NA
+"D121",316,365819,316,121,"pic_nn","animal or thing?"
+"DI52",184,366003,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,366519,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,367036,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,367536,500,51,"sound_NOTNOVEL",NA
+"D114",317,367853,317,114,"pic_nn","animal or thing?"
+"DI52",183,368036,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,368553,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,369069,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI27",500,369569,500,27,"sound_NOVEL",NA
+"D131",317,369886,317,131,"pic_novel","animal or thing?"
+"DI42",183,370069,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,370586,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,371103,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI15",500,371603,500,15,"sound_NOVEL",NA
+"D122",316,371919,316,122,"pic_novel","animal or thing?"
+"DI42",184,372103,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,372619,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,373136,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,373636,500,51,"sound_NOTNOVEL",NA
+"D112",317,373953,317,112,"pic_nn","animal or thing?"
+"DI52",183,374136,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,374653,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,375169,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI20",500,375669,500,20,"sound_NOVEL",NA
+"D114",317,375986,317,114,"pic_novel","animal or thing?"
+"DI42",183,376169,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,376686,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,377203,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,377703,500,51,"sound_NOTNOVEL",NA
+"D123",316,378019,316,123,"pic_nn","animal or thing?"
+"DI52",184,378203,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,378719,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,379236,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,379736,500,51,"sound_NOTNOVEL",NA
+"D118",317,380053,317,118,"pic_nn","animal or thing?"
+"DI52",183,380236,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,380753,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,381269,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DIN4",500,381769,500,4,"sound_NOVEL",NA
+"D127",317,382086,317,127,"pic_novel","animal or thing?"
+"DI42",183,382269,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,382786,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,383303,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI34",500,383803,500,34,"sound_NOVEL",NA
+"D113",316,384119,316,113,"pic_novel","animal or thing?"
+"DI42",184,384303,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,384819,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,385336,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,385836,500,51,"sound_NOTNOVEL",NA
+"D128",317,386153,317,128,"pic_nn","animal or thing?"
+"DI52",183,386336,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,386853,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,387369,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,387869,500,51,"sound_NOTNOVEL",NA
+"D107",317,388186,317,107,"pic_nn","animal or thing?"
+"DI52",183,388369,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,388886,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,389403,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI22",500,389903,500,22,"sound_NOVEL",NA
+"D101",316,390219,316,101,"pic_novel","animal or thing?"
+"DI42",184,390403,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,390919,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,391436,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,391936,500,51,"sound_NOTNOVEL",NA
+"D104",317,392253,317,104,"pic_nn","animal or thing?"
+"DI52",183,392436,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,392953,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,393469,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI16",500,393969,500,16,"sound_NOVEL",NA
+"D115",317,394286,317,115,"pic_novel","animal or thing?"
+"DI42",183,394469,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,394986,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,395503,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI26",500,396003,500,26,"sound_NOVEL",NA
+"D106",316,396319,316,106,"pic_novel","animal or thing?"
+"DI42",184,396503,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,397019,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,397536,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI14",500,398036,500,14,"sound_NOVEL",NA
+"D133",317,398353,317,133,"pic_novel","animal or thing?"
+"DI42",183,398536,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,399053,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,399569,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI30",500,400069,500,30,"sound_NOVEL",NA
+"D122",317,400386,317,122,"pic_novel","animal or thing?"
+"DI42",183,400569,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,401086,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,401603,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,402103,500,51,"sound_NOTNOVEL",NA
+"D112",316,402419,316,112,"pic_nn","animal or thing?"
+"DI52",184,402603,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,403119,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,403636,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,404136,500,51,"sound_NOTNOVEL",NA
+"D117",317,404453,317,117,"pic_nn","animal or thing?"
+"DI52",183,404636,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,405153,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,405669,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,406169,500,51,"sound_NOTNOVEL",NA
+"D131",317,406486,317,131,"pic_nn","animal or thing?"
+"DI52",183,406669,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,407186,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,407703,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,408203,500,51,"sound_NOTNOVEL",NA
+"D107",316,408519,316,107,"pic_nn","animal or thing?"
+"DI52",184,408703,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,409219,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,409736,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,410236,500,51,"sound_NOTNOVEL",NA
+"D126",317,410553,317,126,"pic_nn","animal or thing?"
+"DI52",183,410736,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,411253,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",516,411769,516,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,412269,500,51,"sound_NOTNOVEL",NA
+"D108",317,412586,317,108,"pic_nn","animal or thing?"
+"DI52",183,412769,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,413286,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,413803,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,414303,500,51,"sound_NOTNOVEL",NA
+"D123",316,414619,316,123,"pic_nn","animal or thing?"
+"DI52",184,414803,184,52,NA,"STD1nn or STD1nov"
+"DI53",516,415319,516,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,415836,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI21",500,416336,500,21,"sound_NOVEL",NA
+"D111",317,416653,317,111,"pic_novel","animal or thing?"
+"DI42",183,416836,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,417353,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,417869,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,418369,500,51,"sound_NOTNOVEL",NA
+"D130",317,418686,317,130,"pic_nn","animal or thing?"
+"DI52",183,418869,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,419386,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,419903,517,54,NA,"STD2nn OR STD2nov repeated twice"
+"DI31",500,420403,500,31,"sound_NOVEL",NA
+"D134",316,420719,316,134,"pic_novel","animal or thing?"
+"DI42",184,420903,184,42,NA,"STD1nn or STD1nov"
+"DI43",516,421419,516,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",517,421936,517,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI11",500,422436,500,11,"sound_NOVEL",NA
+"D125",317,422753,317,125,"pic_novel","animal or thing?"
+"DI42",183,422936,183,42,NA,"STD1nn or STD1nov"
+"DI43",517,423453,517,43,NA,"STD2nn OR STD2nov repeated twice"
+"DI44",516,423969,516,44,NA,"STD2nn OR STD2nov repeated twice"
+"DI51",500,424469,500,51,"sound_NOTNOVEL",NA
+"D111",317,424786,317,111,"pic_nn","animal or thing?"
+"DI52",183,424969,183,52,NA,"STD1nn or STD1nov"
+"DI53",517,425486,517,53,NA,"STD2nn OR STD2nov repeated twice"
+"DI54",517,426003,517,54,NA,"STD2nn OR STD2nov repeated twice"
