@@ -6,7 +6,7 @@ linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
 pc3 = 'D:\LocalData\bcowley';
 if isunix
     % Code to run on Linux platform
-    proj_root = fullfile(linux{2}, 'PROJECT_NEUROENHANCE', 'Finland', '');
+    proj_root = fullfile(linux{1}, 'PROJECT_NEUROENHANCE', 'Finland', '');
 elseif ispc
     % Code to run on Windows platform
     proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
