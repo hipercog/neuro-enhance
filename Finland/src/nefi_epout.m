@@ -43,6 +43,7 @@ function [Cfg, out] = nefi_epout(Cfg)
     protos = {'AV' 'Multi' 'Swi'};
     pix = contains(protos, Cfg.MC.export_name_root(end - 2:end - 1));
     epoch_evtype = {unpackCellStr(evtype(pix))};
+    numevs = numel(newevs{pix});
 
     %%%%%%%% Define pipeline %%%%%%%%
     i = 1; %next stepSet
@@ -54,7 +55,7 @@ function [Cfg, out] = nefi_epout(Cfg)
     stepSet(i).id = [num2str(i) '_epoch'];
     
     i = i + 1; %next stepSet
-    stepSet(i).funH = repmat({@CTAP_export_data}, 1, numel(newevs{pix}));
+    stepSet(i).funH = repmat({@CTAP_export_data}, 1, numevs + 1);
     stepSet(i).id = [num2str(i) '_export'];
     stepSet(i).save = false;
 
@@ -75,9 +76,10 @@ function [Cfg, out] = nefi_epout(Cfg)
         'uV_thresh', [-120 120]);
 
     out.export_data = struct(...
-        'type', 'mul',...
-        'outdir', fullfile('exportRoot', ['MUL_EXPORT_' protos{pix}]),...
-        'lock_event', newevs{pix});
+        'type', [repmat({'mul'}, 1, numevs) {'hdf5'}],...
+        'outdir', [repmat(fullfile('exportRoot', ['MUL_EXPORT_' protos{pix}])...
+                        , 1, numevs) {fullfile('exportRoot', 'H5_EXPORT')}],...
+        'lock_event', [newevs{pix} '']);
 
 
     %%%%%%%% Store to Cfg %%%%%%%%
