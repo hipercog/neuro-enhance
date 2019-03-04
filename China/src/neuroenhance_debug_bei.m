@@ -3,7 +3,7 @@
 %% Setup MAIN parameters
 % set the input directory where your data is stored
 linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
-pc3 = 'D:\LocalData\bcowley';
+pc3 = 'D:\';
 if isunix % Code to run on Linux platform
     proj_root = fullfile(linux{1}, 'PROJECT_NEUROENHANCE', 'China');
 elseif ispc % Code to run on Windows platform
@@ -31,23 +31,23 @@ pipeArr = {@nebr_pipe1,...
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 1;%[5:6 9];
+runps = 7;
 
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
 gix = 1;
-pix = 1;
+pix = 1:4;
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {'all' 'all' [105030307]}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {2 2 2}; %setdiff(1:12, [3 7]);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 1;
     
 %You can parameterize the sources for each pipe
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
+                , {NaN 1 1 1 1:3 1:3 1 1:6 1:10}'];
 
             
 %% Use runtime options

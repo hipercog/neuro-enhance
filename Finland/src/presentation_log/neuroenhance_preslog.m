@@ -20,9 +20,9 @@ px = cell2mat(cellfun(@(x) contains(eventfile, x, 'Ig', true), Arg.proto, 'Un', 
 isswitch = px(3);
 
 % prompt mode asks for some parameters and allows retrying
-prompt = true;
+% prompt = true;
 %   -->  disable if looping
-% prompt = false;
+prompt = false;
 
 
 %% Combine events in EEG
