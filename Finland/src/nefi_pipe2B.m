@@ -3,7 +3,7 @@ function [Cfg, out] = nefi_pipe2B(Cfg)
 
     %%%%%%%% Define hierarchy %%%%%%%%
     Cfg.id = 'pipe2B';
-    Cfg.srcid = {'pipe1#1_load'};
+    Cfg.srcid = {'pipe1#2_shape'};
 
     %%%%%%%% Define pipeline %%%%%%%%
     % IC correction
