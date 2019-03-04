@@ -101,11 +101,11 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
     Cfg.MC.export_name_root =...
-        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
+        sprintf('%d_%s_%s_', Arg.timept, grp_short_name{gix}, par_short_name{pix});
 
     % Run (and time) the pipe
     tic
-        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps...
+        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', Arg.runps...
                 , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
     toc
 
