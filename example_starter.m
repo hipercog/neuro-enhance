@@ -1,4 +1,4 @@
-function example_starter(source)
+ function example_starter(source)
 
 s = {'Finland' 'China'};
 sidx = startsWith(s, source);

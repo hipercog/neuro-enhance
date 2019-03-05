@@ -2,7 +2,7 @@
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored
-linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
+linux = {'~/Benslab', fullfile(filesep, 'media', 'bcowley', 'Transcend')};
 pc3 = 'E:\';
 if isunix
     % Code to run on Linux platform
@@ -19,11 +19,7 @@ grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
 par_short_name = {'AV' 'Multi' 'Swi'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
-<<<<<<< HEAD
 ctapID = {'pre_dbg' 'post_dbg'};
-=======
-ctapID = {'pre_old' 'post_dbg_preslog'};
->>>>>>> 75e31e93438e7fa91586a65b0ae8b6f49ab4fdf6
 
 %Select pipe array and first and last pipe to run
 pipeArr = {@nefi_pipe1,...
@@ -39,14 +35,10 @@ pipeArr = {@nefi_pipe1,...
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-<<<<<<< HEAD
-runps = 1:9;
-=======
-runps = 7;%[5:6 9];
->>>>>>> 75e31e93438e7fa91586a65b0ae8b6f49ab4fdf6
+runps = 7;
 
 STOP_ON_ERROR = true;
-OVERWRITE_OLD_RESULTS = true;
+OVERWRITE_OLD_RESULTS = false;
 
 %Subsetting groups and paradigms
 gix = 1;
