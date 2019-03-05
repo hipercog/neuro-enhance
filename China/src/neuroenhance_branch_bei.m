@@ -48,8 +48,8 @@ pipeArr = {@nebr_pipe1,...
 %% Setup MAIN parameters
 p = inputParser;
 p.addRequired('proj_root', @ischar)
-p.addParameter('grpix', 1:3, @(x) any(x == 1:4))
-p.addParameter('parix', 1:4, @(x) any(x == 1:3))
+p.addParameter('grpix', 1:3, @(x) any(x == 1:3))
+p.addParameter('parix', 1:4, @(x) any(x == 1:4))
 p.addParameter('timept', 1, @(x) x == 1 || x == 2)
 p.addParameter('runps', 1:length(pipeArr), @(x) any(x == 1:length(pipeArr)))
 p.addParameter('pipesrc', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}, @iscell)
