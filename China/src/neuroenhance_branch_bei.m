@@ -48,8 +48,8 @@ pipeArr = {@nebr_pipe1,...
 %% Setup MAIN parameters
 p = inputParser;
 p.addRequired('proj_root', @ischar)
-p.addParameter('grpix', 1:4, @(x) any(x == 1:4))
-p.addParameter('parix', 1:3, @(x) any(x == 1:3))
+p.addParameter('grpix', 1:3, @(x) any(x == 1:3))
+p.addParameter('parix', 1:4, @(x) any(x == 1:4))
 p.addParameter('timept', 1, @(x) x == 1 || x == 2)
 p.addParameter('runps', 1:length(pipeArr), @(x) any(x == 1:length(pipeArr)))
 p.addParameter('pipesrc', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}, @iscell)
@@ -94,12 +94,12 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
-    Cfg.MC.export_name_root = sprintf('%d_%s_%s_', timept...
+    Cfg.MC.export_name_root = sprintf('%d_%s_%s_', Arg.timept...
         , upper(group_dir{gix}(1:3)), upper(para_dir{pix}(1:min([4 end]))));
 
     % Run (and time) the pipe
     tic
-        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps...
+        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', Arg.runps...
                 , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
     toc
 
