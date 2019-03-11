@@ -1,25 +1,22 @@
 %% Debug script for branching CTAP of NEURO-ENHANCE Finnish PRE- POST-test data
 
 %% Setup MAIN parameters
-% set the input directory where your data is stored
-linux = {'~/Benslab', fullfile(filesep, 'media', 'bcowley', 'Transcend')};
-pc3 = 'E:\';
-if isunix
-    % Code to run on Linux platform
-    proj_root = fullfile(linux{1}, 'PROJECT_NEUROENHANCE', 'Finland', '');
-elseif ispc
-    % Code to run on Windows platform
-    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'Finland', '');
-else
-    disp('Platform not supported')
-end
+% set the input directory where your data is stored; some examples:
+local = '~/Benslab';
+nixhd = fullfile(filesep, 'media', 'bcowley', 'Transcend');
+pchdd = 'E:\';
+
+proj_root = nixhd;
+
+% project root on your platform
+proj_root = fullfile(proj_root, 'PROJECT_NEUROENHANCE', 'Finland', '');
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
 grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
 par_short_name = {'AV' 'Multi' 'Swi'};
 
 % use ctapID to uniquely name the base folder of the output directory tree
-ctapID = {'pre_dbg' 'post_dbg'};
+ctapID = {'pre' 'post'};
 
 %Select pipe array and first and last pipe to run
 pipeArr = {@nefi_pipe1,...

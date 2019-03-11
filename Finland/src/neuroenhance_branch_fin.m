@@ -62,14 +62,14 @@ Arg = p.Results;
 
 
 %% Runtime options for CTAP:
-STOP_ON_ERROR = false;
-OVERWRITE_OLD_RESULTS = true;
 
 %You can parameterize the sources for each pipe
+runps = Arg.runps;
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
 
 %Set timepoint here: PRE or POST...
 ctapID = ctapID{Arg.timept};
+timept = Arg.timept;
 
 %Subsetting groups and paradigms
 group_dir = group_dir(Arg.grpix);
@@ -101,12 +101,12 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
     Cfg.MC.export_name_root =...
-        sprintf('%d_%s_%s_', Arg.timept, grp_short_name{gix}, par_short_name{pix});
+        sprintf('%d_%s_%s_', timept, grp_short_name{gix}, par_short_name{pix});
 
     % Run (and time) the pipe
     tic
-        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', Arg.runps...
-                , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
+        CTAP_pipeline_brancher(Cfg, pipeArr...
+                            , 'runPipes', runps, 'dbg', false, 'ovw', true)
     toc
 
 end

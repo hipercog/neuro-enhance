@@ -1,10 +1,13 @@
 %% INIT
 %make paths
-t = 1;
-proj = {'_fin_pre', '_fin_post'};%PICK PRE-POST STAGE!!
+proj = {'_fin_pre', '_fin_post'};
+t = 1;%PICK PRE-POST STAGE!!
+
+root = fullfile('/media', 'bcowley', 'Transcend');
 rootNE = fullfile('PROJECT_NEUROENHANCE', 'Finland', 'ANALYSIS');
-ind = fullfile('/media', 'ben', 'Transcend', rootNE, ['neuroenhance' proj{t}]);
-oud = fullfile('/home', 'ben', 'Benslab', rootNE, ['report' proj{t}]);
+ind = fullfile(root, rootNE, ['neuroenhance' proj{t}]);
+oud = fullfile(root, rootNE, ['report' proj{t}]);
+if ~isfolder(oud), mkdir(oud); end
 %spec groups and protocol conditions
 grps = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 cnds = {'AV' 'multiMMN' 'switching'};
