@@ -35,7 +35,7 @@ pipeArr = {@nefi_pipe1,...
 runps = 7;
 
 STOP_ON_ERROR = true;
-OVERWRITE_OLD_RESULTS = false;
+OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
 gix = 1;

@@ -11,7 +11,9 @@ function neuroenhance_branch_bei(proj_root, varargin)
 %   parix       vector, paradigm index to include, default = 1:4
 %   timept      scalar, time point (pre-or post-test) to attack, default = 1
 %   runps       vector, pipes to run, default = all of them
-%   pipesrc     cell array, sources for each pipe, 
+%   pipesrc     cell array, sources for each pipe - to override default you 
+%                           must provide as many cells of source vectors as
+%                           you have pipes; easiest is to copy+modify default
 %                           default = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}
 % 
 %
@@ -43,6 +45,7 @@ pipeArr = {@nebr_pipe1,...
            @nebr_epout,...
            @nebr_segcheck,...
            @nebr_peekpipe};
+srcix = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10};
 
 
 %% Setup MAIN parameters
@@ -51,22 +54,22 @@ p.addRequired('proj_root', @ischar)
 p.addParameter('grpix', 1:3, @(x) any(x == 1:3))
 p.addParameter('parix', 1:4, @(x) any(x == 1:4))
 p.addParameter('timept', 1, @(x) x == 1 || x == 2)
-p.addParameter('runps', 1:length(pipeArr), @(x) any(x == 1:length(pipeArr)))
-p.addParameter('pipesrc', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}, @iscell)
+p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
+p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
 
 p.parse(proj_root, varargin{:});
 Arg = p.Results;
 
 
 %% Runtime options for CTAP:
-STOP_ON_ERROR = false;
-OVERWRITE_OLD_RESULTS = true;
 
 %You can parameterize the sources for each pipe
+runps = Arg.runps;
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
 
 %Set timepoint here: PRE or POST...
 ctapID = ctapID{Arg.timept};
+timept = Arg.timept;
 
 %Subsetting groups and paradigms
 group_dir = group_dir(Arg.grpix);
@@ -94,13 +97,13 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type...
                 , 'session', group_dir(gix), 'measurement', para_dir(pix));
-    Cfg.MC.export_name_root = sprintf('%d_%s_%s_', Arg.timept...
+    Cfg.MC.export_name_root = sprintf('%d_%s_%s_', timept...
         , upper(group_dir{gix}(1:3)), upper(para_dir{pix}(1:min([4 end]))));
 
     % Run (and time) the pipe
     tic
-        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', Arg.runps...
-                , 'dbg', STOP_ON_ERROR, 'ovw', OVERWRITE_OLD_RESULTS)
+        CTAP_pipeline_brancher(Cfg, pipeArr...
+                            , 'runPipes', runps, 'dbg', false, 'ovw', true)
     toc
 
 end

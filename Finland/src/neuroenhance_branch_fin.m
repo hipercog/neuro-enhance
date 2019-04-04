@@ -11,7 +11,9 @@ function neuroenhance_branch_fin(proj_root, varargin)
 %   parix       vector, paradigm index to include, default = 1:4
 %   timept      scalar, time point (pre-or post-test) to attack, default = 1
 %   runps       vector, pipes to run, default = all of them
-%   pipesrc     cell array, sources for each pipe, 
+%   pipesrc     cell array, sources for each pipe - to override default you 
+%                           must provide as many cells of source vectors as
+%                           you have pipes; easiest is to copy+modify default
 %                           default = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}
 % 
 %
@@ -46,6 +48,7 @@ pipeArr = {@nefi_pipe1,...
            @nefi_epout,...
            @nefi_segcheck,...
            @nefi_peekpipe};
+srcix = {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10};
 
 
 %% Setup MAIN parameters
@@ -54,8 +57,8 @@ p.addRequired('proj_root', @ischar)
 p.addParameter('grpix', 1:4, @(x) any(x == 1:4))
 p.addParameter('parix', 1:3, @(x) any(x == 1:3))
 p.addParameter('timept', 1, @(x) x == 1 || x == 2)
-p.addParameter('runps', 1:length(pipeArr), @(x) any(x == 1:length(pipeArr)))
-p.addParameter('pipesrc', {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}, @iscell)
+p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
+p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
 
 p.parse(proj_root, varargin{:});
 Arg = p.Results;

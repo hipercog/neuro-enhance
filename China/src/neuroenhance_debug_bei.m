@@ -1,16 +1,15 @@
 %% Debug script for branching CTAP of NEURO-ENHANCE Chinese PRE- POST-test data
 
 %% Setup MAIN parameters
-% set the input directory where your data is stored
-linux = {'~/Benslab', fullfile(filesep, 'media', 'ben', 'Transcend')};
-pc3 = 'D:\';
-if isunix % Code to run on Linux platform
-    proj_root = fullfile(linux{1}, 'PROJECT_NEUROENHANCE', 'China');
-elseif ispc % Code to run on Windows platform
-    proj_root = fullfile(pc3, 'PROJECT_NEUROENHANCE', 'China');
-else
-    disp('Platform not supported')
-end
+% set the input directory where your data is stored; some examples:
+local = '~/Benslab';
+nixhd = fullfile(filesep, 'media', 'bcowley', 'Transcend');
+pchdd = 'E:\';
+proj_root = local;
+
+% project root on your platform
+proj_root = fullfile(proj_root, 'project_NEUROENHANCE', 'China', '');
+% folder names
 group_dir = {'control' 'english' 'music'};
 para_dir = {'attention' 'AV' 'multiMMN' 'musmelo'};
 
@@ -38,9 +37,9 @@ OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
 gix = 1;
-pix = 1:4;
+pix = 1;
 % use sbj_filt to select all (or a subset) of available recordings
-grpXsbj_filt = {2 2 2}; %setdiff(1:12, [3 7]);
+grpXsbj_filt = {105020102 2 2}; %setdiff(1:12, [3 7]);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
 timept = 1;
