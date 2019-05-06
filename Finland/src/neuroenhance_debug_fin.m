@@ -9,7 +9,7 @@ pchdd = 'E:\';
 proj_root = nixhd;
 
 % project root on your platform
-proj_root = fullfile(proj_root, 'PROJECT_NEUROENHANCE', 'Finland', '');
+proj_root = fullfile(proj_root, 'project_NEUROENHANCE', 'Finland', '');
 group_dir = {'A_movement' 'B_control' 'C_music' 'D_musicmove'};
 para_dir = {'AV' 'multiMMN' 'switching'};
 grp_short_name = {'Mov' 'Con' 'Mus' 'MMo'};
@@ -32,7 +32,7 @@ pipeArr = {@nefi_pipe1,...
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 7;
+runps = 1:9;
 
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;

@@ -40,8 +40,8 @@ else
     %% READ CODE
     % This can take a long time! because 'readtable()' takes a LONG time.
     %create & fill structure of peek stat tables per participant/recording
-    [treeStats, sort_ix] = subdir_parse(peek_stat_files...
-        , ind, 'peekpipe/this/', 'pipename');
+    [treeStats, sort_ix] = subdir_parse(peek_stat_files, ind...
+                                            , 'peekpipe/this/', 'pipename');
     for tidx = 1:numel(treeStats)
         for stix = 1:numel(treeStats(tidx).name)
             treeStats(tidx).pipe(stix).stat = readtable(...

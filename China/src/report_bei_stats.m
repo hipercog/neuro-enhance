@@ -1,15 +1,22 @@
 %% INIT
 %make paths
-proj = fullfile('PROJECT_NEUROENHANCE', 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
-ind = fullfile(filesep, 'media', 'ben', 'Maxtor', proj);
-oud = fullfile(filesep, 'home', 'ben', 'Benslab', proj);
-if ~isfolder(fullfile(oud, 'STAT_HISTS'))
-    mkdir(fullfile(oud, 'STAT_HISTS'))
-end
-%spec groups and protocol conditions
+name = 'project_NEUROENHANCE';
+% name = 'neuroenhance';
+proj = fullfile(name, 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
+ind = fullfile(filesep, 'media', 'bcowley', 'Maxtor', proj);
+oud = fullfile(filesep, 'home', 'bcowley', 'Benslab', proj, 'STAT_REP');
+% ind = fullfile(filesep, 'wrk', 'grp', proj);
+% oud = fullfile(ind, 'STAT_REP');
+
+% if ~isfolder(oud), mkdir(oud); end
+% if ~isfolder(fullfile(oud, 'STAT_HISTS'))
+%     mkdir(fullfile(oud, 'STAT_HISTS'))
+% end
+
+%specify groups, protocols, and pipe levels
 grps = {'Control'  'English'  'Music'};
 cnds = {'atten' 'AV' 'multi' 'melody'};
-plvls = {'2A' '2B' '3A' '3B'};
+plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}; {'epout'}};
 plotnsave = false;
 
 
