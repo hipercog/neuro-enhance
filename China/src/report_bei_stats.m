@@ -7,6 +7,7 @@ proj = fullfile(name, 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
 % oud = fullfile(filesep, 'home', 'bcowley', 'Benslab', proj, 'STAT_REP');
 ind = proj;
 oud = fullfile(proj, 'STAT_REP');
+if ~isfolder(oud), mkdir(oud); end
 
 %specify groups, protocols, and pipe levels
 grps = {'Control'  'English'  'Music'};
