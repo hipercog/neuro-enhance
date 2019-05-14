@@ -1,22 +1,14 @@
-function [treeStats, treeRej, bestpipe] = report_bei_stats(anew, plvls)
-
 %% INIT
 %make paths
-% name = 'project_NEUROENHANCE';
-name = './';
-proj = fullfile(name, 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
-% ind = fullfile(filesep, 'media', 'bcowley', 'Maxtor', proj);
-% oud = fullfile(filesep, 'home', 'bcowley', 'Benslab', proj, 'STAT_REP');
-ind = proj;
-oud = fullfile(proj, 'STAT_REP');
+proj = fullfile('project_NEUROENHANCE', 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
+ind = fullfile(filesep, 'media', 'bcowley', 'Maxtor', proj);
+oud = fullfile(filesep, 'home', 'bcowley', 'Benslab', proj, 'STAT_REP');
 if ~isfolder(oud), mkdir(oud); end
 
 %specify groups, protocols, and pipe levels
 grps = {'Control'  'English'  'Music'};
 cnds = {'atten' 'AV' 'multi' 'melody'};
-if nargin < 2
-    plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}; {'epout'}};
-end
+plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}; {'epout'}};
 
 % READ SUBJxGROUP INFO
 if exist(fullfile(oud, 'subjectXgroup.mat'), 'file') == 2
@@ -27,6 +19,8 @@ else
     sbjXgrp = map_bei_subj_grps;
     save(fullfile(oud, 'subjectXgroup.mat'), 'sbjXgrp')
 end
+
+anew = false;
 
 
 %% CALL FUNCTIONS TO READ & PROCESS STATS LOGS
@@ -45,3 +39,26 @@ treeRej = ctap_compare_branch_rejs(treeRej, grps, cnds, plvls);
 
 %% JUDGEMENT : THE COMBININING
 bestpipe = ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew);
+
+
+%% GROUP-WISE AND CONDITION-WISE HISTOGRAMS OF PIPE STATS
+pidx = new_rows(end);
+for g = grps
+    ix = ismember({treeStats(pidx).pipe.group}, g);
+    dat = [treeStats(pidx).pipe(ix).bestn];
+    figure('Name', g{:}); histogram(dat, numel(unique(dat)));
+end
+for c = cnds
+    ix = ismember({treeStats(pidx).pipe.proto}, c);
+    dat = [treeStats(pidx).pipe(ix).bestn];
+    figure('Name', c{:}); histogram(dat, numel(unique(dat)));
+end
+
+
+%% SCRATCH
+for pidx = 1:numel(peek_stat_files)
+    peek_stat_files(pidx).name = strrep(peek_stat_files(pidx).name...
+                            , 'neuroenhance_base', 'neuroenhance_bei_pre');
+    peek_stat_files(pidx).folder = strrep(peek_stat_files(pidx).folder...
+                            , 'neuroenhance_base', 'neuroenhance_bei_pre');
+end
