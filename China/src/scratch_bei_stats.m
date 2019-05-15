@@ -1,14 +1,16 @@
 %% INIT
-%make paths
-proj = fullfile('project_NEUROENHANCE', 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
-ind = fullfile(filesep, 'media', 'bcowley', 'Maxtor', proj);
-oud = fullfile(filesep, 'home', 'bcowley', 'Benslab', proj, 'STAT_REP');
-if ~isfolder(oud), mkdir(oud); end
-
 %specify groups, protocols, and pipe levels
 grps = {'Control'  'English'  'Music'};
 cnds = {'atten' 'AV' 'multi' 'melody'};
-plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}; {'epout'}};
+% plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}; {'epout'}};
+plvls = {{'2A' '2C'}; {'3A' '3B'}; {'epout'}};
+
+%make paths
+oudyn = ['STAT_REP_' myToString(unpackCellStr(plvls))];
+proj = fullfile('project_NEUROENHANCE', 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
+ind = fullfile('/media', 'bcowley', 'Maxtor', proj);
+oud = fullfile('/home', 'bcowley', 'Benslab', proj, oudyn);
+if ~isfolder(oud), mkdir(oud); end
 
 % READ SUBJxGROUP INFO
 if exist(fullfile(oud, 'subjectXgroup.mat'), 'file') == 2

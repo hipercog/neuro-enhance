@@ -1,19 +1,20 @@
 function [treeStats, treeRej, bestpipe] = report_bei_stats(anew, plvls)
 
 %% INIT
+if nargin < 1, anew = false; end
+
+%specify pipe levels, groups, and protocols
 if nargin < 2
     plvls = {{'2A' '2B' '2C'}; {'3A' '3B'}; {'epout'}};
 end
-%make paths
-name = './';
-proj = fullfile(name, 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
-ind = proj;
-oud = fullfile(proj, 'STAT_REP');
-if ~isfolder(oud), mkdir(oud); end
-
-%specify groups, protocols, and pipe levels
 grps = {'Control'  'English'  'Music'};
 cnds = {'atten' 'AV' 'multi' 'melody'};
+
+%make paths
+name = './';
+ind = fullfile(name, 'China', 'ANALYSIS', 'neuroenhance_bei_pre');
+oud = fullfile(ind, ['STAT_REP_' myToString(unpackCellStr(plvls))]);
+if ~isfolder(oud), mkdir(oud); end
 
 % READ SUBJxGROUP INFO
 if exist(fullfile(oud, 'subjectXgroup.mat'), 'file') == 2
