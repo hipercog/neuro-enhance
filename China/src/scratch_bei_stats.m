@@ -22,7 +22,7 @@ else
     save(fullfile(oud, 'subjectXgroup.mat'), 'sbjXgrp')
 end
 
-anew = false;
+anew = true;
 
 
 %% CALL FUNCTIONS TO READ & PROCESS STATS LOGS
