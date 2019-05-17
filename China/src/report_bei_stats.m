@@ -44,4 +44,4 @@ save(fullfile(oud, 'rej_stats.mat'), 'treeRej')
 
 
 %% JUDGEMENT : THE COMBININING
-bestpipe = ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew);
+bestpipe = []; %ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew);
