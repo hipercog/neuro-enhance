@@ -40,7 +40,7 @@ treeRej = ctap_compare_branch_rejs(treeRej, grps, cnds, plvls);
 
 
 %% JUDGEMENT : THE COMBININING
-bestpipe = ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew);
+[bestpipe, bpTab] = ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew);
 
 
 %% GROUP-WISE AND CONDITION-WISE HISTOGRAMS OF PIPE STATS

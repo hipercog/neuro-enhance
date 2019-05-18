@@ -28,15 +28,15 @@ end
 
 
 %% CALL FUNCTIONS TO READ & PROCESS STATS LOGS
-[treeStats, peek_stat_files] = ctap_get_peek_stats(ind, oud, 'anew', anew...
+[treeStats, ~] = ctap_get_peek_stats(ind, oud, 'anew', anew...
                                     , 'post_pipe_part', 'peekpipe/this/');
 [treeStats, new_rows] = ctap_compare_branchstats(treeStats, grps, cnds...
                                                     , plvls(1:2), 1:9, 1:9);
-save(fullfile(oud, 'peek_stats.mat'), 'treeStats')
+save(fullfile(oud, 'peek_stats.mat'), 'treeStats', 'new_rows')
 
 
 %% CALL FUNCTIONS TO READ & PROCESS REJECTION LOGS
-[treeRej, rej_files] = ctap_get_rejections(ind, oud, 'anew', anew...
+[treeRej, ~] = ctap_get_rejections(ind, oud, 'anew', anew...
                         , 'post_pipe_part', 'this/logs/all_rejections.txt');
 treeRej = ctap_parse_rejections(treeRej, grps, cnds, 1:9);
 treeRej = ctap_compare_branch_rejs(treeRej, grps, cnds, plvls);
@@ -44,4 +44,4 @@ save(fullfile(oud, 'rej_stats.mat'), 'treeRej')
 
 
 %% JUDGEMENT : THE COMBININING
-bestpipe = []; %ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew);
+ctap_get_bestpipe(treeStats, treeRej, oud, plvls, 'anew', anew)
