@@ -7,6 +7,7 @@ function [Cfg, out] = neav_cfg(project_root_folder, group_dir, para_dir, ID)
     anal_dir = 'ANALYSIS';
     
     % Analysis branch ID
+    Cfg.T = ID;
     Cfg.id = ['neuroenhance_bei_AV_' ID];
     Cfg.srcid = {''};
     Cfg.env.paths.projectRoot = project_root_folder;
@@ -28,7 +29,7 @@ function [Cfg, out] = neav_cfg(project_root_folder, group_dir, para_dir, ID)
     Cfg.eeg.data_type = '*.raw';
 
     % Define other important stuff
-    Cfg.eeg.reference = { 'average'};
+    Cfg.eeg.reference = {'E57' 'E100'};
 
     % NOTE! EOG channel specification for artifact detection purposes.
     Cfg.eeg.heogChannelNames = {'E125' 'E128'};
