@@ -32,7 +32,7 @@ function [Cfg, out] = neav_cfg(project_root_folder, group_dir, para_dir, ID)
 
     % NOTE! EOG channel specification for artifact detection purposes.
     Cfg.eeg.heogChannelNames = {'E125' 'E128'};
-    Cfg.eeg.veogChannelNames = {'E14' 'E126'};
+    Cfg.eeg.veogChannelNames = {'E8' 'E126'};
 
     % dummy var
     out = struct([]);
