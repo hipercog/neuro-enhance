@@ -17,6 +17,10 @@ function neuroenhance_bei_AV(proj_root, varargin)
 %                           must provide as many cells of source vectors as
 %                           you have pipes; easiest is to copy+modify default
 %                           default = {NaN 1 3 6 [1 4 10]}
+%   pipestp     cell array, steps for each pipe - to override default you 
+%                           must provide as many cells of source vectors as
+%                           you have pipes; easiest is to copy+modify default
+%                           default = {1:3 1 1 1:2 1}
 % 
 %
 % Version History:
@@ -45,6 +49,7 @@ pipeArr = {@neav_pipe1,...
            @nebr_peekpipe};
 %You can parameterize the sources for each pipe
 srcix = {NaN 1 3 6 [1 4 10]};
+stpix = {1:3 1 1 1:2 1};
        
        
 %% Setup MAIN parameters
@@ -54,6 +59,7 @@ p.addParameter('grpix', 1:numel(group_dir), @(x) any(x == 1:numel(group_dir)))
 p.addParameter('timept', 1, @(x) x == 1 || x == 2)
 p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
 p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
+p.addParameter('pipestp', stpix, @(x) iscell(x) && numel(x) == numel(stpix))
 
 p.parse(proj_root, varargin{:});
 Arg = p.Results;
@@ -67,6 +73,7 @@ Arg = p.Results;
 group_dir = group_dir(Arg.grpix);
 ctapID = ctapID{Arg.timept};
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
+pipe_stp = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipestp'];
 
 
 %% Loop the available data sources
@@ -75,6 +82,7 @@ for ix = 1:numel(group_dir)
     %First, define important paths; plus step sets and their parameters
     [Cfg, ~] = neav_cfg(proj_root, group_dir{ix}, para_dir, ctapID);
     Cfg.pipe_src = pipe_src;
+    Cfg.pipe_stp = pipe_stp;
 
     %Then create measurement config (MC) based on a directory and filetype
     % - name the session/group, and the measurement/condition (pass cells)

@@ -37,6 +37,11 @@ function [Cfg, out] = nebr_peekpipe(Cfg)
 %         'plotEEGHist', false);
 
     %%%%%%%% Store to Cfg %%%%%%%%
+    if isfield(Cfg, 'pipe_stp')% step sets to run, default: whole thing
+        idx = Cfg.pipe_stp{ismember(Cfg.pipe_stp(:,1), mfilename), 2};
+        Cfg.pipe.runSets = {stepSet(idx).id};
+    else
+        Cfg.pipe.runSets = {stepSet(:).id};
+    end
     Cfg.pipe.stepSets = stepSet;
-    Cfg.pipe.runSets = {stepSet(:).id};
 end

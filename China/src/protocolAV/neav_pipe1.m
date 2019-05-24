@@ -75,6 +75,11 @@ function [Cfg, out] = neav_pipe1(Cfg)
 
 
     %%%%%%%% Store to Cfg %%%%%%%%
-    Cfg.pipe.runSets = {stepSet(:).id}; % step sets to run, default: whole thing
+    if isfield(Cfg, 'pipe_stp')% step sets to run, default: whole thing
+        idx = Cfg.pipe_stp{ismember(Cfg.pipe_stp(:,1), mfilename), 2};
+        Cfg.pipe.runSets = {stepSet(idx).id};
+    else
+        Cfg.pipe.runSets = {stepSet(:).id};
+    end
     Cfg.pipe.stepSets = stepSet; % record of all step sets
 end
