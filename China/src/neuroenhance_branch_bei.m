@@ -92,7 +92,6 @@ parfor (ix = 1:numel(group_dir) * numel(para_dir))
     Cfg.pipe_src = pipe_src;
 
     %Then create measurement config (MC) based on a directory and filetype
-    % - subselect subjects using numeric or name indexing in 'sbj_filt'
     % - name the session/group, and the measurement/condition (pass cells)
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                 , 'eeg_ext', Cfg.eeg.data_type...
