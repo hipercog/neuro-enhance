@@ -40,7 +40,7 @@ STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Choose groups & use sbj_filt to select all or some of available recordings
-gix = 3;
+gix = 1:2;
 grpXsbj_filt = {'all' 'all' 'all'}; %setdiff(1:12, [3 7]);
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
