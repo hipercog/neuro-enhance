@@ -3,7 +3,13 @@ function [Cfg, out] = nebr_pipe2C(Cfg)
 
     %%%%%%%% Define hierarchy %%%%%%%%
     Cfg.id = 'pipe2C';
-    Cfg.srcid = {'pipe1#1_load'};
+    Cfg.srcid = {'pipe1#1_load'...
+                 'pipe1#2_denoise'...
+                 'pipe1#3_ICA'};
+    if isfield(Cfg, 'pipe_src')
+        idx = Cfg.pipe_src{ismember(Cfg.pipe_src(:,1), mfilename), 2};
+        Cfg.srcid = Cfg.srcid(idx);
+    end
 
     %%%%%%%% Define pipeline %%%%%%%%
     % IC correction

@@ -48,7 +48,7 @@ pipeArr = {@neav_pipe1,...
            @nebr_epout,...
            @nebr_peekpipe};
 %You can parameterize the sources for each pipe
-srcix = {NaN 1 3 6 [1 4 10]};
+srcix = {NaN 3 3 6 [1 4 10]};
 stpix = {1:3 1 1 1:2 1};
        
        
@@ -95,7 +95,7 @@ for ix = 1:numel(group_dir)
     % Run the pipe
     tic
         CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', Arg.runps...
-                                           , 'dbg', false, 'ovw', true)
+                                           , 'dbg', true, 'ovw', true)
     toc
 end
 
