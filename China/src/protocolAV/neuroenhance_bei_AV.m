@@ -56,7 +56,7 @@ stpix = {1:3 1 1 1:2 1};
 p = inputParser;
 p.addRequired('proj_root', @ischar)
 p.addParameter('grpix', 1:numel(group_dir), @(x) any(x == 1:numel(group_dir)))
-p.addParameter('timept', 1, @(x) x == 1 || x == 2)
+% p.addParameter('timept', 1, @(x) x == 1 || x == 2)
 p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
 p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
 p.addParameter('pipestp', stpix, @(x) iscell(x) && numel(x) == numel(stpix))
@@ -71,31 +71,42 @@ Arg = p.Results;
             
 %% Use runtime options
 group_dir = group_dir(Arg.grpix);
-ctapID = ctapID{Arg.timept};
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
 pipe_stp = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipestp'];
+runps = Arg.runps;
 
 
 %% Loop the available data sources
-for ix = 1:numel(group_dir)
+parfor (ix = 1:numel(group_dir) * numel(ctapID))
+    
+    %get sub-index S from global index G
+    %First is group index:
+    grix = mod(ix, 3) + 1;
+    %Second is pre/post index
+    idix = mod(ix, 2) + 1;
+    
+    ctapid = ctapID{idix};
+    grpdir = group_dir{grix};
     %Create the CONFIGURATION struct
     %First, define important paths; plus step sets and their parameters
-    [Cfg, ~] = neav_cfg(proj_root, group_dir{ix}, para_dir, ctapID);
+    [Cfg, ~] = neav_cfg(proj_root, grpdir, para_dir, ctapid);
     Cfg.pipe_src = pipe_src;
     Cfg.pipe_stp = pipe_stp;
 
     %Then create measurement config (MC) based on a directory and filetype
     % - name the session/group, and the measurement/condition (pass cells)
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
-                , 'eeg_ext',   Cfg.eeg.data_type...
-                , 'session', group_dir(ix), 'measurement', {para_dir});
-    Cfg.MC.export_name_root = sprintf('%d_%s_%s_', Arg.timept...
-                                    , upper(group_dir{ix}(1:3)), para_dir);
+                            , 'eeg_ext',   Cfg.eeg.data_type...
+                            , 'session', {grpdir}...
+                            , 'measurement', {para_dir});
+    Cfg.MC.export_name_root = sprintf('%d_%s_%s_'...
+                                    , idix...
+                                    , upper(grpdir(1:3))...
+                                    , para_dir);
 
     % Run the pipe
     tic
-        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', Arg.runps...
-                                           , 'dbg', true, 'ovw', true)
+        CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps, 'ovw', true)
     toc
 end
 
