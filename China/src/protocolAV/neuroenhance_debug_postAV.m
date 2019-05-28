@@ -42,7 +42,7 @@ Cfg.MC.export_name_root = sprintf('%d_%s_%s_'...
 
 % Run the pipe
 tic
-	CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps, 'ovw', true)
+	CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps, 'dbg', true, 'ovw', true)
 toc
 
 clear
