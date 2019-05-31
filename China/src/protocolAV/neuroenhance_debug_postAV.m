@@ -5,10 +5,24 @@
 % proj_root = 'D:\UH\data_analysis\school_intervention_study_data\EEG_data\3-105030102';
 % proj_root = '/media/bcowley/Transcend/project_NEUROENHANCE/China';
 
-group_dir = 'control';
 para_dir = 'AV';
-ctapID = 'post';
-sbj_filt = [105020111, 105030216, 105030308];
+
+group_dir = 'english';
+ctapID = 'pre';
+sbj_filt = 105020308;
+
+% group_dir = 'music';
+% ctapID = 'pre';
+% sbj_filt = 105020303;
+
+% group_dir = 'control';
+% ctapID = 'post';
+% sbj_filt = [105020111, 105030216, 105030308];
+
+% group_dir = 'english';
+% ctapID = 'post';
+% sbj_filt = [105020108, 105030204, 105030208];
+
 
 %Select pipe array and first and last pipe to run
 pipeArr = {@neav_pipe1,... 
