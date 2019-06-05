@@ -21,6 +21,8 @@ function neuroenhance_bei_AV(proj_root, varargin)
 %                           must provide as many cells of source vectors as
 %                           you have pipes; easiest is to copy+modify default
 %                           default = {1:3 1 1 1:2 1}
+%   sbjfilt     vector | cell array, list of subjects by ID number or string
+%               default = all
 % 
 %
 % Version History:
@@ -55,18 +57,15 @@ stpix = {1:3 1 1 1:2 1};
 %% Setup MAIN parameters
 p = inputParser;
 p.addRequired('proj_root', @ischar)
+
 p.addParameter('grpix', 1:numel(group_dir), @(x) any(x == 1:numel(group_dir)))
-% p.addParameter('timept', 1, @(x) x == 1 || x == 2)
+p.addParameter('subjfilt', 'all', @(x) iscell(x) || isvector(x))
 p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
 p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
 p.addParameter('pipestp', stpix, @(x) iscell(x) && numel(x) == numel(stpix))
 
 p.parse(proj_root, varargin{:});
 Arg = p.Results;
-% set the input directory where your data is stored
-% proj_root = fullfile('E:\', 'PROJECT_NEUROENHANCE', 'China');
-% proj_root = 'D:\UH\data_analysis\school_intervention_study_data\EEG_data\3-105030102';
-% proj_root = '/media/bcowley/Transcend/project_NEUROENHANCE/China';
 
             
 %% Use runtime options
@@ -74,6 +73,7 @@ group_dir = group_dir(Arg.grpix);
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
 pipe_stp = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipestp'];
 runps = Arg.runps;
+sbj_filt = Arg.subjfilt;
 
 
 %% Loop the available data sources
@@ -97,6 +97,7 @@ parfor (ix = 1:numel(group_dir) * numel(ctapID))
     % - name the session/group, and the measurement/condition (pass cells)
     Cfg = get_meas_cfg_MC(Cfg, Cfg.env.paths.branchSource...
                             , 'eeg_ext',   Cfg.eeg.data_type...
+                            , 'sbj_filt', sbj_filt...
                             , 'session', {grpdir}...
                             , 'measurement', {para_dir});
     Cfg.MC.export_name_root = sprintf('%d_%s_%s_'...

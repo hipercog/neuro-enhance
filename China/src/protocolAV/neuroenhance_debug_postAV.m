@@ -4,6 +4,7 @@
 % proj_root = fullfile('E:\', 'PROJECT_NEUROENHANCE', 'China');
 % proj_root = 'D:\UH\data_analysis\school_intervention_study_data\EEG_data\3-105030102';
 % proj_root = '/media/bcowley/Transcend/project_NEUROENHANCE/China';
+proj_root = '~/Benslab/project_NEUROENHANCE/China';
 
 para_dir = 'AV';
 
