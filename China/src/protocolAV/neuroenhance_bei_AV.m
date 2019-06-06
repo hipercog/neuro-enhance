@@ -83,9 +83,9 @@ parfor (ix = 1:numel(group_dir) * numel(ctapID))
     
     %get sub-index S from global index G
     %First is group index:
-    grix = mod(ix, 3) + 1;
+    grix = mod(ix, numel(group_dir)) + 1;
     %Second is pre/post index
-    idix = mod(ix, 2) + 1;
+    idix = mod(ix, numel(ctapID)) + 1;
     
     ctapid = ctapID{idix};
     grpdir = group_dir{grix};

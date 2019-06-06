@@ -12,17 +12,17 @@ para_dir = 'AV';
 % ctapID = 'pre';
 % sbj_filt = 105020308;
 
-group_dir = 'music';
-ctapID = 'pre';
-sbj_filt = 105020303;
-
-group_dir = 'control';
-ctapID = 'post';
-sbj_filt = [105020111, 105030216, 105030308];
-
-group_dir = 'english';
-ctapID = 'post';
-sbj_filt = [105020108, 105030204, 105030208];
+% group_dir = 'music';
+% ctapID = 'pre';
+% sbj_filt = 105020303;
+ 
+% group_dir = 'control';
+% ctapID = 'post';
+% sbj_filt = [105020111, 105030216, 105030308];
+ 
+% group_dir = 'english';
+% ctapID = 'post';
+% sbj_filt = [105020108, 105030204, 105030208];
 
 
 %Select pipe array and first and last pipe to run
