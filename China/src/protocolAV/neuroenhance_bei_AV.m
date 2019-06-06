@@ -59,7 +59,7 @@ p = inputParser;
 p.addRequired('proj_root', @ischar)
 
 p.addParameter('grpix', 1:numel(group_dir), @(x) any(x == 1:numel(group_dir)))
-p.addParameter('subjfilt', 'all', @(x) iscell(x) || isvector(x))
+p.addParameter('subjfilt', {'all'}, @(x) iscell(x) || isvector(x))
 p.addParameter('timept', 1:2, @isvector)
 p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
 p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
