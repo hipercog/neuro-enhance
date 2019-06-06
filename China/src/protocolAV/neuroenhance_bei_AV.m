@@ -21,7 +21,7 @@ function neuroenhance_bei_AV(proj_root, varargin)
 %                           must provide as many cells of source vectors as
 %                           you have pipes; easiest is to copy+modify default
 %                           default = {1:3 1 1 1:2 1}
-%   sbjfilt     vector | cell array, list of subjects by ID number or string
+%   subjfilt    vector | cell array, list of subjects by ID number or string
 %               default = all
 % 
 %
@@ -60,6 +60,7 @@ p.addRequired('proj_root', @ischar)
 
 p.addParameter('grpix', 1:numel(group_dir), @(x) any(x == 1:numel(group_dir)))
 p.addParameter('subjfilt', 'all', @(x) iscell(x) || isvector(x))
+p.addParameter('timept', 1:2, @isvector)
 p.addParameter('runps', 1:length(pipeArr), @(x) all(ismember(x, 1:length(pipeArr))))
 p.addParameter('pipesrc', srcix, @(x) iscell(x) && numel(x) == numel(srcix))
 p.addParameter('pipestp', stpix, @(x) iscell(x) && numel(x) == numel(stpix))
@@ -74,6 +75,7 @@ pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipesrc'];
 pipe_stp = [cellfun(@func2str, pipeArr, 'un', 0)', Arg.pipestp'];
 runps = Arg.runps;
 sbj_filt = Arg.subjfilt;
+ctapID = ctapID(Arg.timept);
 
 
 %% Loop the available data sources
