@@ -8,21 +8,9 @@ proj_root = '~/Benslab/project_NEUROENHANCE/China';
 
 para_dir = 'AV';
 
-% group_dir = 'english';
-% ctapID = 'pre';
-% sbj_filt = 105020308;
-
-% group_dir = 'music';
-% ctapID = 'pre';
-% sbj_filt = 105020303;
- 
-% group_dir = 'control';
-% ctapID = 'post';
-% sbj_filt = [105020111, 105030216, 105030308];
- 
-% group_dir = 'english';
-% ctapID = 'post';
-% sbj_filt = [105020108, 105030204, 105030208];
+group_dir = 'music';
+ctapID = 'post';
+sbj_filt = 105020101;
 
 
 %Select pipe array and first and last pipe to run
@@ -35,7 +23,7 @@ pipeArr = {@neav_pipe1,...
 %You can parameterize the pipes/steps to run, and sources for each pipe
 runps = 1:length(pipeArr);
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)', {NaN 3 3 6 [1 4 10]}'];
-pipe_stp = [cellfun(@func2str, pipeArr, 'un', 0)', {1:3 1 1 1:2 1}'];
+pipe_stp = [cellfun(@func2str, pipeArr, 'un', 0)', {1:3 1 1 2 1}'];
 
 %Create the CONFIGURATION struct
 %First, define important paths; plus step sets and their parameters
@@ -57,7 +45,7 @@ Cfg.MC.export_name_root = sprintf('%d_%s_%s_'...
 
 % Run the pipe
 tic
-	CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps, 'dbg', true, 'ovw', true)
+	CTAP_pipeline_brancher(Cfg, pipeArr, 'runPipes', runps, 'dbg', true, 'ovw', false)
 toc
 
 clear

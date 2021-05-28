@@ -2,11 +2,11 @@
 
 %% Setup MAIN parameters
 % set the input directory where your data is stored; some examples:
-local = '~/Benslab';
+local = '~/Benslab/METHODMAN/';
 nixhd = fullfile(filesep, 'media', 'bcowley', 'Transcend');
 pchdd = 'E:\';
 
-proj_root = nixhd;
+proj_root = local;
 
 % project root on your platform
 proj_root = fullfile(proj_root, 'project_NEUROENHANCE', 'Finland', '');

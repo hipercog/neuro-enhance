@@ -62,6 +62,6 @@ function [Cfg, out] = nefi_pipe1(Cfg)
 
 
     %%%%%%%% Store to Cfg %%%%%%%%
-    Cfg.pipe.runSets = {stepSet(2).id}; % step sets to run, default: whole thing
+    Cfg.pipe.runSets = {stepSet(:).id}; % step sets to run, default: whole thing
     Cfg.pipe.stepSets = stepSet; % record of all step sets
 end
