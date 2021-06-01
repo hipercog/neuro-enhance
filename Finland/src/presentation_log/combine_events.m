@@ -90,10 +90,11 @@ while tryagain
                         eegfile.event, pres, syncrs(s), eegfname, prompt);
             drifts(s) = mean(abs(drift));
         end
-        [mindr, ix] = min(drifts);
-        if mindr < tolr
-            syncevt = syncrs(ix);
-        end
+        syncevt = syncrs(find((drifts < tolr), 1));
+%         [mindr, ix] = min(drifts);
+%         if mindr < tolr
+%             syncevt = syncrs(ix);
+%         end
     end
     % If in prompt mode just ask the user:
     if prompt

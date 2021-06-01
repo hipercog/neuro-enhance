@@ -42,7 +42,7 @@ gix = 2;
 pix = 2;
 % use sbj_filt to select all (or a subset) of available recordings
 bad_preslog_con_mul = [101 104 106:109 163:165 172];
-grpXsbj_filt = {'all' 'all' 'all' 'all'};
+grpXsbj_filt = {'all' 'LB101' 'all' 'all'};
 % grpXsbj_filt = {[] [] 158 []};
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
