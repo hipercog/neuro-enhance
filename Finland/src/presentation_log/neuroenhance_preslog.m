@@ -19,14 +19,17 @@ Arg = p.Results;
 px = cell2mat(cellfun(@(x) contains(Arg.src, x, 'Ig', true), Arg.proto, 'Un', 0));
 isswitch = px(3);
 
-% prompt mode asks for some parameters and allows retrying
+% If number of events and triggers don't match, combining might fail
+% Prompt mode asks for some parameters and allows retrying manually
 % prompt = true;
-%   -->  disable if looping
+% Prompt nothing:
 prompt = false;
+% Instead, we can try to estimate the correct trigger by minimising the drift
+auto = true;
 
 
 %% Combine events in EEG
-[EEG, allclear, ~, ~] = combine_events(EEG, Arg.src, isswitch, prompt);
+[EEG, allclear, ~, ~] = combine_events(EEG, Arg.src, isswitch, prompt, auto);
 
 EEG.CTAP.err.preslog_evt = allclear;
 

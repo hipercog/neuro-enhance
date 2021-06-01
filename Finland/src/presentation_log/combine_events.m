@@ -7,10 +7,11 @@
 % Tommi muokkasi 14.3.2018: rivit 354-357 (unhandled indices)
 
 function [eegfile, allclear, pres, eegfname] = combine_events(...
-                                        eegfile, logfile, isswitch, prompt)
+                                    eegfile, logfile, isswitch, prompt, auto)
 
 if nargin < 3, isswitch = false; end
 if nargin < 4, prompt = false; end
+if nargin < 5, auto = true; end
                                     
 % Get files
 try
@@ -29,7 +30,7 @@ try
     elseif iscell(logfile)
         logfname = '(given cell array)';
     end
-    disp(['Writing ' logfname ' events onto triggers of ' eegfname ' (type ' ext ')'])
+    disp(['Writing ' logfname ' events onto triggers of ' eegfname '.' ext])
 catch ME
     if strcmp('No such file or directory', ME.message)
         warning('Wrong filenames! See headerfile (below) for correct ones.')
@@ -66,33 +67,50 @@ tryagain = 1;
 while tryagain
     allclear = 1;
     
-    % Define the event no to be used for syncing (in eeg data)
-    syncevent = 2;
+    % Define the tolerance
+    tolr = 11;
     % If in prompt mode
     if prompt
-        syncevent = input('Which eeg trigger no. should be used for syncing? (To use default, press Enter): ');
-        if isempty(syncevent) || ~(isnumeric(syncevent))
-            syncevent = 2;
+        tolr = input(['How many samples of tolerance for matching?'...
+                                        ' (To use default 11, press Enter): ']);
+        if isempty(tolr) || ~(isnumeric(tolr))
+           tolr = 11;
         end
     end
     
+    % Define the event no to be used for syncing (in eeg data):
+    syncevt = 2;
+    % If auto, try all events for sync and use whichever gives minimum drift:
+    if auto
+        mincnt = min((length(eegfile.event) - 1), length(pres.type));
+        syncrs = syncevt:mincnt;
+        drifts = NaN(1, numel(syncrs));
+        for s = 1:numel(syncrs)
+            [~, drift] = calculate_latencies(...
+                        eegfile.event, pres, syncrs(s), eegfname, prompt);
+            drifts(s) = mean(abs(drift));
+        end
+        [mindr, ix] = min(drifts);
+        if mindr < tolr
+            syncevt = syncrs(ix);
+        end
+    end
+    % If in prompt mode just ask the user:
+    if prompt
+        syncevt = input(['Which eeg trigger no. should be used for syncing?'...
+                                        ' (To use default, press Enter): ']);
+        if isempty(syncevt) || ~(isnumeric(syncevt))
+            syncevt = 2;
+        end
+    end
+        
     % Try to sync
     pres.newlatency = calculate_latencies(...
-                        eegfile.event, pres, syncevent, eegfname, prompt);
-    
-    % Define the tolerance
-    tolerance = 11;
-    % If in prompt mode
-    if prompt
-        tolerance = input('How many samples of tolerance for matching? (To use default 11, press Enter): ');
-        if isempty(tolerance) || ~(isnumeric(tolerance))
-           tolerance = 11;
-        end
-    end
+                        eegfile.event, pres, syncevt, eegfname, prompt);
 
     % Try to match
     [newevent, bad_log_ind, bad_eeg_ind] = match_events(...
-                        eegfile.event, pres, tolerance, syncevent, prompt);
+                        eegfile.event, pres, tolr, syncevt, prompt);
     
     % If there was trouble and not in prompt mode, exit immediately
     if isempty(newevent) && ~prompt
@@ -106,7 +124,7 @@ while tryagain
     if ~isempty(newevent)
         add_ok = true;
         if sum(bad_log_ind) > 1
-            [add_ok, not_ok_mask] = check_adding(bad_log_ind, pres, tolerance);
+            [add_ok, not_ok_mask] = check_adding(bad_log_ind, pres, tolr);
             allclear = add_ok;
         end
         if sum(bad_eeg_ind) > 1
@@ -118,7 +136,7 @@ while tryagain
     tryagain = 0;
     % Allow for retry or termination (in prompt mode)
     if isempty(newevent) && prompt
-        inp = input('Press Enter to try matching again or [x] to give up. ', 's');
+        inp = input('Press Enter to try match again or [x] to give up. ', 's');
         if strcmp(inp, 'x')
             disp('Quitting.');
             allclear = 0;
@@ -128,7 +146,8 @@ while tryagain
             tryagain = 1;
         end
     elseif prompt
-        inp = input('Press Enter to proceed, [a] to try matching again, or [x] to give up. ', 's');
+        inp = input(['Press Enter to proceed, [a] to try matching again'...
+                                                ', or [x] to give up. '], 's');
         if strcmp(inp, 'x')
             disp('Quitting.');
             allclear = 0;
@@ -153,19 +172,20 @@ end
 
 % Add unresolved log events to eeg
 if sum(bad_log_ind) > 1 && ~add_ok && prompt
-    inp = input('Some events cannot be added. Press [a] if you want to add what can be added, otherwise press Enter. ', 's');
+    inp = input(['Some events cannot be added. Press [a] if you want to add'...
+                        ' what can be added, otherwise press Enter. '], 's');
     if strcmp(inp, 'a')
         bad_log_ind = bad_log_ind & ~not_ok_mask;
         add_ok = 1;
     end
 elseif sum(bad_log_ind) > 1 && ~add_ok && ~prompt
     % There really should be a log written about these troublemakers!!
-    disp('Note: Unadded events remained. Checking these indices by hand is strongly recommended!');
+    disp('Note: Unadded events remain. Check indices is strongly recommended!');
     disp(find(bad_log_ind & not_ok_mask))   ;
 end
 
 if sum(bad_log_ind) > 1 && add_ok
-    eegfile = add_unresolved(eegfile, bad_log_ind, syncevent, tolerance, pres, prompt);
+    eegfile = add_unresolved(eegfile, bad_log_ind, syncevt, tolr, pres, prompt);
 end
 % NOTE: Pictures in switching are not added!! Should they be?
 % Function above is defined with varargin to enable adding this later
@@ -241,7 +261,8 @@ end % separate_pictures()
 
 
 %% calculate_latencies()
-function newlatency = calculate_latencies(event, pres, syncevent, eegname, prompt)
+function [newlatency, drifts] = calculate_latencies(...
+                                        event, pres, syncevent, eegname, prompt)
 
     if prompt
         disp('Calculating latencies and drifts...')
@@ -371,7 +392,7 @@ end
 
 
 %% add_unresolved()
-function EEG = add_unresolved(EEG, bad_log_ind, syncevent, tolerance, pres, prompt)
+function EEG = add_unresolved(EEG, bad_log_ind, syncevent, tolr, pres, prompt)
 
     bad_log_ind(find(bad_log_ind, 1)) = 0;
     badpres = pres(bad_log_ind, :);
@@ -390,7 +411,7 @@ function EEG = add_unresolved(EEG, bad_log_ind, syncevent, tolerance, pres, prom
         end
         for j = lkg_j+1:length(EEG.event)
             % a match --> add event
-            if abs(EEG.event(j).latency - badpres.newlatency(i)) < tolerance
+            if abs(EEG.event(j).latency - badpres.newlatency(i)) < tolr
                 eegtime = EEG.event(j).latency;
 %                 row = badpres(i,:);
                 % more fun stuff bc of editeventvals!

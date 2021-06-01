@@ -32,25 +32,25 @@ pipeArr = {@nefi_pipe1,...
 
 %% Runtime options for CTAP:
 %You can also run only a subset of pipes, e.g. 2:length(pipeArr)
-runps = 1:9;
+runps = [1 2 5 7];
 
 STOP_ON_ERROR = true;
 OVERWRITE_OLD_RESULTS = true;
 
 %Subsetting groups and paradigms
-gix = 1;
-pix = 1;
+gix = 2;
+pix = 2;
 % use sbj_filt to select all (or a subset) of available recordings
 bad_preslog_con_mul = [101 104 106:109 163:165 172];
 grpXsbj_filt = {'all' 'all' 'all' 'all'};
 % grpXsbj_filt = {[] [] 158 []};
 
 %PICK YOUR TIMEPOINT HERE! PRE or POST...
-timept = 1;
+timept = 2;
 
 %You can parameterize the sources for each pipe
 pipe_src = [cellfun(@func2str, pipeArr, 'un', 0)'...
-                , {NaN 1 1 1 1:3 1:3 1:6 1:6 1:10}'];
+                , {NaN 1 1 1 1 1:3 1 1:6 1:10}'];
 
 
 %% Use runtime options
